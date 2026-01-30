@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob_Cook_Resume</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 1.05; /* Optimized for single-page fit */
+            color: #000;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            padding: 0.2in 0.8in; /* 0.8in sides guarantee right-side clearance */
+            margin: 0.1in auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media print {
+            @page {
+                size: letter;
+                margin: 0;
+            }
+            body { background: none; }
+            .page { 
+                margin: 0; 
+                box-shadow: none; 
+                width: 8.5in;
+                height: 11in;
+            }
+            .no-print { display: none; }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .name {
+            font-size: 16pt;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+
+        .contact {
+            font-size: 10pt;
+            margin-bottom: 2px;
+        }
+
+        .section-title {
+            border-bottom: 1px solid #000;
+            text-transform: uppercase;
+            margin-top: 5px; 
+            margin-bottom: 3px;
+            font-size: 12pt;
+        }
+
+        .item {
+            margin-bottom: 3px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            margin: 1px 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0px;
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #2d3436;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            z-index: 100;
+        }
+
+        a { color: black; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">Download PDF / Print</button>
+
+    <div class="page">
+        <div class="header">
+            <div class="name">Jacob Cook</div>
+            <div class="contact">
+                Sacramento, CA | (916) 314-5358 | jacobcookofficial@gmail.com<br>
+                <a href="https://www.linkedin.com/in/jcook-dev/">LinkedIn: jcook-dev</a> | <a href="https://github.com/jacobdcook/">GitHub: jacobdcook</a> | <a href="https://jacobdcook.com">jacobdcook.com</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; font-size: 10.5pt; margin-bottom: 2px; margin-top: 2px;">
+            Security-focused IT professional pursuing SOC Analyst and IT Support roles. CompTIA Security+ certified with hands-on SIEM, log analysis, and incident triage experience through home labs and coursework.
+        </div>
+
+        <div class="section-title">Education & Certifications</div>
+        <div class="item">
+            <div class="item-header">
+                <span>WGU: MS, Cybersecurity (In Progress) | CSUS: BS, Computer Science (2024)</span>
+                <span>GPA 3.50</span>
+            </div>
+            <div style="font-size: 11pt;">CompTIA Security+ Certified (SY0-701) — Score: 805/900 — Jan 2026</div>
+        </div>
+
+        <div class="section-title">Technical Skills</div>
+        <div class="item">
+            <div>• SOC / Blue Team: SIEM (Wazuh), Log Analysis, Alert Triage, Incident Documentation, Phishing Analysis, Threat Detection, Playbook Automation</div>
+            <div>• Systems & IT: Windows Endpoints, Linux (Ubuntu/CentOS), Azure AD, Networking Fundamentals, Wireshark, VirtualBox, System Hardening, Root Cause Analysis</div>
+            <div>• Development & Automation: Python, Bash Scripting, SQL, Git, FastAPI, React, Ticketing/Documentation Tools</div>
+        </div>
+
+        <div class="section-title">Technical Projects</div>
+        <div class="item">
+            <div class="item-header">
+                <span>Blue Team SOC Monitoring Lab (Wazuh SIEM)</span>
+                <span>2026</span>
+            </div>
+            <ul>
+                <li>Deployed full Wazuh stack (Manager, Indexer, Dashboard) to monitor endpoints for brute-force and malware indicators</li>
+                <li>Wrote Python scripts to simulate attack scenarios and tuned detection rules to reduce false positive alerts</li>
+                <li>Analyzed auth and security logs to distinguish real threats from noise and documented incident timelines</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span>Phishing Analysis Lab</span>
+                <span>2026</span>
+            </div>
+            <ul>
+                <li>Performed hands-on phishing email analysis including header inspection, link extraction, and VirusTotal lookups</li>
+                <li>Created Tier 1–style triage reports documenting IOCs and escalation recommendations for incident response</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span>SOAR-lite – Incident Response Orchestrator</span>
+                <span>2026</span>
+            </div>
+            <ul>
+                <li>Built automated playbooks triggered by SIEM alerts to streamline SOC incident response workflows</li>
+                <li>Integrated alert enrichment and notification pipelines reducing manual triage steps for common alert types</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span>Industry-Sponsored AI Platform (G3-GPT) — Team of 6</span>
+                <span>2024</span>
+            </div>
+            <ul>
+                <li>Engineered role-based access control and Azure SSO enforcing strict data privacy for corporate stakeholders</li>
+                <li>Delivered production-ready enterprise platform collaborating across a six-person engineering team</li>
+            </ul>
+        </div>
+
+        <div class="section-title">Professional Experience</div>
+        <div class="item">
+            <div class="item-header">
+                <span>Target Distribution Center</span>
+                <span>2019 – 2025</span>
+            </div>
+            <div style="font-style: italic;">Warehouse Operations – Engineering & Facilities Support</div>
+            <ul>
+                <li>Monitored industrial control systems and sensors for operational incidents ensuring high availability</li>
+                <li>Performed root cause analysis on system failures and documented resolutions for compliance tracking</li>
+                <li>Administered hardware configuration changes following enterprise change management procedures</li>
+                <li>Coordinated incident response with engineering teams to minimize system downtime across shifts</li>
+            </ul>
+        </div>
+
+        <div class="section-title">Additional Information</div>
+        <div class="item">
+            <ul>
+                <li>Pursuing continuous professional development in cybersecurity through home labs, CTF practice, and WGU coursework</li>
+                <li>Enjoys camping, mountain biking, and hiking — drives resilience and attention to detail</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

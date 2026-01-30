@@ -2,7 +2,7 @@ import profile from "../../content/profile.json";
 
 export default function Footer() {
   return (
-    <footer className="py-10 px-6 bg-dark-900 text-white/50">
+    <footer className="py-10 px-6 bg-dark-900 dark:bg-dark-900 text-white/50 border-t border-dark-800 dark:border-dark-700">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <p className="text-sm font-medium text-white/70">

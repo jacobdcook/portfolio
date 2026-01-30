@@ -22,10 +22,10 @@ export default function Projects() {
       : profile.projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="py-20 px-6 bg-ice-50">
+    <section id="projects" className="py-20 px-6 bg-ice-50 dark:bg-dark-800">
       <div className="max-w-6xl mx-auto">
         <div ref={ref} className={`reveal ${isInView ? "in-view" : ""}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 dark:text-white mb-2">
             My <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-16 h-1 bg-gojo-500 rounded-full mb-8" />
@@ -39,7 +39,7 @@ export default function Projects() {
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                   active === f.value
                     ? "bg-gojo-600 text-white shadow-md shadow-gojo-600/20"
-                    : "bg-white text-dark-700/70 border border-ice-200 hover:border-gojo-300 hover:text-gojo-600"
+                    : "bg-white dark:bg-dark-900 text-dark-700/70 dark:text-white/60 border border-ice-200 dark:border-dark-600 hover:border-gojo-300 dark:hover:border-gojo-500 hover:text-gojo-600 dark:hover:text-gojo-400"
                 }`}
               >
                 {f.label}
@@ -58,10 +58,10 @@ export default function Projects() {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group bg-white rounded-2xl p-6 shadow-sm border flex flex-col card-hover ${
+                className={`group bg-white dark:bg-dark-900 rounded-2xl p-6 shadow-sm border flex flex-col card-hover ${
                   isFeatured
-                    ? "border-gojo-300 ring-1 ring-gojo-200"
-                    : "border-ice-100"
+                    ? "border-gojo-300 dark:border-gojo-600 ring-1 ring-gojo-200 dark:ring-gojo-700"
+                    : "border-ice-100 dark:border-dark-600"
                 }`}
               >
                 <div className="flex items-start justify-between mb-3">
@@ -69,8 +69,8 @@ export default function Projects() {
                     <span
                       className={`px-2.5 py-1 text-xs font-semibold rounded-full ${
                         project.category === "cybersecurity"
-                          ? "bg-gojo-50 text-gojo-700"
-                          : "bg-emerald-50 text-emerald-600"
+                          ? "bg-gojo-50 dark:bg-gojo-700/20 text-gojo-700 dark:text-gojo-300"
+                          : "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400"
                       }`}
                     >
                       {project.category === "cybersecurity"
@@ -84,7 +84,7 @@ export default function Projects() {
                     )}
                   </div>
                   <svg
-                    className="w-4 h-4 text-dark-700/30 group-hover:text-gojo-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                    className="w-4 h-4 text-dark-700/30 dark:text-white/30 group-hover:text-gojo-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -98,14 +98,14 @@ export default function Projects() {
                   </svg>
                 </div>
 
-                <h3 className="font-bold text-dark-800 group-hover:text-gojo-600 transition-colors mb-2">
+                <h3 className="font-bold text-dark-800 dark:text-white group-hover:text-gojo-600 dark:group-hover:text-gojo-400 transition-colors mb-2">
                   {project.name}
                 </h3>
-                <p className="text-sm text-dark-700/60 leading-relaxed flex-1">
+                <p className="text-sm text-dark-700/60 dark:text-white/50 leading-relaxed flex-1">
                   {project.description}
                 </p>
 
-                <div className="mt-4 flex items-center gap-2 text-xs text-dark-700/40 group-hover:text-gojo-500 transition-colors">
+                <div className="mt-4 flex items-center gap-2 text-xs text-dark-700/40 dark:text-white/30 group-hover:text-gojo-500 transition-colors">
                   <svg
                     className="w-4 h-4"
                     fill="currentColor"

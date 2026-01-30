@@ -9,14 +9,14 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 px-6">
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${isInView ? "in-view" : ""}`}>
-        <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 mb-2">
+        <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 dark:text-white mb-2">
           Experience
         </h2>
         <div className="w-16 h-1 bg-gojo-500 rounded-full mb-10" />
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gojo-400 to-gojo-200 hidden sm:block" />
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gojo-400 to-gojo-200 dark:from-gojo-500 dark:to-gojo-700 hidden sm:block" />
 
           <div className="space-y-8">
             {profile.experience.map((exp, i) => (
@@ -27,29 +27,29 @@ export default function Experience() {
                 </div>
 
                 {/* Card */}
-                <div className="flex-1 bg-white rounded-2xl p-6 shadow-sm border border-ice-100 card-hover">
+                <div className="flex-1 bg-white dark:bg-dark-800 rounded-2xl p-6 shadow-sm border border-ice-100 dark:border-dark-600 card-hover">
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-lg font-bold text-dark-800">
+                      <h3 className="text-lg font-bold text-dark-800 dark:text-white">
                         {exp.title}
                       </h3>
-                      <p className="text-gojo-600 font-medium text-sm">
+                      <p className="text-gojo-600 dark:text-gojo-400 font-medium text-sm">
                         {exp.company}
                       </p>
                     </div>
                     <div className="text-right">
-                      <span className="inline-block px-3 py-1 bg-gojo-50 text-gojo-700 text-xs font-semibold rounded-full">
+                      <span className="inline-block px-3 py-1 bg-gojo-50 dark:bg-gojo-700/20 text-gojo-700 dark:text-gojo-300 text-xs font-semibold rounded-full">
                         {exp.type}
                       </span>
-                      <p className="text-xs text-dark-700/50 mt-1">
+                      <p className="text-xs text-dark-700/50 dark:text-white/40 mt-1">
                         {exp.period}
                       </p>
                     </div>
                   </div>
-                  <p className="text-sm text-dark-700/70 leading-relaxed">
+                  <p className="text-sm text-dark-700/70 dark:text-white/60 leading-relaxed">
                     {exp.description}
                   </p>
-                  <p className="text-xs text-dark-700/40 mt-3 flex items-center gap-1">
+                  <p className="text-xs text-dark-700/40 dark:text-white/30 mt-3 flex items-center gap-1">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                     {exp.location}
                   </p>

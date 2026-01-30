@@ -1,9 +1,14 @@
+"use client";
+
+import { useInView } from "@/hooks/useInView";
 import profile from "../../content/profile.json";
 
 export default function Experience() {
+  const { ref, isInView } = useInView();
+
   return (
-    <section id="experience" className="py-20 px-6 bg-ice-50">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="py-20 px-6">
+      <div ref={ref} className={`max-w-4xl mx-auto reveal ${isInView ? "in-view" : ""}`}>
         <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 mb-2">
           Experience
         </h2>
@@ -11,13 +16,13 @@ export default function Experience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gojo-200 hidden sm:block" />
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gojo-400 to-gojo-200 hidden sm:block" />
 
           <div className="space-y-8">
             {profile.experience.map((exp, i) => (
               <div key={i} className="relative flex gap-6">
                 {/* Timeline dot */}
-                <div className="hidden sm:flex flex-shrink-0 w-8 h-8 rounded-full bg-gojo-600 items-center justify-center z-10 mt-1">
+                <div className="hidden sm:flex flex-shrink-0 w-8 h-8 rounded-full bg-gojo-600 items-center justify-center z-10 mt-1 shadow-md shadow-gojo-600/20">
                   <div className="w-3 h-3 rounded-full bg-white" />
                 </div>
 
@@ -44,7 +49,8 @@ export default function Experience() {
                   <p className="text-sm text-dark-700/70 leading-relaxed">
                     {exp.description}
                   </p>
-                  <p className="text-xs text-dark-700/40 mt-3">
+                  <p className="text-xs text-dark-700/40 mt-3 flex items-center gap-1">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                     {exp.location}
                   </p>
                 </div>

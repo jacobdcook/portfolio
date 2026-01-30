@@ -71,25 +71,29 @@
       "name": "Blue Team SOC Monitoring Lab",
       "description": "SIEM deployment with Wazuh for threat detection and log analysis. Investigated auth and security logs to distinguish false positives from real brute-force attempts and documented incident timelines.",
       "url": "https://github.com/jacobdcook/blue-team-soc-monitoring-lab",
-      "category": "cybersecurity"
+      "category": "cybersecurity",
+      "featured": true
     },
     {
       "name": "Phishing Analysis Lab",
       "description": "Hands-on phishing email analysis: header inspection, link extraction, VirusTotal checks, triage reports. Analyzed phishing emails and created triage notes a SOC analyst could hand off to incident response.",
       "url": "https://github.com/jacobdcook/Phishing-Analysis-Lab",
-      "category": "cybersecurity"
+      "category": "cybersecurity",
+      "featured": true
     },
     {
       "name": "SOAR-lite – Incident Response Orchestrator",
       "description": "Security Orchestration: automated playbooks triggered by SIEM alerts. Built runbook automation for SOC incident response workflows.",
       "url": "https://github.com/jacobdcook/soar-incident-orchestrator",
-      "category": "cybersecurity"
+      "category": "cybersecurity",
+      "featured": true
     },
     {
       "name": "Azure Cloud Hardening Lab",
       "description": "Hardened infrastructure on Azure with Terraform. Focused on reducing attack surface and security misconfiguration through infrastructure-as-code.",
       "url": "https://github.com/jacobdcook/Azure-Cloud-Hardening-Lab",
-      "category": "cybersecurity"
+      "category": "cybersecurity",
+      "featured": true
     },
     {
       "name": "AI Log Auditor",

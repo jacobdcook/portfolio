@@ -1,9 +1,14 @@
+"use client";
+
+import { useInView } from "@/hooks/useInView";
 import profile from "../../content/profile.json";
 
 export default function About() {
+  const { ref, isInView } = useInView();
+
   return (
     <section id="about" className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div ref={ref} className={`max-w-4xl mx-auto reveal ${isInView ? "in-view" : ""}`}>
         <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 mb-2">
           About <span className="gradient-text">me</span>
         </h2>
@@ -22,7 +27,7 @@ export default function About() {
             {profile.education.map((edu, i) => (
               <div
                 key={i}
-                className="bg-ice-50 rounded-xl p-4 text-center border border-gojo-100"
+                className="bg-ice-50 rounded-xl p-4 text-center border border-gojo-100 hover:border-gojo-300 transition-colors"
               >
                 <div className="text-2xl mb-2">
                   {edu.icon === "shield"

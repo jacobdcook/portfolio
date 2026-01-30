@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { useInView } from "@/hooks/useInView";
 import profile from "../../content/profile.json";
 
 export default function Contact() {
@@ -12,6 +13,7 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
+  const { ref, isInView } = useInView();
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -38,8 +40,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6 bg-ice-50">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-20 px-6">
+      <div ref={ref} className={`max-w-4xl mx-auto reveal ${isInView ? "in-view" : ""}`}>
         <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 mb-2">
           Get in <span className="gradient-text">Touch</span>
         </h2>
@@ -131,7 +133,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, name: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 rounded-xl border border-ice-200 focus:border-gojo-400 focus:ring-2 focus:ring-gojo-100 outline-none transition-all text-sm"
+                  className="w-full px-4 py-2.5 rounded-xl border border-ice-200 focus:border-gojo-400 focus:ring-2 focus:ring-gojo-100 outline-none transition-all text-sm bg-frost"
                   placeholder="Your name"
                 />
               </div>
@@ -150,7 +152,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, email: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 rounded-xl border border-ice-200 focus:border-gojo-400 focus:ring-2 focus:ring-gojo-100 outline-none transition-all text-sm"
+                  className="w-full px-4 py-2.5 rounded-xl border border-ice-200 focus:border-gojo-400 focus:ring-2 focus:ring-gojo-100 outline-none transition-all text-sm bg-frost"
                   placeholder="you@example.com"
                 />
               </div>
@@ -168,7 +170,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })
                   }
-                  className="w-full px-4 py-2.5 rounded-xl border border-ice-200 focus:border-gojo-400 focus:ring-2 focus:ring-gojo-100 outline-none transition-all text-sm resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-ice-200 focus:border-gojo-400 focus:ring-2 focus:ring-gojo-100 outline-none transition-all text-sm resize-none bg-frost"
                   placeholder="What's on your mind?"
                 />
               </div>
@@ -176,7 +178,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full py-3 bg-gojo-600 text-white font-semibold rounded-xl hover:bg-gojo-700 transition-colors disabled:opacity-60"
+                className="w-full py-3 bg-gojo-600 text-white font-semibold rounded-xl hover:bg-gojo-700 transition-all disabled:opacity-60 shadow-md shadow-gojo-600/20 hover:shadow-lg"
               >
                 {status === "sending"
                   ? "Sending..."
@@ -200,7 +202,7 @@ export default function Contact() {
               </p>
               <a
                 href={`mailto:${profile.email}`}
-                className="px-6 py-3 bg-gojo-600 text-white font-semibold rounded-full hover:bg-gojo-700 transition-colors"
+                className="px-6 py-3 bg-gojo-600 text-white font-semibold rounded-full hover:bg-gojo-700 transition-all shadow-md shadow-gojo-600/20"
               >
                 Send an email
               </a>

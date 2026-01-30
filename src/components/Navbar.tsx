@@ -1,18 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navLinks = [
-  { label: "About me", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "My Projects", href: "#projects" },
-  { label: "Resume", href: "/resume.pdf" },
-  { label: "Get in Touch", href: "#contact" },
+  { label: "About me", href: "#about", section: "about" },
+  { label: "Experience", href: "#experience", section: "experience" },
+  { label: "My Projects", href: "#projects", section: "projects" },
+  { label: "Resume", href: "/resume.pdf", section: "" },
+  { label: "Get in Touch", href: "#contact", section: "contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -38,21 +40,31 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.href.startsWith("http") || link.href.startsWith("/") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") || link.href.startsWith("/") ? "noopener noreferrer" : undefined}
-              className={`text-sm font-medium transition-colors ${
-                link.label === "Resume"
-                  ? "font-semibold px-4 py-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700"
-                  : "text-dark-700/70 hover:text-gojo-500"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isExternal =
+              link.href.startsWith("/") || link.href.startsWith("http");
+            const isActive = link.section && activeSection === link.section;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className={`text-sm font-medium transition-all relative ${
+                  link.label === "Resume"
+                    ? "font-semibold px-4 py-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700"
+                    : isActive
+                    ? "text-gojo-600"
+                    : "text-dark-700/70 hover:text-gojo-500"
+                }`}
+              >
+                {link.label}
+                {isActive && link.label !== "Resume" && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gojo-500 rounded-full" />
+                )}
+              </a>
+            );
+          })}
         </div>
 
         {/* Mobile hamburger */}
@@ -82,22 +94,26 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-frost/95 backdrop-blur-md border-t border-ice-100 px-6 pb-6 pt-2">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.href.startsWith("http") || link.href.startsWith("/") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") || link.href.startsWith("/") ? "noopener noreferrer" : undefined}
-              className={`block py-3 transition-colors font-medium ${
-                link.label === "Resume"
-                  ? "text-center mt-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700"
-                  : "text-dark-700 hover:text-gojo-500"
-              }`}
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isExternal =
+              link.href.startsWith("/") || link.href.startsWith("http");
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className={`block py-3 transition-colors font-medium ${
+                  link.label === "Resume"
+                    ? "text-center mt-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700"
+                    : "text-dark-700 hover:text-gojo-500"
+                }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
       )}
     </nav>

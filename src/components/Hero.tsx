@@ -7,9 +7,16 @@ import profile from "../../content/profile.json";
 export default function Hero() {
   const [displayText, setDisplayText] = useState("");
   const [typingDone, setTypingDone] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const fullText = profile.heroGreeting;
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     let index = 0;
     const interval = setInterval(() => {
       if (index < fullText.length) {
@@ -22,7 +29,10 @@ export default function Hero() {
     }, 80);
 
     return () => clearInterval(interval);
-  }, [fullText]);
+  }, [fullText, mounted]);
+
+  // Always show full text after typing completes
+  const finalText = typingDone ? fullText : displayText;
 
   return (
     <section className="min-h-[80vh] flex items-center justify-center px-6 pt-20 pb-12 hero-gradient">
@@ -30,14 +40,13 @@ export default function Hero() {
         {/* Text */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-800 mb-4 animate-fade-in-up min-h-[1.2em]">
-            {displayText}
-            <span
-              className={
-                typingDone ? "cursor-fade text-gojo-500" : "cursor-blink text-gojo-500"
-              }
-            >
-              |
-            </span>
+            {finalText}
+            {!typingDone && (
+              <span className="cursor-blink text-gojo-500">|</span>
+            )}
+            {typingDone && (
+              <span className="cursor-fade text-gojo-500">|</span>
+            )}
           </h1>
           <p className="text-lg sm:text-xl text-dark-700/70 mb-8 max-w-xl animate-fade-in-up-delay-1 text-balance">
             {profile.tagline}

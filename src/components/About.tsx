@@ -14,6 +14,10 @@ export default function About() {
             {profile.bio}
           </p>
 
+          <p className="text-base text-gojo-700 font-medium mb-8 p-4 bg-gojo-50 rounded-xl border border-gojo-200">
+            {profile.targetRoles}
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {profile.education.map((edu, i) => (
               <div

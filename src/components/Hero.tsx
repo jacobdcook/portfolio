@@ -1,27 +1,45 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import profile from "../../content/profile.json";
 
 export default function Hero() {
+  const [displayText, setDisplayText] = useState("");
+  const fullText = profile.heroGreeting;
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < fullText.length) {
+        setDisplayText(fullText.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 80); // Adjust speed (ms per character)
+
+    return () => clearInterval(interval);
+  }, [fullText]);
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 pb-12">
+    <section className="min-h-[80vh] flex items-center justify-center px-6 pt-20 pb-12">
       <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
         {/* Text */}
         <div className="flex-1 text-center md:text-left">
-          <p className="text-gojo-500 font-semibold text-lg mb-2 animate-fade-in-up">
-            Hello!
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-800 mb-4 animate-fade-in-up-delay-1">
-            {profile.heroGreeting}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-800 mb-4 animate-fade-in-up min-h-[1.2em]">
+            {displayText}
+            <span className="animate-pulse">|</span>
           </h1>
-          <p className="text-lg sm:text-xl text-dark-700/70 mb-6 max-w-xl animate-fade-in-up-delay-2">
+          <p className="text-lg sm:text-xl text-dark-700/70 mb-6 max-w-xl animate-fade-in-up-delay-1">
             {profile.tagline}
           </p>
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start animate-fade-in-up-delay-3">
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start animate-fade-in-up-delay-2">
             <a
               href="#contact"
               className="px-6 py-3 bg-gojo-600 text-white font-semibold rounded-full hover:bg-gojo-700 transition-colors shadow-md hover:shadow-lg"
             >
-              Get in touch
+              Get in Touch
             </a>
             <a
               href="#projects"

@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { label: "About", href: "#about" },
+  { label: "About me", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "My Projects", href: "#projects" },
+  { label: "Resume", href: "/resume.pdf" },
+  { label: "Get in Touch", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -41,19 +42,17 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-dark-700/70 hover:text-gojo-500 transition-colors"
+              target={link.href.startsWith("http") || link.href.startsWith("/") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") || link.href.startsWith("/") ? "noopener noreferrer" : undefined}
+              className={`text-sm font-medium transition-colors ${
+                link.label === "Resume"
+                  ? "font-semibold px-4 py-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700"
+                  : "text-dark-700/70 hover:text-gojo-500"
+              }`}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold px-4 py-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700 transition-colors"
-          >
-            Resume
-          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -87,21 +86,18 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="block py-3 text-dark-700 hover:text-gojo-500 transition-colors font-medium"
+              target={link.href.startsWith("http") || link.href.startsWith("/") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") || link.href.startsWith("/") ? "noopener noreferrer" : undefined}
+              className={`block py-3 transition-colors font-medium ${
+                link.label === "Resume"
+                  ? "text-center mt-2 rounded-full bg-gojo-600 text-white hover:bg-gojo-700"
+                  : "text-dark-700 hover:text-gojo-500"
+              }`}
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block mt-2 text-center py-3 rounded-full bg-gojo-600 text-white font-semibold hover:bg-gojo-700 transition-colors"
-            onClick={() => setMobileOpen(false)}
-          >
-            Resume
-          </a>
         </div>
       )}
     </nav>

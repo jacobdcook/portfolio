@@ -90,12 +90,84 @@ create policy "Allow anonymous insert"
 
 ---
 
-## 4. Summary
+## 4. Email you when someone submits the contact form (free: Resend + Edge Function)
+
+Contacts are stored in the `contacts` table. To get an **email to jacobcookofficial@gmail.com** every time someone submits, use Resend (free tier: 100 emails/day) and a Supabase Edge Function.
+
+### 4.1 Resend (free signup)
+
+1. Go to [resend.com](https://resend.com) and sign up (free).
+2. In the dashboard, go to **API Keys** and create an API key. Copy it (starts with `re_`).
+3. You’ll add this as a secret in Supabase in step 4.3.
+
+### 4.2 Install Supabase CLI and link project
+
+**Do not use `npm install -g supabase`** — global install is not supported. Use one of these:
+
+**Option A — Project-local (recommended, no global install):**
+
+```bash
+cd portfolio
+npm install supabase --save-dev
+npx supabase login
+npx supabase link --project-ref mlmoptojfgkbreqxnccj
+```
+
+**Option B — Linux binary:** Download the `.deb` from [Supabase CLI releases](https://github.com/supabase/cli/releases), then `sudo dpkg -i supabase_*.deb`. Then run `supabase login` and `supabase link --project-ref mlmoptojfgkbreqxnccj` from the portfolio folder.
+
+**Option C — Homebrew (macOS/Linux):** `brew install supabase/tap/supabase`, then `supabase login` and `supabase link` from the portfolio folder.
+
+Use the project ref that matches your Supabase project URL (e.g. `mlmoptojfgkbreqxnccj`).
+
+### 4.3 Set Resend API key in Supabase
+
+```bash
+# From portfolio folder; use npx if you installed Supabase as dev dependency
+npx supabase secrets set RESEND_API_KEY=re_your_key_here
+```
+
+Replace `re_your_key_here` with your real Resend API key (from Resend → API Keys). Do **not** commit it or paste it in this file.
+
+### 4.4 Deploy the Edge Function
+
+From the **portfolio** folder (where `supabase/functions/send-contact-email` lives):
+
+```bash
+npx supabase functions deploy send-contact-email
+```
+
+The function will be live at:
+
+`https://mlmoptojfgkbreqxnccj.supabase.co/functions/v1/send-contact-email`
+
+### 4.5 Create a Database Webhook (so each new contact triggers the email)
+
+1. In **Supabase Dashboard** → **Database** → **Webhooks** (or **Integrations** → **Webhooks**).
+2. Click **Create a new webhook**.
+3. **Name:** e.g. `contact-form-email`.
+4. **Table:** `contacts`.
+5. **Events:** check **Insert** only.
+6. **Type:** HTTP Request.
+7. **URL:**  
+   `https://mlmoptojfgkbreqxnccj.supabase.co/functions/v1/send-contact-email`
+8. **HTTP method:** POST.
+9. **Headers:** add one header so the function can be called:
+   - **Name:** `Authorization`  
+   - **Value:** `Bearer YOUR_ANON_KEY`  
+   (Use your project’s anon key from **Settings** → **API** → anon public.)
+10. Save.
+
+After this, every new row in `contacts` will trigger the webhook, and the Edge Function will send an email to **jacobcookofficial@gmail.com** via Resend. Emails are sent from `onboarding@resend.dev` (Resend’s free sender); you can later verify your own domain in Resend if you want a custom “from” address.
+
+---
+
+## 5. Summary
 
 | What            | Where to put it        | Where NOT to put it   |
 |-----------------|------------------------|------------------------|
 | Vercel token    | `.env.local`           | Repo, SETUP.md, chat  |
 | Supabase anon   | `.env.local`           | Repo, SETUP.md, chat  |
+| Resend API key  | Supabase secrets       | Repo, SETUP.md, chat  |
 | Domain DNS      | Namecheap Advanced DNS | —                      |
 
 - **Run site locally:** `npm run dev` → http://localhost:3002  

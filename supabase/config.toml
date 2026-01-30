@@ -1,0 +1,10 @@
+# Supabase project config (used for Edge Function deploy).
+# Project ref is set when you run: supabase link --project-ref mlmoptojfgkbreqxnccj
+
+[api]
+enabled = true
+
+[functions]
+# send-contact-email is invoked by Database Webhook with anon key in header
+[functions.send-contact-email]
+verify_jwt = true

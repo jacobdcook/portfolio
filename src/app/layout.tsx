@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jacob Cook | Software Developer & Cybersecurity",
+  title: "Jacob Cook – SOC Analyst | Cybersecurity",
   description:
-    "Software developer focused on building secure, AI-driven solutions. MS Cybersecurity student at WGU, CompTIA Security+ certified.",
+    "Aspiring SOC analyst focused on threat detection and SIEM monitoring. MS Cybersecurity student at WGU, CompTIA Security+ certified.",
   openGraph: {
-    title: "Jacob Cook | Software Developer & Cybersecurity",
+    title: "Jacob Cook – SOC Analyst | Cybersecurity",
     description:
-      "Software developer focused on building secure, AI-driven solutions.",
+      "Aspiring SOC analyst focused on threat detection and SIEM monitoring.",
     type: "website",
     url: "https://jacobdcook.com",
   },

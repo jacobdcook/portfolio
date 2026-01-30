@@ -41,7 +41,7 @@ export default function Contact() {
     <section id="contact" className="py-20 px-6 bg-ice-50">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 mb-2">
-          Get in <span className="gradient-text">touch</span>
+          Get in <span className="gradient-text">Touch</span>
         </h2>
         <div className="w-16 h-1 bg-gojo-500 rounded-full mb-8" />
 
@@ -50,7 +50,7 @@ export default function Contact() {
           <div className="space-y-5">
             <p className="text-dark-700/70 leading-relaxed">
               I&apos;m always open to new opportunities, collaborations, or just
-              a friendly chat about cybersecurity and software development.
+              a friendly conversation about cybersecurity and security operations.
             </p>
 
             <div className="space-y-4">

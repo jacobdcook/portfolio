@@ -15,7 +15,7 @@
   "headshotPath": "/headshot.jpg",
   "skills": {
     "soc_blue_team": ["SIEM (Wazuh)", "Log analysis", "Alert triage", "Incident documentation", "Phishing analysis", "Basic SOAR/playbooks"],
-    "it_systems": ["Windows endpoints", "Basic Linux", "Azure", "System hardening", "Networking fundamentals"],
+    "it_systems": ["Windows endpoints", "Linux", "Azure", "System hardening", "Networking fundamentals"],
     "supporting": ["Python for automation", "Scripting", "Documentation", "Ticketing tools"]
   },
   "experience": [
@@ -55,7 +55,6 @@
       "degree": "B.S. in Computer Science",
       "school": "California State University, Sacramento",
       "period": "May 2020 – Dec 2024",
-      "detail": "GPA 3.5",
       "icon": "code"
     },
     {

@@ -1,7 +1,7 @@
 {
   "name": "Jacob Cook",
   "pronouns": "he/him",
-  "tagline": "Aspiring SOC Analyst | MS Cybersecurity @ WGU | CompTIA Security+ Certified",
+  "tagline": "Aspiring SOC Analyst | MS Cybersecurity @ WGU | CompTIA Security+ & CySA+ Certified",
   "heroGreeting": "Hi, I'm Jacob!",
   "heroSubtitle": "Aspiring SOC analyst focused on threat detection and security operations.",
   "bio": "I'm an aspiring SOC analyst based in California, focused on threat detection, SIEM monitoring, and incident triage. I'm currently pursuing my Master's in Cybersecurity at WGU and building hands-on experience through Wazuh-based home labs and phishing analysis projects. I love camping, mountain biking, and spending time with my dogs.",
@@ -61,7 +61,12 @@
       "degree": "CompTIA Security+ (SY0-701)",
       "school": "CompTIA",
       "period": "Certified Jan 2026",
-      "detail": "Score: 805/900",
+      "icon": "cert"
+    },
+    {
+      "degree": "CompTIA CySA+ (CS0-003)",
+      "school": "CompTIA",
+      "period": "Certified Feb 2026",
       "icon": "cert"
     }
   ],

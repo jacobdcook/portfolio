@@ -43,8 +43,8 @@ export default function About() {
                 <p className="text-xs text-gojo-600 dark:text-gojo-400 font-medium mt-1">
                   {edu.period}
                 </p>
-                {edu.detail && (
-                  <p className="text-xs text-dark-700/50 dark:text-white/40 mt-1">{edu.detail}</p>
+                {"detail" in edu && (
+                  <p className="text-xs text-dark-700/50 dark:text-white/40 mt-1">{(edu as { detail?: string }).detail}</p>
                 )}
               </div>
             ))}

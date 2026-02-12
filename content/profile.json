@@ -68,6 +68,12 @@
       "school": "CompTIA",
       "period": "Certified Feb 2026",
       "icon": "cert"
+    },
+    {
+      "degree": "CompTIA CSAP Stackable",
+      "school": "CompTIA",
+      "period": "Earned Feb 2026",
+      "icon": "cert"
     }
   ],
   "projects": [

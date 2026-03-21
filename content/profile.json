@@ -1,11 +1,11 @@
 {
   "name": "Jacob Cook",
   "pronouns": "he/him",
-  "tagline": "Aspiring SOC Analyst | MS Cybersecurity @ WGU | CompTIA Security+ & CySA+ Certified",
+  "tagline": "SOC-focused security engineer | MS Cybersecurity @ WGU | CompTIA Security+, CySA+, PenTest+, SecurityX",
   "heroGreeting": "Hi, I'm Jacob!",
-  "heroSubtitle": "Aspiring SOC analyst focused on threat detection and security operations.",
-  "bio": "I'm an aspiring SOC analyst based in California, focused on threat detection, SIEM monitoring, and incident triage. I'm currently pursuing my Master's in Cybersecurity at WGU and building hands-on experience through Wazuh-based home labs and phishing analysis projects. I love camping, mountain biking, and spending time with my dogs.",
-  "targetRoles": "Target roles: SOC Analyst, Security Operations Center Technician, IT Security Specialist, IT Support/Helpdesk (security-focused).",
+  "heroSubtitle": "Focused on threat detection, SIEM, and detection engineering.",
+  "bio": "I'm a California-based security engineer focused on threat detection, SIEM monitoring, and incident triage. I'm pursuing my Master's in Cybersecurity at WGU and building hands-on experience through Wazuh home labs, Okta-focused detection work, phishing analysis, and automation. I love camping, mountain biking, and spending time with my dogs.",
+  "targetRoles": "Target roles: SOC Analyst, Detection Engineering, Security Operations, IT Security Specialist, security-focused IT Support.",
   "location": "Sacramento, CA",
   "email": "jacobcookofficial@gmail.com",
   "phone": "(916) 314-5358",
@@ -14,7 +14,15 @@
   "resumePath": "/resume.pdf",
   "headshotPath": "/headshot.jpg",
   "skills": {
-    "soc_blue_team": ["SIEM (Wazuh)", "Log analysis", "Alert triage", "Incident documentation", "Phishing analysis", "Basic SOAR/playbooks"],
+    "soc_blue_team": [
+      "SIEM (Wazuh)",
+      "Log analysis",
+      "Alert triage",
+      "Incident documentation",
+      "Phishing analysis",
+      "Basic SOAR/playbooks",
+      "Detection engineering (lab)"
+    ],
     "it_systems": ["Windows endpoints", "Linux", "Azure", "System hardening", "Networking fundamentals"],
     "supporting": ["Python for automation", "Scripting", "Documentation", "Ticketing tools"]
   },
@@ -48,19 +56,25 @@
     {
       "degree": "Master's in Cybersecurity",
       "school": "Western Governors University",
-      "period": "Anticipated Jan 2028",
+      "period": "Expected Dec 2026",
       "icon": "shield"
     },
     {
       "degree": "B.S. in Computer Science",
       "school": "California State University, Sacramento",
-      "period": "May 2020 – Dec 2024",
+      "period": "2025",
       "icon": "code"
     },
     {
-      "degree": "CompTIA Security+ (SY0-701)",
+      "degree": "CompTIA SecurityX (CAS-005)",
       "school": "CompTIA",
-      "period": "Certified Jan 2026",
+      "period": "Certified 2026",
+      "icon": "cert"
+    },
+    {
+      "degree": "CompTIA PenTest+ (PT0-003)",
+      "school": "CompTIA",
+      "period": "Certified 2026",
       "icon": "cert"
     },
     {
@@ -70,9 +84,9 @@
       "icon": "cert"
     },
     {
-      "degree": "CompTIA CSAP Stackable",
+      "degree": "CompTIA Security+ (SY0-701)",
       "school": "CompTIA",
-      "period": "Earned Feb 2026",
+      "period": "Certified Jan 2026",
       "icon": "cert"
     }
   ],
@@ -81,6 +95,13 @@
       "name": "Blue Team SOC Monitoring Lab",
       "description": "SIEM deployment with Wazuh for threat detection and log analysis. Investigated auth and security logs to distinguish false positives from real brute-force attempts and documented incident timelines.",
       "url": "https://github.com/jacobdcook/blue-team-soc-monitoring-lab",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "Okta Detection Engine",
+      "description": "Python-based detection logic for Okta: MFA fatigue, impossible travel, and related identity threat scenarios.",
+      "url": "https://github.com/jacobdcook/okta-detection-engine",
       "category": "cybersecurity",
       "featured": true
     },
@@ -102,8 +123,7 @@
       "name": "Azure Cloud Hardening Lab",
       "description": "Hardened infrastructure on Azure with Terraform. Focused on reducing attack surface and security misconfiguration through infrastructure-as-code.",
       "url": "https://github.com/jacobdcook/Azure-Cloud-Hardening-Lab",
-      "category": "cybersecurity",
-      "featured": true
+      "category": "cybersecurity"
     },
     {
       "name": "AI Log Auditor",
@@ -121,6 +141,12 @@
       "name": "Network Traffic Behavioral Analyzer",
       "description": "C2 beaconing and data exfiltration detection with behavioral analysis and Groq AI for network threat detection.",
       "url": "https://github.com/jacobdcook/network-behavior-analyzer",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "TCM SOC 101 Lab Notes",
+      "description": "Lab notes from TCM Security SOC 101 course.",
+      "url": "https://github.com/jacobdcook/tcm-soc-101-lab-notes",
       "category": "cybersecurity"
     },
     {
@@ -142,6 +168,18 @@
       "category": "software"
     },
     {
+      "name": "Synapse",
+      "description": "Multi-model AI chat client for local Ollama models with a ChatGPT-style desktop UI.",
+      "url": "https://github.com/jacobdcook/synapse",
+      "category": "software"
+    },
+    {
+      "name": "Whisper Transcribe",
+      "description": "Fast local audio-to-text transcription using faster-whisper with CUDA GPU acceleration.",
+      "url": "https://github.com/jacobdcook/whisper-transcribe",
+      "category": "software"
+    },
+    {
       "name": "Daily Wellness Scheduler",
       "description": "Desktop app for supplements/electrolytes with gamification.",
       "url": "https://github.com/jacobdcook/daily-wellness-scheduler",
@@ -156,7 +194,7 @@
     {
       "name": "Smart Pantry Meal Planning",
       "description": "AI-powered meal planning from ingredients.",
-      "url": "https://github.com/jacobdcook/smart-pantry-meal-planner",
+      "url": "https://github.com/jacobdcook/Smart-Pantry-Meal-Planning",
       "category": "software"
     },
     {

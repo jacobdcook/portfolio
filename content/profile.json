@@ -4,7 +4,7 @@
   "tagline": "SOC-focused security engineer | MS Cybersecurity @ WGU | CompTIA Security+, CySA+, PenTest+, SecurityX",
   "heroGreeting": "Hi, I'm Jacob!",
   "heroSubtitle": "Focused on threat detection, SIEM, and detection engineering.",
-  "bio": "I'm a California-based security engineer focused on threat detection, SIEM monitoring, and incident triage. I'm pursuing my Master's in Cybersecurity at WGU and building hands-on experience through Wazuh home labs, Okta-focused detection work, phishing analysis, and automation. I love camping, mountain biking, and spending time with my dogs.",
+  "bio": "I'm a California-based security engineer focused on threat detection, SIEM monitoring, and incident triage. I'm pursuing my Master's in Cybersecurity at WGU (started Apr 2026, ~41% credited at entry from prior learning) and building hands-on experience through Wazuh, Okta-focused detection work, Azure and Terraform labs, phishing analysis, and automation. I love camping, mountain biking, and spending time with my dogs.",
   "targetRoles": "Target roles: SOC Analyst, Detection Engineering, Security Operations, IT Security Specialist, security-focused IT Support.",
   "location": "Sacramento, CA",
   "email": "jacobcookofficial@gmail.com",
@@ -21,27 +21,34 @@
       "Incident documentation",
       "Phishing analysis",
       "Basic SOAR/playbooks",
-      "Detection engineering (lab)"
+      "IdP detection (Okta, lab)"
     ],
-    "it_systems": ["Windows endpoints", "Linux", "Azure", "System hardening", "Networking fundamentals"],
+    "it_systems": [
+      "Windows endpoints",
+      "Linux",
+      "Azure",
+      "Terraform / IaC",
+      "System hardening",
+      "Networking fundamentals"
+    ],
     "supporting": ["Python for automation", "Scripting", "Documentation", "Ticketing tools"]
   },
   "experience": [
     {
       "title": "MS Cybersecurity Student",
       "company": "Western Governors University",
-      "period": "Jan 2026 – Present",
+      "period": "Apr 2026 – Present",
       "location": "Remote",
       "type": "Part-time",
-      "description": "Worked through SIEM labs using Wazuh to investigate simulated brute-force and malware incidents and document findings as Tier 1–style tickets. Practiced system hardening and log review on Windows/Linux to reduce alert noise and improve detection fidelity. Studying part-time while working full-time to transition into a professional SOC role."
+      "description": "MS program aligned to security operations and defense. Coursework and labs emphasize Wazuh SIEM investigations, Tier 1–style alert triage and documentation, Windows/Linux log review, and reducing noisy detections. Complemented by independent work in Okta-centric detection logic, Azure hardening with Terraform, and cloud security auditing. Studying part-time while working full-time toward a SOC or detection role."
     },
     {
-      "title": "SOC Home Lab – Wazuh SIEM",
-      "company": "Personal Projects",
-      "period": "Jan 2026",
+      "title": "Hands-on security labs (Wazuh, Okta, Azure)",
+      "company": "Personal / Portfolio",
+      "period": "2025 – Present",
       "location": "Sacramento, CA",
-      "type": "Personal",
-      "description": "Built a SOC home lab using Wazuh. Deployed full Wazuh stack (Manager, Indexer, Dashboard), wrote Python scripts to simulate brute-force attacks, tuned detection rules, and analyzed auth and security logs for incident triage."
+      "type": "Projects",
+      "description": "End-to-end lab work: deployed and tuned Wazuh (manager, indexer, dashboard) with Python-driven attack simulation and rule refinement; built Python Okta detection scenarios (e.g. MFA fatigue, impossible travel); hardened Azure with Terraform and practiced static/dynamic cloud auditing with remediation workflows. SOAR-style orchestration and network behavioral analysis round out the blue-team stack. Code and write-ups are public on GitHub (see My Projects)."
     },
     {
       "title": "Warehouse Operations – Engineering & Facilities Support",
@@ -56,7 +63,7 @@
     {
       "degree": "Master's in Cybersecurity",
       "school": "Western Governors University",
-      "period": "Expected Dec 2026",
+      "period": "Oct 1, 2026 or Apr 1, 2027 (1–2 terms)",
       "icon": "shield"
     },
     {
@@ -68,13 +75,13 @@
     {
       "degree": "CompTIA SecurityX (CAS-005)",
       "school": "CompTIA",
-      "period": "Certified 2026",
+      "period": "Certified Mar 26, 2026",
       "icon": "cert"
     },
     {
       "degree": "CompTIA PenTest+ (PT0-003)",
       "school": "CompTIA",
-      "period": "Certified 2026",
+      "period": "Certified Feb 26, 2026",
       "icon": "cert"
     },
     {
@@ -180,6 +187,18 @@
       "category": "software"
     },
     {
+      "name": "Career Development Tracker",
+      "description": "Desktop app for structured career plans: templates, progress tracking, and AI-assisted planning.",
+      "url": "https://github.com/jacobdcook/career-development-tracker",
+      "category": "software"
+    },
+    {
+      "name": "LinkedIn Feed Parser",
+      "description": "GUI tool to parse raw LinkedIn feed HTML into readable post summaries.",
+      "url": "https://github.com/jacobdcook/linkedin-feed-parser",
+      "category": "software"
+    },
+    {
       "name": "Daily Wellness Scheduler",
       "description": "Desktop app for supplements/electrolytes with gamification.",
       "url": "https://github.com/jacobdcook/daily-wellness-scheduler",
@@ -199,7 +218,7 @@
     },
     {
       "name": "AI Job Hunter",
-      "description": "Job search automation with AI scoring.",
+      "description": "Scrapes listings, filters roles, and uses AI to score fit (automation and LLM integration, personal tooling).",
       "url": "https://github.com/jacobdcook/ai-job-hunter",
       "category": "software"
     }

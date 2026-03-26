@@ -1,11 +1,11 @@
 {
   "name": "Jacob Cook",
   "pronouns": "he/him",
-  "tagline": "Detection & security automation engineer · MS Cybersecurity @ WGU · Security+, CySA+, PenTest+, SecurityX, CSIE · SIEM, detection, identity, cloud, SOAR",
+  "tagline": "Detection & security automation engineer · Threat hunting · Security automation · MS Cybersecurity @ WGU · SecurityX, CSIE · Python, SIEM, SOAR",
   "heroGreeting": "Hi, I'm Jacob!",
   "heroSubtitle": "Detection engineering, automation, and blue-team security.",
-  "bio": "Detection-focused security engineer with a BS in Computer Science and an MS in Cybersecurity in progress at WGU. I ship detection and automation work across SIEM, identity, and cloud: Sigma-style detection packs, Okta identity detections, SOAR-style orchestration, Terraform and Azure auditing, network behavior tooling, and SOC-style Wazuh labs. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
-  "targetRoles": "Open to: Detection Engineer, SOC Analyst, Security Automation Engineer, Threat Detection Analyst, Cybersecurity Analyst — Sacramento or remote.",
+  "bio": "Detection and security automation engineer focused on reducing alert noise, closing coverage gaps, and building repeatable triage paths. My public detection work includes behavioral Sigma rules with KV store enrichment and false-positive tuning, Okta identity threat detections, SOAR-style orchestration that cuts manual response steps, and network behavior analysis that catches C2 beaconing and exfiltration patterns. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
+  "targetRoles": "Open to: Detection Engineer, Threat Hunter, Security Automation Engineer, Vulnerability Management, Tier 2+ SOC — Sacramento or remote.",
   "location": "Sacramento, CA",
   "email": "jacobcookofficial@gmail.com",
   "phone": "(916) 314-5358",
@@ -39,7 +39,7 @@
       "period": "Jan 2026 – Present",
       "location": "Remote",
       "type": "Full-time",
-      "description": "MS Cybersecurity (competency-based): network defense, incident response, security architecture, and hands-on labs across SIEM, logging, and system hardening. Same outcome focus as my projects: detection coverage, alert quality, and triage paths. Full-time focus on the degree and transition into security: coursework, labs, public detection and automation projects, and job search. Building on Security+, CySA+, CSAP, PenTest+, SecurityX, and CSIE (stackable)."
+      "description": "MS Cybersecurity (competency-based): network defense, incident response, security architecture, and hands-on labs across SIEM, logging, and system hardening. Coursework and labs connected to public detection and automation work, with emphasis on detection coverage, alert quality, and triage paths."
     },
     {
       "title": "Security & Detection Projects (Open Source)",
@@ -47,7 +47,7 @@
       "period": "Oct 2025 – Present",
       "location": "Sacramento, CA",
       "type": "Part-time",
-      "description": "Ongoing public work: SIEM and SOC-style monitoring (Wazuh, log review, rule tuning, triage), detection-as-code (Sigma-style rules, playbooks, MITRE-aligned coverage), identity scenarios (Okta lab patterns), SOAR-style automation, cloud and Terraform auditing, and network behavior tooling. Outcomes: clearer coverage, less noisy alerting where possible, repeatable triage. Code on GitHub: jacobdcook."
+      "description": "Public detection and automation portfolio across SIEM, identity, cloud, and network security. Built behavioral Sigma detection pack for Stryker/Intune MDM attack with KV store enrichment and baseline-aware thresholds. Okta detection engine with false-positive tuning (3 benign use cases per detection). SOAR-style orchestration automating alert intake and response. Network behavior analyzer detecting C2 beaconing via behavioral baselines. Wazuh SIEM stack with rule tuning that tightened noisy coverage. Each project includes detection logic, false-positive analysis, and repeatable triage paths. Code at github.com/jacobdcook."
     },
     {
       "title": "Warehouse Operations – Engineering & Facilities Support",

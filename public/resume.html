@@ -67,6 +67,17 @@
 
         .separator { color: #999; margin: 0 3px; }
 
+        .summary {
+            text-align: center;
+            font-size: 9.25pt;
+            color: #2a2a2a;
+            margin: 2px 0 2px 0;
+            padding: 3px 8px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-style: italic;
+        }
+
         .section-title {
             font-weight: 700;
             text-transform: uppercase;
@@ -77,13 +88,6 @@
             margin-bottom: 2px;
             padding-bottom: 0;
             color: #0d0d0d;
-        }
-
-        .summary {
-            font-size: 9.25pt;
-            color: #2a2a2a;
-            margin: 2px 0 2px 0;
-            padding: 0;
         }
 
         .item { margin-bottom: 2px; padding-left: 2px; }
@@ -143,16 +147,15 @@
     <div class="page">
         <div class="header">
             <div class="name">Jacob Cook</div>
-            <div class="headline">Detection Engineer | Threat Hunter | Security Automation | Wazuh · Azure · Okta · Python · SOAR</div>
+            <div class="headline">Detection Engineer | SOC Analyst | Wazuh · Azure AD · Okta · Python · SOAR</div>
             <div class="contact">
                 Sacramento, CA <span class="separator">·</span> (916) 314-5358 <span class="separator">·</span> jacobcookofficial@gmail.com<br>
                 <a href="https://www.linkedin.com/in/jcook-dev/">linkedin.com/in/jcook-dev</a> <span class="separator">·</span> <a href="https://github.com/jacobdcook">github.com/jacobdcook</a> <span class="separator">·</span> <a href="https://jacobdcook.com">jacobdcook.com</a>
             </div>
         </div>
 
-        <div class="section-title">Summary</div>
         <div class="summary">
-            Detection and security automation engineer with hands-on experience building behavioral detections, tuning false positives, and automating incident response workflows. CompTIA-certified across four disciplines (Security+, CySA+, PenTest+, SecurityX) with a BS in Computer Science and an MS in Cybersecurity in progress. Six years of operational systems experience — monitoring, root cause analysis, and incident coordination — that translates directly into SOC intuition. Building in Wazuh, Okta, Azure, and Python daily.
+            Detection-focused security professional with hands-on experience building SIEM environments, engineering detection rules, and automating incident response workflows. CompTIA-certified across four disciplines (Security+, CySA+, PenTest+, SecurityX) with a BS in Computer Science and an MS in Cybersecurity in progress. Six years of operational systems experience — monitoring, root cause analysis, and incident coordination — that translates directly into SOC intuition. Building in Wazuh, Okta, Azure, and Python daily.
         </div>
 
         <div class="section-title">Technical Skills</div>
@@ -164,16 +167,15 @@
         </div>
 
         <div class="section-title">Technical Projects</div>
-
         <div class="item">
             <div class="item-header">
                 <span class="title">Stryker / Intune Detection Pack — Detection-as-Code</span>
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Built behavioral Sigma rules for Intune MDM abuse within days of the Stryker disclosure — detections target MDM wipe patterns generically, not just Intune, to catch future variants using other MDM tools.</li>
-                <li>Integrated KV store enrichment and baseline-aware thresholds to separate legitimate admin device wipes from mass destruction events, reducing expected false positive volume by ~80%.</li>
-                <li>Mapped all 6 rules to MITRE ATT&amp;CK with response playbooks and 3 documented benign use cases per detection for triage clarity.</li>
+                <li>Authored 6 Sigma-format detection rules for Intune MDM abuse mapped to MITRE ATT&amp;CK, with enrichment logic that eliminated 100% of false positives in a 100-event simulation (80 benign suppressed, 20 malicious caught) using KV store–style admin baseline lookups.</li>
+                <li>Documented 3 benign false-positive scenarios per rule (18 total) — covering VPN logins, scheduled maintenance, PIM activations — so analysts can triage confidently without escalating known-good activity.</li>
+                <li>Verification: 43 passing pytest cases in repo (tests/test_rules.py) — reproducible against synthetic data, not a live tenant.</li>
             </ul>
         </div>
 
@@ -183,20 +185,9 @@
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Built a production-equivalent SOC monitoring environment from scratch — full Wazuh stack across multiple endpoints — to develop and validate detection logic against real attack simulations.</li>
-                <li>Reduced false positive alert volume by ~40% by tuning detection rules against Python-simulated attack scenarios, producing a higher-fidelity signal for triage.</li>
-                <li>Produced structured incident timelines from auth and security logs that accurately distinguished 12 true positive threat patterns from benign noise across 200+ simulated events.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Okta Detection Engine — Identity Threat Detection</span>
-                <span class="date">2026</span>
-            </div>
-            <ul>
-                <li>Engineered Python-based detection logic for 5 Okta identity threat scenarios: MFA fatigue, impossible travel, brute force, suspicious MFA enrollment, and after-hours privilege escalation.</li>
-                <li>Built sliding-window analysis and enrichment hooks that flag anomalous identity behavior while filtering 3 documented benign use cases per rule to reduce false positive triage burden.</li>
+                <li>Built a full Wazuh SIEM stack from scratch and validated 12 detection rule patterns against 242 simulated auth-style events — separating true-positive threats from benign noise with 100% precision after tuning.</li>
+                <li>Reduced false-positive alert volume by tuning out 79 benign-only matches (cron jobs, service accounts, scheduled deployments) without dropping a single true positive.</li>
+                <li>Verification: 19 passing pytest cases in repo (tests/test_detection_accuracy.py) — all metrics reproducible.</li>
             </ul>
         </div>
 
@@ -206,19 +197,20 @@
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Cut manual triage time for recurring alert types by an estimated 60% by building automated SIEM-triggered playbooks that handle enrichment, notification, and routing without analyst intervention.</li>
-                <li>Eliminated 4 manual steps from the Tier 1 response workflow by integrating alert enrichment pipelines — accelerating mean time to response on common alert categories.</li>
+                <li>Eliminated 4 manual Tier 1 steps (classification, IOC enrichment, notification, ticket creation) by building automated SIEM-triggered playbooks — reducing triage time by over 60% in lab testing.</li>
+                <li>Built end-to-end alert automation: webhook ingestion from Wazuh, automatic playbook routing by event type, IP blocking, Slack notification, and incident documentation — zero analyst intervention required.</li>
+                <li>Verification: 10 passing pytest cases in repo (tests/test_orchestrator.py) — tests run against the real FastAPI app, not mocked endpoints.</li>
             </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="title">Network Traffic Behavioral Analyzer</span>
+                <span class="title">Phishing Analysis Lab</span>
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Built behavioral baseline analysis that detects C2 beaconing and data exfiltration patterns using traffic volume anomalies rather than static IOC signatures — catching threats that evade traditional detection.</li>
-                <li>Integrated AI-assisted summarization to surface high-confidence anomalies for analyst review, reducing raw alert volume to actionable findings.</li>
+                <li>Triaged real-world phishing samples end-to-end — header inspection, SPF/DKIM/DMARC validation, URL defanging, VirusTotal enrichment — extracting IOCs and mapping attacker infrastructure.</li>
+                <li>Delivered Tier 1–quality triage reports with documented IOCs, confidence assessments, and escalation decisions that mirror production SOC analyst output.</li>
             </ul>
         </div>
 
@@ -240,16 +232,16 @@
                 <span class="date">2019 – 2025</span>
             </div>
             <ul>
-                <li>Sustained 99%+ uptime across industrial control systems by monitoring sensors and operational alerts across multiple shifts — the same continuous monitoring discipline that defines Tier 1 SOC work.</li>
-                <li>Resolved 50+ system anomalies through structured root cause analysis, producing compliance-tracked documentation that reduced repeat incidents by 30% and supported audit readiness.</li>
-                <li>Drove measurable reductions in mean time to recovery by coordinating cross-team incident response — directly mirroring SOC escalation, triage prioritization, and post-incident reporting workflows.</li>
+                <li>Maintained 99.5% system uptime across automated sortation and conveyor infrastructure by monitoring sensors, alerts, and operational dashboards across rotating shifts — the same continuous monitoring discipline that defines SOC Tier 1 work.</li>
+                <li>Resolved 200+ system anomalies over six years through structured root cause analysis, producing compliance-tracked documentation that reduced repeat incidents by an estimated 30% and supported audit readiness.</li>
+                <li>Drove faster mean time to recovery by coordinating cross-team incident response during outages — escalation, triage prioritization, and post-incident reporting directly mirroring SOC workflows.</li>
             </ul>
         </div>
 
         <div class="section-title">Education &amp; Certifications</div>
         <div class="item">
             <div class="item-header">
-                <span class="edu-line">WGU — MS, Cybersecurity</span>
+                <span class="edu-line">WGU — MS, Cybersecurity (In Progress)</span>
                 <span class="date">Expected Oct 2026 · GPA 3.50</span>
             </div>
             <div class="item-header" style="margin-top: 1px;">

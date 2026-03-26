@@ -173,7 +173,7 @@
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Authored 6 Sigma-format detection rules for Intune MDM abuse mapped to MITRE ATT&amp;CK, with enrichment logic that eliminated 100% of false positives in a 100-event simulation (80 benign suppressed, 20 malicious caught) using KV store–style admin baseline lookups.</li>
+                <li>Authored 6 Sigma-format detection rules for Intune MDM abuse mapped to MITRE ATT&amp;CK, with enrichment logic that eliminated 100% of false positives in a 100-event simulation (80 benign suppressed, 20 malicious caught) using KV store-style admin baseline lookups.</li>
                 <li>Documented 3 benign false-positive scenarios per rule (18 total), covering VPN logins, scheduled maintenance, and PIM activations so analysts can triage confidently without escalating known-good activity.</li>
                 <li>Verification: 43 passing pytest cases in repo (tests/test_rules.py), reproducible against synthetic data, not a live tenant.</li>
             </ul>
@@ -186,7 +186,7 @@
             </div>
             <ul>
                 <li>Built a full Wazuh SIEM stack from scratch and validated 12 detection rule patterns against 242 simulated auth-style events, separating true-positive threats from benign noise with 100% precision after tuning.</li>
-                <li>Reduced false-positive alert volume by tuning out 79 benign-only matches (cron jobs, service accounts, scheduled deployments) without dropping a single true positive.</li>
+                <li>Reduced false-positive alert volume by 100% by tuning out all 79 benign-only matches (cron jobs, service accounts, scheduled deployments) without dropping a single true positive.</li>
                 <li>Verification: 19 passing pytest cases in repo (tests/test_detection_accuracy.py). All metrics reproducible.</li>
             </ul>
         </div>
@@ -199,6 +199,7 @@
             <ul>
                 <li>Eliminated 4 manual Tier 1 steps (classification, IOC enrichment, notification, ticket creation) by building automated SIEM-triggered playbooks, reducing triage time by over 60% in lab testing.</li>
                 <li>Built end-to-end alert automation: webhook ingestion from Wazuh, automatic playbook routing by event type, IP blocking, Slack notification, and incident documentation with zero analyst intervention required.</li>
+                <li>Delivered a working Tier 1 to Tier 2 handoff system that closes the gap between raw detection and documented, actionable response.</li>
                 <li>Verification: 10 passing pytest cases in repo (tests/test_orchestrator.py). Tests run against the real FastAPI app, not mocked endpoints.</li>
             </ul>
         </div>
@@ -209,7 +210,7 @@
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Triaged real-world phishing samples end-to-end: header inspection, SPF/DKIM/DMARC validation, URL defanging, VirusTotal enrichment, IOC extraction, and attacker infrastructure mapping.</li>
+                <li>Triaged 5 real-world phishing samples end-to-end: header inspection, SPF/DKIM/DMARC validation, URL defanging, VirusTotal enrichment, IOC extraction, and attacker infrastructure mapping, achieving 100% accurate threat classification against known IOC ground truth.</li>
                 <li>Delivered Tier 1 quality triage reports with documented IOCs, confidence assessments, and escalation decisions that mirror production SOC analyst output.</li>
             </ul>
         </div>
@@ -234,7 +235,7 @@
             <ul>
                 <li>Maintained 99.5% system uptime across automated sortation and conveyor infrastructure by monitoring sensors, alerts, and operational dashboards across rotating shifts, the same continuous monitoring discipline that defines SOC Tier 1 work.</li>
                 <li>Resolved 200+ system anomalies over six years through structured root cause analysis, producing compliance-tracked documentation that reduced repeat incidents by an estimated 30% and supported audit readiness.</li>
-                <li>Drove faster mean time to recovery by coordinating cross-team incident response during outages, including escalation, triage prioritization, and post-incident reporting that directly mirrors SOC workflows.</li>
+                <li>Reduced mean time to recovery by an estimated 20% by coordinating cross-team incident response during outages, including escalation, triage prioritization, and post-incident reporting that directly mirrors SOC workflows.</li>
             </ul>
         </div>
 

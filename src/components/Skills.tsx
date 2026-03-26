@@ -15,11 +15,11 @@ export default function Skills() {
         <div className="w-16 h-1 bg-gojo-500 rounded-full mb-8" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* SOC / Blue Team */}
+          {/* Detection & Blue Team */}
           <div className="bg-white dark:bg-dark-900 rounded-2xl p-6 shadow-sm border border-gojo-200 dark:border-dark-600 hover:shadow-md transition-shadow">
             <h3 className="text-xl font-bold text-gojo-700 dark:text-gojo-400 mb-4 flex items-center gap-2">
               <span className="w-9 h-9 rounded-lg bg-gojo-50 dark:bg-gojo-700/20 flex items-center justify-center text-lg">🛡️</span>
-              SOC / Blue Team
+              Detection & Blue Team
             </h3>
             <ul className="space-y-2.5">
               {profile.skills.soc_blue_team.map((skill, i) => (

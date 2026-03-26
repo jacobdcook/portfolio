@@ -1,11 +1,11 @@
 {
   "name": "Jacob Cook",
   "pronouns": "he/him",
-  "tagline": "SOC-focused security engineer | MS Cybersecurity @ WGU | CompTIA Security+, CySA+, PenTest+, SecurityX",
+  "tagline": "Detection & security automation engineer · MS Cybersecurity @ WGU · Security+, CySA+, PenTest+, SecurityX, CSIE · SIEM, detection, identity, cloud, SOAR",
   "heroGreeting": "Hi, I'm Jacob!",
-  "heroSubtitle": "Focused on threat detection, SIEM, and detection engineering.",
-  "bio": "I'm a California-based security engineer focused on threat detection, SIEM monitoring, and incident triage. I'm pursuing my Master's in Cybersecurity at WGU (started Apr 2026, ~41% credited at entry from prior learning) and building hands-on experience through Wazuh, Okta-focused detection work, Azure and Terraform labs, phishing analysis, and automation. I love camping, mountain biking, and spending time with my dogs.",
-  "targetRoles": "Target roles: SOC Analyst, Detection Engineering, Security Operations, IT Security Specialist, security-focused IT Support.",
+  "heroSubtitle": "Detection engineering, automation, and blue-team security.",
+  "bio": "Detection-focused security engineer with a BS in Computer Science and an MS in Cybersecurity in progress at WGU. I ship detection and automation work across SIEM, identity, and cloud: Sigma-style detection packs, Okta identity detections, SOAR-style orchestration, Terraform and Azure auditing, network behavior tooling, and SOC-style Wazuh labs. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
+  "targetRoles": "Open to: Detection Engineer, SOC Analyst, Security Automation Engineer, Threat Detection Analyst, Cybersecurity Analyst — Sacramento or remote.",
   "location": "Sacramento, CA",
   "email": "jacobcookofficial@gmail.com",
   "phone": "(916) 314-5358",
@@ -15,40 +15,39 @@
   "headshotPath": "/headshot.jpg",
   "skills": {
     "soc_blue_team": [
+      "Detection engineering (Sigma, MITRE-aligned labs)",
       "SIEM (Wazuh)",
-      "Log analysis",
-      "Alert triage",
-      "Incident documentation",
+      "Identity detection (Okta, lab)",
+      "Log analysis and alert triage",
+      "SOAR-style automation / playbooks",
       "Phishing analysis",
-      "Basic SOAR/playbooks",
-      "IdP detection (Okta, lab)"
+      "Network behavior and cloud auditing (lab)"
     ],
     "it_systems": [
-      "Windows endpoints",
-      "Linux",
-      "Azure",
+      "Windows and Linux",
+      "Azure (labs)",
       "Terraform / IaC",
       "System hardening",
       "Networking fundamentals"
     ],
-    "supporting": ["Python for automation", "Scripting", "Documentation", "Ticketing tools"]
+    "supporting": ["Python", "Scripting", "Documentation", "Git"]
   },
   "experience": [
     {
-      "title": "MS Cybersecurity Student",
+      "title": "MS Cybersecurity Graduate Student",
       "company": "Western Governors University",
-      "period": "Apr 2026 – Present",
+      "period": "Jan 2026 – Present",
       "location": "Remote",
-      "type": "Part-time",
-      "description": "MS program aligned to security operations and defense. Coursework and labs emphasize Wazuh SIEM investigations, Tier 1–style alert triage and documentation, Windows/Linux log review, and reducing noisy detections. Complemented by independent work in Okta-centric detection logic, Azure hardening with Terraform, and cloud security auditing. Studying part-time while working full-time toward a SOC or detection role."
+      "type": "Full-time",
+      "description": "MS Cybersecurity (competency-based): network defense, incident response, security architecture, and hands-on labs across SIEM, logging, and system hardening. Same outcome focus as my projects: detection coverage, alert quality, and triage paths. Full-time focus on the degree and transition into security: coursework, labs, public detection and automation projects, and job search. Building on Security+, CySA+, CSAP, PenTest+, SecurityX, and CSIE (stackable)."
     },
     {
-      "title": "Hands-on security labs (Wazuh, Okta, Azure)",
-      "company": "Personal / Portfolio",
-      "period": "2025 – Present",
+      "title": "Security & Detection Projects (Open Source)",
+      "company": "Personal Projects",
+      "period": "Oct 2025 – Present",
       "location": "Sacramento, CA",
-      "type": "Projects",
-      "description": "End-to-end lab work: deployed and tuned Wazuh (manager, indexer, dashboard) with Python-driven attack simulation and rule refinement; built Python Okta detection scenarios (e.g. MFA fatigue, impossible travel); hardened Azure with Terraform and practiced static/dynamic cloud auditing with remediation workflows. SOAR-style orchestration and network behavioral analysis round out the blue-team stack. Code and write-ups are public on GitHub (see My Projects)."
+      "type": "Part-time",
+      "description": "Ongoing public work: SIEM and SOC-style monitoring (Wazuh, log review, rule tuning, triage), detection-as-code (Sigma-style rules, playbooks, MITRE-aligned coverage), identity scenarios (Okta lab patterns), SOAR-style automation, cloud and Terraform auditing, and network behavior tooling. Outcomes: clearer coverage, less noisy alerting where possible, repeatable triage. Code on GitHub: jacobdcook."
     },
     {
       "title": "Warehouse Operations – Engineering & Facilities Support",
@@ -56,32 +55,32 @@
       "period": "Oct 2019 – 2025",
       "location": "Woodland, CA",
       "type": "Full-time",
-      "description": "Monitored and troubleshot warehouse systems and sensors for operational incidents. Performed root-cause analysis to resolve infrastructure issues and documented changes for compliance. Coordinated incident response with engineers to minimize system downtime. Experience in basic systems administration, change management, and operational security."
+      "description": "Supported Engineering and Facilities in a high-throughput warehouse: kept industrial and material-handling systems available, diagnosed hardware and integration failures quickly, and used root cause analysis and change control to reduce repeat outages and downtime. Monitoring, diagnostics, sensor-to-server validation, and change management aligned to operational and enterprise standards."
     }
   ],
   "education": [
     {
       "degree": "Master's in Cybersecurity",
       "school": "Western Governors University",
-      "period": "Oct 1, 2026 or Apr 1, 2027 (1–2 terms)",
+      "period": "Expected Oct 2026",
       "icon": "shield"
     },
     {
       "degree": "B.S. in Computer Science",
       "school": "California State University, Sacramento",
-      "period": "2025",
+      "period": "May 2020 – Dec 2024",
       "icon": "code"
     },
     {
       "degree": "CompTIA SecurityX (CAS-005)",
       "school": "CompTIA",
-      "period": "Certified Mar 26, 2026",
+      "period": "Certified Mar 2026",
       "icon": "cert"
     },
     {
       "degree": "CompTIA PenTest+ (PT0-003)",
       "school": "CompTIA",
-      "period": "Certified Feb 26, 2026",
+      "period": "Certified Feb 2026",
       "icon": "cert"
     },
     {
@@ -95,13 +94,19 @@
       "school": "CompTIA",
       "period": "Certified Jan 2026",
       "icon": "cert"
+    },
+    {
+      "degree": "CompTIA CSIE (Secure Infrastructure Expert)",
+      "school": "CompTIA",
+      "period": "Stackable credential",
+      "icon": "cert"
     }
   ],
   "projects": [
     {
-      "name": "Blue Team SOC Monitoring Lab",
-      "description": "SIEM deployment with Wazuh for threat detection and log analysis. Investigated auth and security logs to distinguish false positives from real brute-force attempts and documented incident timelines.",
-      "url": "https://github.com/jacobdcook/blue-team-soc-monitoring-lab",
+      "name": "Stryker / Intune Detection Pack",
+      "description": "Detection-as-code for Intune MDM abuse: Sigma rules, KV enrichment, MITRE-aligned playbooks. Inspired by March 2026 Stryker/Handala-style scenarios.",
+      "url": "https://github.com/jacobdcook/stryker-intune-detection-pack",
       "category": "cybersecurity",
       "featured": true
     },
@@ -113,41 +118,49 @@
       "featured": true
     },
     {
-      "name": "Phishing Analysis Lab",
-      "description": "Hands-on phishing email analysis: header inspection, link extraction, VirusTotal checks, triage reports. Analyzed phishing emails and created triage notes a SOC analyst could hand off to incident response.",
-      "url": "https://github.com/jacobdcook/Phishing-Analysis-Lab",
-      "category": "cybersecurity",
-      "featured": true
-    },
-    {
       "name": "SOAR-lite – Incident Response Orchestrator",
-      "description": "Security Orchestration: automated playbooks triggered by SIEM alerts. Built runbook automation for SOC incident response workflows.",
+      "description": "Lightweight SOAR: ingests alerts and runs automated playbooks for triage and response workflows.",
       "url": "https://github.com/jacobdcook/soar-incident-orchestrator",
       "category": "cybersecurity",
       "featured": true
     },
     {
+      "name": "Cloud Infrastructure Security Auditor",
+      "description": "Terraform and live Azure auditing: static analysis, dynamic resource checks, AI-assisted remediation for misconfigurations.",
+      "url": "https://github.com/jacobdcook/cloud-security-auditor",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "Network Traffic Behavioral Analyzer",
+      "description": "Behavioral analysis for C2 beaconing and data exfiltration patterns; Groq-assisted summarization for review.",
+      "url": "https://github.com/jacobdcook/network-behavior-analyzer",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "Blue Team SOC Monitoring Lab",
+      "description": "Wazuh SIEM stack: log ingestion, Python attack simulation, rule tuning, and triage on auth and security logs.",
+      "url": "https://github.com/jacobdcook/blue-team-soc-monitoring-lab",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "Phishing Analysis Lab",
+      "description": "Phishing triage: headers, links, VirusTotal, structured reports for handoff.",
+      "url": "https://github.com/jacobdcook/Phishing-Analysis-Lab",
+      "category": "cybersecurity"
+    },
+    {
       "name": "Azure Cloud Hardening Lab",
-      "description": "Hardened infrastructure on Azure with Terraform. Focused on reducing attack surface and security misconfiguration through infrastructure-as-code.",
+      "description": "Hardened Azure infrastructure with Terraform; reduced attack surface via IaC.",
       "url": "https://github.com/jacobdcook/Azure-Cloud-Hardening-Lab",
       "category": "cybersecurity"
     },
     {
       "name": "AI Log Auditor",
-      "description": "Tier 1 log triage automation: pattern matching + AI-powered threat detection for multi-format logs with PDF reports. Built to assist SOC analysts in faster incident detection.",
+      "description": "Log triage automation: pattern matching and AI-assisted analysis with PDF reporting for review.",
       "url": "https://github.com/jacobdcook/ai-log-auditor",
-      "category": "cybersecurity"
-    },
-    {
-      "name": "Cloud Infrastructure Security Auditor",
-      "description": "Terraform/Azure auditing, static/dynamic analysis, AI-powered remediation for cloud misconfigurations.",
-      "url": "https://github.com/jacobdcook/cloud-security-auditor",
-      "category": "cybersecurity"
-    },
-    {
-      "name": "Network Traffic Behavioral Analyzer",
-      "description": "C2 beaconing and data exfiltration detection with behavioral analysis and Groq AI for network threat detection.",
-      "url": "https://github.com/jacobdcook/network-behavior-analyzer",
       "category": "cybersecurity"
     },
     {
@@ -158,13 +171,13 @@
     },
     {
       "name": "Security+ Learning Lab",
-      "description": "Hands-on labs and notes for Security+ prep. Covers threat models, access control, cryptography, and incident response.",
+      "description": "Hands-on labs and notes for Security+ prep.",
       "url": "https://github.com/jacobdcook/security-plus-labs",
       "category": "cybersecurity"
     },
     {
       "name": "Cybersecurity Learning Journey",
-      "description": "Documentation of cybersecurity concepts, tools, and hands-on practice for blue team and SOC operations.",
+      "description": "Documentation of concepts, tools, and hands-on practice.",
       "url": "https://github.com/jacobdcook/cybersecurity-learning-journey",
       "category": "cybersecurity"
     },
@@ -218,7 +231,7 @@
     },
     {
       "name": "AI Job Hunter",
-      "description": "Scrapes listings, filters roles, and uses AI to score fit (automation and LLM integration, personal tooling).",
+      "description": "Scrapes listings, filters roles, and uses AI to score fit (personal tooling).",
       "url": "https://github.com/jacobdcook/ai-job-hunter",
       "category": "software"
     }

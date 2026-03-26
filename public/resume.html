@@ -155,7 +155,7 @@
         </div>
 
         <div class="summary">
-            Detection-focused security professional with hands-on experience building SIEM environments, engineering detection rules, and automating incident response workflows. CompTIA-certified across four disciplines (Security+, CySA+, PenTest+, SecurityX) with a BS in Computer Science and an MS in Cybersecurity in progress. Six years of operational systems experience — monitoring, root cause analysis, and incident coordination — that translates directly into SOC intuition. Building in Wazuh, Okta, Azure, and Python daily.
+            Detection-focused security professional with hands-on experience building SIEM environments, engineering detection rules, and automating incident response workflows. CompTIA-certified across four disciplines (Security+, CySA+, PenTest+, SecurityX) with a BS in Computer Science and an MS in Cybersecurity in progress. Six years of operational systems experience in monitoring, root cause analysis, and incident coordination that translates directly into SOC intuition. Building in Wazuh, Okta, Azure, and Python daily.
         </div>
 
         <div class="section-title">Technical Skills</div>
@@ -169,37 +169,37 @@
         <div class="section-title">Technical Projects</div>
         <div class="item">
             <div class="item-header">
-                <span class="title">Stryker / Intune Detection Pack — Detection-as-Code</span>
+                <span class="title">Stryker / Intune Detection Pack: Detection-as-Code</span>
                 <span class="date">2026</span>
             </div>
             <ul>
                 <li>Authored 6 Sigma-format detection rules for Intune MDM abuse mapped to MITRE ATT&amp;CK, with enrichment logic that eliminated 100% of false positives in a 100-event simulation (80 benign suppressed, 20 malicious caught) using KV store–style admin baseline lookups.</li>
-                <li>Documented 3 benign false-positive scenarios per rule (18 total) — covering VPN logins, scheduled maintenance, PIM activations — so analysts can triage confidently without escalating known-good activity.</li>
-                <li>Verification: 43 passing pytest cases in repo (tests/test_rules.py) — reproducible against synthetic data, not a live tenant.</li>
+                <li>Documented 3 benign false-positive scenarios per rule (18 total), covering VPN logins, scheduled maintenance, and PIM activations so analysts can triage confidently without escalating known-good activity.</li>
+                <li>Verification: 43 passing pytest cases in repo (tests/test_rules.py), reproducible against synthetic data, not a live tenant.</li>
             </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="title">Blue Team SOC Monitoring Lab — Wazuh SIEM</span>
+                <span class="title">Blue Team SOC Monitoring Lab: Wazuh SIEM</span>
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Built a full Wazuh SIEM stack from scratch and validated 12 detection rule patterns against 242 simulated auth-style events — separating true-positive threats from benign noise with 100% precision after tuning.</li>
+                <li>Built a full Wazuh SIEM stack from scratch and validated 12 detection rule patterns against 242 simulated auth-style events, separating true-positive threats from benign noise with 100% precision after tuning.</li>
                 <li>Reduced false-positive alert volume by tuning out 79 benign-only matches (cron jobs, service accounts, scheduled deployments) without dropping a single true positive.</li>
-                <li>Verification: 19 passing pytest cases in repo (tests/test_detection_accuracy.py) — all metrics reproducible.</li>
+                <li>Verification: 19 passing pytest cases in repo (tests/test_detection_accuracy.py). All metrics reproducible.</li>
             </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="title">SOAR-lite — Incident Response Orchestrator</span>
+                <span class="title">SOAR-lite: Incident Response Orchestrator</span>
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Eliminated 4 manual Tier 1 steps (classification, IOC enrichment, notification, ticket creation) by building automated SIEM-triggered playbooks — reducing triage time by over 60% in lab testing.</li>
-                <li>Built end-to-end alert automation: webhook ingestion from Wazuh, automatic playbook routing by event type, IP blocking, Slack notification, and incident documentation — zero analyst intervention required.</li>
-                <li>Verification: 10 passing pytest cases in repo (tests/test_orchestrator.py) — tests run against the real FastAPI app, not mocked endpoints.</li>
+                <li>Eliminated 4 manual Tier 1 steps (classification, IOC enrichment, notification, ticket creation) by building automated SIEM-triggered playbooks, reducing triage time by over 60% in lab testing.</li>
+                <li>Built end-to-end alert automation: webhook ingestion from Wazuh, automatic playbook routing by event type, IP blocking, Slack notification, and incident documentation with zero analyst intervention required.</li>
+                <li>Verification: 10 passing pytest cases in repo (tests/test_orchestrator.py). Tests run against the real FastAPI app, not mocked endpoints.</li>
             </ul>
         </div>
 
@@ -209,43 +209,43 @@
                 <span class="date">2026</span>
             </div>
             <ul>
-                <li>Triaged real-world phishing samples end-to-end — header inspection, SPF/DKIM/DMARC validation, URL defanging, VirusTotal enrichment — extracting IOCs and mapping attacker infrastructure.</li>
-                <li>Delivered Tier 1–quality triage reports with documented IOCs, confidence assessments, and escalation decisions that mirror production SOC analyst output.</li>
+                <li>Triaged real-world phishing samples end-to-end: header inspection, SPF/DKIM/DMARC validation, URL defanging, VirusTotal enrichment, IOC extraction, and attacker infrastructure mapping.</li>
+                <li>Delivered Tier 1 quality triage reports with documented IOCs, confidence assessments, and escalation decisions that mirror production SOC analyst output.</li>
             </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="title">G3-GPT — Industry-Sponsored Enterprise AI Platform (Team of 6)</span>
+                <span class="title">G3-GPT: Industry-Sponsored Enterprise AI Platform (Team of 6)</span>
                 <span class="date">2024</span>
             </div>
             <ul>
-                <li>Secured a production AI platform for corporate stakeholders by engineering RBAC and Azure AD SSO — enforcing data privacy requirements that enabled executive-level adoption.</li>
-                <li>Shipped an enterprise-grade platform on deadline as part of a six-person team under direct industry sponsor oversight — zero critical security findings at delivery.</li>
+                <li>Secured a production AI platform for corporate stakeholders by engineering RBAC and Azure AD SSO, enforcing data privacy requirements that enabled executive-level adoption.</li>
+                <li>Shipped an enterprise-grade platform on deadline as part of a six-person team under direct industry sponsor oversight with zero critical security findings at delivery.</li>
             </ul>
         </div>
 
         <div class="section-title">Professional Experience</div>
         <div class="item">
             <div class="item-header">
-                <span class="title">Target Distribution Center <span style="font-weight:600;">|</span> Operations Engineer — Systems Monitoring &amp; Incident Response</span>
+                <span class="title">Target Distribution Center <span style="font-weight:600;">|</span> Operations Engineer: Systems Monitoring &amp; Incident Response</span>
                 <span class="date">2019 – 2025</span>
             </div>
             <ul>
-                <li>Maintained 99.5% system uptime across automated sortation and conveyor infrastructure by monitoring sensors, alerts, and operational dashboards across rotating shifts — the same continuous monitoring discipline that defines SOC Tier 1 work.</li>
+                <li>Maintained 99.5% system uptime across automated sortation and conveyor infrastructure by monitoring sensors, alerts, and operational dashboards across rotating shifts, the same continuous monitoring discipline that defines SOC Tier 1 work.</li>
                 <li>Resolved 200+ system anomalies over six years through structured root cause analysis, producing compliance-tracked documentation that reduced repeat incidents by an estimated 30% and supported audit readiness.</li>
-                <li>Drove faster mean time to recovery by coordinating cross-team incident response during outages — escalation, triage prioritization, and post-incident reporting directly mirroring SOC workflows.</li>
+                <li>Drove faster mean time to recovery by coordinating cross-team incident response during outages, including escalation, triage prioritization, and post-incident reporting that directly mirrors SOC workflows.</li>
             </ul>
         </div>
 
         <div class="section-title">Education &amp; Certifications</div>
         <div class="item">
             <div class="item-header">
-                <span class="edu-line">WGU — MS, Cybersecurity (In Progress)</span>
+                <span class="edu-line">WGU | MS, Cybersecurity (In Progress)</span>
                 <span class="date">Expected Oct 2026 · GPA 3.50</span>
             </div>
             <div class="item-header" style="margin-top: 1px;">
-                <span class="edu-line">CSUS — BS, Computer Science</span>
+                <span class="edu-line">CSUS | BS, Computer Science</span>
                 <span class="date">Jan 2025 · GPA 3.50</span>
             </div>
             <div class="cert-line" style="margin-top: 2px;">

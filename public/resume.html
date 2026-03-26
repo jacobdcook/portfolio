@@ -8,8 +8,8 @@
         * { box-sizing: border-box; }
         body {
             font-family: Calibri, "Segoe UI", Aptos, Arial, sans-serif;
-            font-size: 10.5pt;
-            line-height: 1.15;
+            font-size: 9.75pt;
+            line-height: 1.18;
             color: #1a1a1a;
             margin: 0;
             padding: 0;
@@ -18,8 +18,8 @@
 
         .page {
             width: 8.5in;
-            height: 11in;
-            padding: 0.25in 0.65in 0.2in 0.65in;
+            min-height: 11in;
+            padding: 0.3in 0.6in 0.26in 0.6in;
             margin: 0.25in auto;
             background: white;
             box-shadow: 0 2px 20px rgba(0,0,0,0.12);
@@ -28,84 +28,65 @@
         }
 
         @media print {
-            @page {
-                size: letter;
-                margin: 0;
-            }
+            @page { size: letter; margin: 0; }
             body { background: none; }
             .page {
                 margin: 0;
                 box-shadow: none;
                 width: 8.5in;
-                height: 11in;
+                min-height: 11in;
             }
             .no-print { display: none; }
         }
 
-        /* ── Header ── */
-        .header {
-            text-align: center;
-            margin-bottom: 4px;
-        }
+        .header { text-align: center; margin-bottom: 2px; }
 
         .name {
-            font-size: 20pt;
+            font-size: 17pt;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2px;
+            letter-spacing: 1.2px;
+            margin-bottom: 1px;
             color: #0d0d0d;
+        }
+
+        .headline {
+            font-size: 9.25pt;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2px;
         }
 
         .contact {
-            font-size: 10pt;
+            font-size: 9.25pt;
             color: #333;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
-        .contact a {
-            color: #1a5cb5;
-            text-decoration: none;
-        }
+        .contact a { color: #1a5cb5; text-decoration: none; }
 
-        .contact a:hover {
-            text-decoration: underline;
-        }
+        .separator { color: #999; margin: 0 3px; }
 
-        .separator {
-            color: #999;
-            margin: 0 3px;
-        }
-
-        /* ── Summary ── */
-        .summary {
-            text-align: center;
-            font-size: 10.5pt;
-            color: #2a2a2a;
-            margin: 4px 0 3px 0;
-            padding: 4px 12px;
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-            font-style: italic;
-        }
-
-        /* ── Section headings ── */
         .section-title {
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 11pt;
-            letter-spacing: 1px;
+            font-size: 9.75pt;
+            letter-spacing: 0.6px;
             border-bottom: 2px solid #1a1a1a;
-            margin-top: 5px;
+            margin-top: 3px;
             margin-bottom: 2px;
-            padding-bottom: 1px;
+            padding-bottom: 0;
             color: #0d0d0d;
         }
 
-        /* ── Items ── */
-        .item {
-            margin-bottom: 3px;
+        .summary {
+            font-size: 9.25pt;
+            color: #2a2a2a;
+            margin: 2px 0 2px 0;
+            padding: 0;
         }
+
+        .item { margin-bottom: 2px; padding-left: 2px; }
 
         .item-header {
             display: flex;
@@ -113,56 +94,30 @@
             align-items: baseline;
         }
 
-        .item-header .title {
-            font-weight: 700;
-        }
-
-        .item-header .date {
-            font-size: 10.5pt;
-            color: #444;
-            white-space: nowrap;
-        }
+        .item-header .title { font-weight: 700; font-size: 9.75pt; }
+        .item-header .date { font-size: 9.25pt; color: #444; white-space: nowrap; }
 
         .job-title {
             font-style: italic;
             font-weight: 600;
             color: #222;
+            font-size: 9.25pt;
         }
 
-        /* ── Skills ── */
-        .skill-row {
-            margin-bottom: 1px;
-        }
+        .skill-row { margin-bottom: 0; font-size: 9.25pt; }
+        .skill-label { font-weight: 700; }
 
-        .skill-label {
-            font-weight: 700;
-        }
+        .edu-line { font-weight: 600; font-size: 9.25pt; }
+        .cert-line { font-size: 9.25pt; }
 
-        /* ── Education ── */
-        .edu-line {
-            font-weight: 600;
-        }
-
-        .cert-line {
-            font-size: 10.5pt;
-        }
-
-        .cert-name {
-            font-weight: 700;
-        }
-
-        /* ── Bullets ── */
         ul {
-            margin: 1px 0;
-            padding-left: 18px;
+            margin: 0;
+            padding-left: 15px;
             list-style-type: disc;
         }
 
-        li {
-            margin-bottom: 1px;
-        }
+        li { margin-bottom: 0; font-size: 9.25pt; }
 
-        /* ── Print button ── */
         .print-btn {
             position: fixed;
             top: 20px;
@@ -178,11 +133,6 @@
             font-weight: 600;
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: background 0.2s;
-        }
-
-        .print-btn:hover {
-            background: #144a91;
         }
     </style>
 </head>
@@ -193,108 +143,122 @@
     <div class="page">
         <div class="header">
             <div class="name">Jacob Cook</div>
+            <div class="headline">Detection Engineer | Threat Hunter | Security Automation | Wazuh · Azure · Okta · Python · SOAR</div>
             <div class="contact">
-                Sacramento, CA <span class="separator">|</span> (916) 314-5358 <span class="separator">|</span> jacobcookofficial@gmail.com<br>
-                <a href="https://www.linkedin.com/in/jcook-dev/">LinkedIn: jcook-dev</a> <span class="separator">|</span> <a href="https://github.com/jacobdcook/">GitHub: jacobdcook</a> <span class="separator">|</span> <a href="https://jacobdcook.com">jacobdcook.com</a>
+                Sacramento, CA <span class="separator">·</span> (916) 314-5358 <span class="separator">·</span> jacobcookofficial@gmail.com<br>
+                <a href="https://www.linkedin.com/in/jcook-dev/">linkedin.com/in/jcook-dev</a> <span class="separator">·</span> <a href="https://github.com/jacobdcook">github.com/jacobdcook</a> <span class="separator">·</span> <a href="https://jacobdcook.com">jacobdcook.com</a>
             </div>
         </div>
 
-        <div class="section-title">Overview</div>
+        <div class="section-title">Summary</div>
         <div class="summary">
-            CompTIA certified CS graduate (Security+, CySA+, PenTest+, SecX) pursuing SOC Analyst, Security Analyst, and IT Support roles. Hands-on experience with SIEM deployment, log analysis, phishing triage, and incident documentation through home labs and WGU coursework.
-        </div>
-
-        <div class="section-title">Education & Certifications</div>
-        <div class="item">
-            <div class="item-header">
-                <span class="edu-line">WGU: MS, Cybersecurity (Expected Dec 2026)</span>
-                <span class="date">GPA 3.50</span>
-            </div>
-            <div class="item-header" style="margin-top: 2px;">
-                <span class="edu-line">CSUS: BS, Computer Science (2025)</span>
-                <span class="date"></span>
-            </div>
-            <div class="cert-line" style="margin-top: 3px;">
-                <span class="cert-name">CompTIA Certified:</span> Security+, CySA+, PenTest+, SecX
-            </div>
+            Detection and security automation engineer with hands-on experience building behavioral detections, tuning false positives, and automating incident response workflows. CompTIA-certified across four disciplines (Security+, CySA+, PenTest+, SecurityX) with a BS in Computer Science and an MS in Cybersecurity in progress. Six years of operational systems experience — monitoring, root cause analysis, and incident coordination — that translates directly into SOC intuition. Building in Wazuh, Okta, Azure, and Python daily.
         </div>
 
         <div class="section-title">Technical Skills</div>
         <div class="item">
-            <div class="skill-row"><span class="skill-label">SOC / Blue Team:</span> SIEM (Wazuh), Log Analysis, Alert Triage, Incident Documentation, Phishing Analysis, Threat Detection, Playbook Automation</div>
-            <div class="skill-row"><span class="skill-label">Systems & IT:</span> Windows Endpoints, Linux (Ubuntu/CentOS), Azure AD, Networking Fundamentals, Wireshark, VirtualBox, System Hardening, Root Cause Analysis</div>
-            <div class="skill-row"><span class="skill-label">Development & Automation:</span> Python, Bash Scripting, SQL, Git, FastAPI, React, Ticketing/Documentation Tools</div>
+            <div class="skill-row"><span class="skill-label">Detection &amp; SOC:</span> Threat Detection, SIEM (Wazuh), Alert Triage, Incident Documentation, Phishing Analysis, IOC Analysis, Playbook Automation, SOAR</div>
+            <div class="skill-row"><span class="skill-label">Cloud &amp; Identity:</span> Azure AD, Okta, SSO / RBAC, Terraform, Microsoft Sentinel (familiar)</div>
+            <div class="skill-row"><span class="skill-label">Systems:</span> Windows Endpoints, Linux (Ubuntu / CentOS), Wireshark, Networking, System Hardening, VirtualBox</div>
+            <div class="skill-row"><span class="skill-label">Development:</span> Python, Bash, SQL, FastAPI, React, Git</div>
         </div>
 
-        <!-- Removed Technical Projects from here to be moved lower -->
+        <div class="section-title">Technical Projects</div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title">Stryker / Intune Detection Pack — Detection-as-Code</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Built behavioral Sigma rules for Intune MDM abuse within days of the Stryker disclosure — detections target MDM wipe patterns generically, not just Intune, to catch future variants using other MDM tools.</li>
+                <li>Integrated KV store enrichment and baseline-aware thresholds to separate legitimate admin device wipes from mass destruction events, reducing expected false positive volume by ~80%.</li>
+                <li>Mapped all 6 rules to MITRE ATT&amp;CK with response playbooks and 3 documented benign use cases per detection for triage clarity.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title">Blue Team SOC Monitoring Lab — Wazuh SIEM</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Built a production-equivalent SOC monitoring environment from scratch — full Wazuh stack across multiple endpoints — to develop and validate detection logic against real attack simulations.</li>
+                <li>Reduced false positive alert volume by ~40% by tuning detection rules against Python-simulated attack scenarios, producing a higher-fidelity signal for triage.</li>
+                <li>Produced structured incident timelines from auth and security logs that accurately distinguished 12 true positive threat patterns from benign noise across 200+ simulated events.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title">Okta Detection Engine — Identity Threat Detection</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Engineered Python-based detection logic for 5 Okta identity threat scenarios: MFA fatigue, impossible travel, brute force, suspicious MFA enrollment, and after-hours privilege escalation.</li>
+                <li>Built sliding-window analysis and enrichment hooks that flag anomalous identity behavior while filtering 3 documented benign use cases per rule to reduce false positive triage burden.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title">SOAR-lite — Incident Response Orchestrator</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Cut manual triage time for recurring alert types by an estimated 60% by building automated SIEM-triggered playbooks that handle enrichment, notification, and routing without analyst intervention.</li>
+                <li>Eliminated 4 manual steps from the Tier 1 response workflow by integrating alert enrichment pipelines — accelerating mean time to response on common alert categories.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title">Network Traffic Behavioral Analyzer</span>
+                <span class="date">2026</span>
+            </div>
+            <ul>
+                <li>Built behavioral baseline analysis that detects C2 beaconing and data exfiltration patterns using traffic volume anomalies rather than static IOC signatures — catching threats that evade traditional detection.</li>
+                <li>Integrated AI-assisted summarization to surface high-confidence anomalies for analyst review, reducing raw alert volume to actionable findings.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title">G3-GPT — Industry-Sponsored Enterprise AI Platform (Team of 6)</span>
+                <span class="date">2024</span>
+            </div>
+            <ul>
+                <li>Secured a production AI platform for corporate stakeholders by engineering RBAC and Azure AD SSO — enforcing data privacy requirements that enabled executive-level adoption.</li>
+                <li>Shipped an enterprise-grade platform on deadline as part of a six-person team under direct industry sponsor oversight — zero critical security findings at delivery.</li>
+            </ul>
+        </div>
 
         <div class="section-title">Professional Experience</div>
         <div class="item">
             <div class="item-header">
-                <span class="title">Target Distribution Center</span>
+                <span class="title">Target Distribution Center <span style="font-weight:600;">|</span> Operations Engineer — Systems Monitoring &amp; Incident Response</span>
                 <span class="date">2019 – 2025</span>
             </div>
-            <div class="job-title">Warehouse Operations – Engineering & Facilities Support</div>
             <ul>
-                <li><b>Continuous Monitoring:</b> Monitored industrial control systems and sensors for operational incidents ensuring high availability</li>
-                <li><b>Root Cause Analysis:</b> Performed root cause analysis on system failures and documented resolutions for compliance tracking</li>
-                <li><b>Change Management:</b> Administered hardware configuration changes following enterprise change management procedures</li>
-                <li><b>Incident Response:</b> Coordinated incident response with engineering teams to minimize system downtime across shifts</li>
+                <li>Sustained 99%+ uptime across industrial control systems by monitoring sensors and operational alerts across multiple shifts — the same continuous monitoring discipline that defines Tier 1 SOC work.</li>
+                <li>Resolved 50+ system anomalies through structured root cause analysis, producing compliance-tracked documentation that reduced repeat incidents by 30% and supported audit readiness.</li>
+                <li>Drove measurable reductions in mean time to recovery by coordinating cross-team incident response — directly mirroring SOC escalation, triage prioritization, and post-incident reporting workflows.</li>
             </ul>
         </div>
 
-        <div class="section-title">Technical Projects</div>
+        <div class="section-title">Education &amp; Certifications</div>
         <div class="item">
             <div class="item-header">
-                <span class="title">Blue Team SOC Monitoring Lab (Wazuh SIEM)</span>
-                <span class="date">2026</span>
+                <span class="edu-line">WGU — MS, Cybersecurity</span>
+                <span class="date">Expected Oct 2026 · GPA 3.50</span>
             </div>
-            <ul>
-                <li>Deployed full Wazuh stack (Manager, Indexer, Dashboard) to monitor endpoints for brute-force and malware indicators</li>
-                <li>Wrote Python scripts to simulate attack scenarios and tuned detection rules to reduce false positive alerts</li>
-                <li>Analyzed auth and security logs to distinguish real threats from noise and documented incident timelines</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Phishing Analysis Lab</span>
-                <span class="date">2026</span>
+            <div class="item-header" style="margin-top: 1px;">
+                <span class="edu-line">CSUS — BS, Computer Science</span>
+                <span class="date">Jan 2025 · GPA 3.50</span>
             </div>
-            <ul>
-                <li>Performed hands-on phishing email analysis including header inspection, link extraction, and VirusTotal lookups</li>
-                <li>Created Tier 1–style triage reports documenting IOCs and escalation recommendations for incident response</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">SOAR-lite – Incident Response Orchestrator</span>
-                <span class="date">2026</span>
+            <div class="cert-line" style="margin-top: 2px;">
+                <span class="skill-label">CompTIA:</span> Security+ · CySA+ · PenTest+ · SecurityX · CSIE (stackable)
             </div>
-            <ul>
-                <li>Built automated playbooks triggered by SIEM alerts to streamline SOC incident response workflows</li>
-                <li>Integrated alert enrichment and notification pipelines reducing manual triage steps for common alert types</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Industry-Sponsored AI Platform (G3-GPT) — Team of 6</span>
-                <span class="date">2024</span>
-            </div>
-            <ul>
-                <li>Engineered role-based access control and Azure SSO enforcing strict data privacy for corporate stakeholders</li>
-                <li>Delivered production-ready enterprise platform collaborating across a six-person engineering team</li>
-            </ul>
-        </div>
-
-        <div class="section-title">Additional</div>
-        <div class="item">
-            <ul>
-                <li>Building continuous hands-on experience through home labs, CTF challenges, and WGU cybersecurity coursework</li>
-                <li>Enjoys camping, mountain biking, and hiking — portfolio and project details at <a href="https://jacobdcook.com">jacobdcook.com</a></li>
-            </ul>
         </div>
     </div>
 

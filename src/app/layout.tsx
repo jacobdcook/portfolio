@@ -10,16 +10,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jacob Cook – SOC & Detection | Cybersecurity",
+  title: "Jacob Cook – Detection & Security Automation | Cybersecurity",
   description:
-    "SOC-focused security engineer. MS Cybersecurity @ WGU. CompTIA Security+, CySA+, PenTest+, SecurityX. SIEM, detection, and incident response.",
+    "Detection engineering, threat hunting, and security automation. MS Cybersecurity @ WGU. CompTIA SecurityX, CSIE. SIEM, SOAR, identity detection.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Jacob Cook – SOC & Detection | Cybersecurity",
+    title: "Jacob Cook – Detection & Security Automation | Cybersecurity",
     description:
-      "Threat detection, SIEM, and detection engineering. MS Cybersecurity @ WGU.",
+      "Detection engineering, threat hunting, and security automation. MS Cybersecurity @ WGU.",
     type: "website",
     url: "https://jacobdcook.com",
   },

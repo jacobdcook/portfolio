@@ -1,79 +1,101 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import profile from "../../content/profile.json";
 
+const SIGMA_SNIPPET = `title: Suspicious encoded PowerShell
+status: experimental
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    CommandLine|contains|all:
+      - "powershell"
+      - " -e"
+      - "JAB"
+  condition: selection
+falsepositives:
+  - Rare admin scripts using -enc
+level: medium`;
+
+const spring = { type: "spring" as const, stiffness: 100, damping: 20 };
+
 export default function Hero() {
-  const [displayText, setDisplayText] = useState("");
-  const [mounted, setMounted] = useState(false);
-  const fullText = profile.heroGreeting;
+  const reduceMotion = useReducedMotion();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayText(fullText.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 80);
-
-    return () => clearInterval(interval);
-  }, [fullText, mounted]);
-
-  const finalText = displayText || fullText;
+  const childProps = reduceMotion
+    ? { initial: false, animate: {} }
+    : {
+        initial: { opacity: 0, y: 12 },
+        animate: { opacity: 1, y: 0 },
+        transition: spring,
+      };
 
   return (
-    <section className="min-h-[80vh] flex items-center justify-center px-6 pt-20 pb-12 hero-gradient">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
-        {/* Text */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-800 dark:text-white mb-4 animate-fade-in-up min-h-[1.2em]">
-            {finalText}
-            <span className="cursor-blink text-gojo-500">|</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-dark-700/70 dark:text-white/60 mb-8 max-w-xl animate-fade-in-up-delay-1 text-balance">
+    <section
+      id="hero"
+      aria-label="Introduction"
+      className="min-h-[100dvh] flex flex-col justify-center px-6 lg:px-0 pt-24 pb-16 md:pt-28 md:pb-24 bg-canvas-light dark:bg-canvas-dark"
+    >
+      <div className="max-w-6xl mx-auto w-full grid gap-12 lg:gap-16 lg:grid-cols-12 lg:items-center">
+        <div className="lg:col-span-6 xl:col-span-7 flex flex-col gap-6 lg:gap-8">
+          <motion.h1
+            {...childProps}
+            className="font-display text-display sm:text-display-lg xl:text-display-xl font-bold tracking-tighter text-text-primary dark:text-white text-balance leading-none"
+          >
+            {profile.heroGreeting}
+          </motion.h1>
+          <motion.p
+            {...childProps}
+            transition={
+              reduceMotion ? undefined : { ...spring, delay: 0.06 }
+            }
+            className="text-lg sm:text-xl text-text-secondary dark:text-white/65 max-w-[42rem] leading-relaxed text-balance"
+          >
             {profile.tagline}
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in-up-delay-2">
+          </motion.p>
+          <motion.div
+            {...childProps}
+            transition={
+              reduceMotion ? undefined : { ...spring, delay: 0.12 }
+            }
+            className="flex flex-wrap gap-4"
+          >
             <a
               href="#contact"
-              className="px-8 py-3.5 bg-gojo-600 text-white font-semibold rounded-full hover:bg-gojo-700 transition-all shadow-lg shadow-gojo-600/25 hover:shadow-xl hover:shadow-gojo-600/30 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-accent-500 text-white font-semibold text-base transition-smooth hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98] active:translate-y-px focus-ring"
             >
-              Get in Touch
+              Get in touch
             </a>
             <a
               href="#projects"
-              className="px-8 py-3.5 bg-white dark:bg-dark-800 text-dark-800 dark:text-white font-semibold rounded-full border-2 border-dark-800/10 dark:border-white/10 hover:border-gojo-500 dark:hover:border-gojo-400 hover:text-gojo-600 dark:hover:text-gojo-400 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-text-primary dark:text-white font-semibold text-base transition-smooth hover:border-accent-500 hover:text-accent-500 dark:hover:text-accent-400 hover:scale-[1.02] active:scale-[0.98] focus-ring"
             >
-              View My Projects
+              View projects
             </a>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Headshot */}
-        <div className="flex-shrink-0 animate-float">
-          <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gojo-400 to-gojo-600 blur-2xl opacity-20 dark:opacity-30 scale-110" />
-            <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-gojo-300/50 ring-offset-4 ring-offset-frost dark:ring-offset-dark-900 shadow-2xl">
-              <Image
-                src={profile.headshotPath}
-                alt={`${profile.name} headshot`}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-        </div>
+        <motion.div
+          {...(reduceMotion
+            ? { initial: false, animate: {} }
+            : {
+                initial: { opacity: 0, y: 16 },
+                animate: { opacity: 1, y: 0 },
+                transition: { ...spring, delay: 0.08 },
+              })}
+          className="lg:col-span-6 xl:col-span-5 min-w-0"
+        >
+          <pre
+            className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary dark:text-white/90 overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
+          >
+            {SIGMA_SNIPPET}
+          </pre>
+          <p className="mt-3 text-xs font-medium uppercase tracking-wide text-text-tertiary dark:text-white/45">
+            Sigma rule excerpt
+          </p>
+        </motion.div>
       </div>
     </section>
   );

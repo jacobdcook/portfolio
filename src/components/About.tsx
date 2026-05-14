@@ -3,51 +3,86 @@
 import { useInView } from "@/hooks/useInView";
 import profile from "../../content/profile.json";
 
+type Edu = (typeof profile.education)[number];
+
 export default function About() {
   const { ref, isInView } = useInView();
+  const degrees = profile.education.filter((e: Edu) => e.icon !== "cert");
+  const certs = profile.education.filter((e: Edu) => e.icon === "cert");
+
+  const dot = profile.bio.indexOf(". ");
+  const pullQuote =
+    dot > 0 ? profile.bio.slice(0, dot + 1).trim() : profile.bio.trim();
+  const bodyRest =
+    dot > 0 ? profile.bio.slice(dot + 2).trim() : "";
 
   return (
-    <section id="about" className="py-20 px-6">
-      <div ref={ref} className={`max-w-4xl mx-auto reveal ${isInView ? "in-view" : ""}`}>
-        <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 dark:text-white mb-2">
-          About <span className="gradient-text">me</span>
+    <section id="about" className="py-24 lg:py-32 px-6 lg:px-0 bg-canvas-light dark:bg-canvas-dark">
+      <div
+        ref={ref}
+        className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
+      >
+        <h2 className="font-display text-h2 font-bold tracking-tight text-text-primary dark:text-white mb-12">
+          About me
         </h2>
-        <div className="w-16 h-1 bg-gojo-500 rounded-full mb-8" />
 
-        <div className="bg-white dark:bg-dark-800 rounded-2xl p-8 shadow-sm border border-ice-100 dark:border-dark-600">
-          <p className="text-lg text-dark-700/80 dark:text-white/70 leading-relaxed mb-6">
-            {profile.bio}
-          </p>
+        <div className="max-w-prose space-y-10">
+          <blockquote className="font-display text-xl sm:text-2xl font-semibold tracking-tight leading-snug text-text-primary dark:text-white border-l-[3px] border-accent-500 pl-6 py-1 not-italic">
+            {pullQuote}
+          </blockquote>
 
-          <p className="text-base text-gojo-700 dark:text-gojo-300 font-medium mb-8 p-4 bg-gojo-50 dark:bg-gojo-700/20 rounded-xl border border-gojo-200 dark:border-gojo-600/30">
+          {bodyRest ? (
+            <p className="text-base text-text-secondary dark:text-white/70 leading-relaxed">
+              {bodyRest}
+            </p>
+          ) : null}
+
+          <p className="text-base text-text-secondary dark:text-white/70 leading-relaxed border-l border-border-light dark:border-border-dark pl-5">
             {profile.targetRoles}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {profile.education.map((edu, i) => (
-              <div
-                key={i}
-                className="bg-ice-50 dark:bg-dark-700 rounded-xl p-4 text-center border border-gojo-100 dark:border-dark-600 hover:border-gojo-300 dark:hover:border-gojo-500 transition-colors"
-              >
-                <div className="text-2xl mb-2">
-                  {edu.icon === "shield"
-                    ? "🛡️"
-                    : edu.icon === "code"
-                    ? "💻"
-                    : "📜"}
-                </div>
-                <p className="font-semibold text-dark-800 dark:text-white text-sm">
-                  {edu.degree}
-                </p>
-                <p className="text-xs text-dark-700/60 dark:text-white/50 mt-1">{edu.school}</p>
-                <p className="text-xs text-gojo-600 dark:text-gojo-400 font-medium mt-1">
-                  {edu.period}
-                </p>
-                {"detail" in edu && (
-                  <p className="text-xs text-dark-700/50 dark:text-white/40 mt-1">{(edu as { detail?: string }).detail}</p>
-                )}
-              </div>
-            ))}
+          <div className="space-y-8 pt-4">
+            <h3 className="text-label uppercase tracking-wide text-text-tertiary dark:text-white/45 font-medium">
+              Education
+            </h3>
+            <ul className="space-y-6">
+              {degrees.map((edu) => (
+                <li key={`${edu.degree}-${edu.school}`}>
+                  <p className="font-semibold text-text-primary dark:text-white">
+                    {edu.degree}
+                  </p>
+                  <p className="text-sm text-text-secondary dark:text-white/65 mt-1">
+                    {edu.school}
+                    <span className="text-text-tertiary dark:text-white/45">
+                      {" · "}
+                      {edu.period}
+                    </span>
+                  </p>
+                  {"detail" in edu &&
+                  typeof (edu as { detail?: string }).detail === "string" ? (
+                    <p className="text-sm text-text-tertiary dark:text-white/50 mt-1">
+                      {(edu as { detail: string }).detail}
+                    </p>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4 pt-2">
+            <h3 className="text-label uppercase tracking-wide text-text-tertiary dark:text-white/45 font-medium">
+              Certifications
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {certs.map((c) => (
+                <kbd
+                  key={c.degree}
+                  className="inline-block px-2.5 py-1.5 text-xs font-mono rounded border border-border-light dark:border-border-dark bg-white/60 dark:bg-white/[0.06] text-text-primary dark:text-white/90 shadow-[inset_0_-1px_0_rgba(0,0,0,0.05)] dark:shadow-none"
+                >
+                  {c.degree}
+                </kbd>
+              ))}
+            </div>
           </div>
         </div>
       </div>

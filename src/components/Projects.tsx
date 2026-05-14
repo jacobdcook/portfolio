@@ -1,125 +1,160 @@
 "use client";
 
-import { useState } from "react";
-import { useInView } from "@/hooks/useInView";
+import { useMemo, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
 import profile from "../../content/profile.json";
 
 type Category = "all" | "cybersecurity" | "software";
 
+type Project = (typeof profile.projects)[number];
+
 const filters: { label: string; value: Category }[] = [
   { label: "All", value: "all" },
-  { label: "Cybersecurity & AI", value: "cybersecurity" },
-  { label: "Software Development", value: "software" },
+  { label: "Cybersecurity", value: "cybersecurity" },
+  { label: "Software", value: "software" },
 ];
+
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.05 },
+  },
+};
 
 export default function Projects() {
   const [active, setActive] = useState<Category>("all");
-  const { ref, isInView } = useInView();
+  const reduceMotion = useReducedMotion();
 
-  const filtered =
-    active === "all"
-      ? profile.projects
-      : profile.projects.filter((p) => p.category === active);
+  const sorted = useMemo(() => {
+    const filtered =
+      active === "all"
+        ? profile.projects
+        : profile.projects.filter((p) => p.category === active);
+    return [...filtered].sort(
+      (a, b) =>
+        Number(isFeatured(b)) - Number(isFeatured(a))
+    );
+  }, [active]);
+
+  const springHover = reduceMotion
+    ? undefined
+    : {
+        y: -4,
+        transition: {
+          type: "spring" as const,
+          stiffness: 100,
+          damping: 20,
+        },
+      };
 
   return (
-    <section id="projects" className="py-20 px-6 bg-ice-50 dark:bg-dark-800">
+    <section
+      id="projects"
+      className="py-24 lg:py-32 px-6 lg:px-0 bg-canvas-light dark:bg-canvas-dark border-t border-border-light dark:border-border-dark"
+    >
       <div className="max-w-6xl mx-auto">
-        <div ref={ref} className={`reveal ${isInView ? "in-view" : ""}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-dark-800 dark:text-white mb-2">
-            My <span className="gradient-text">Projects</span>
+        <div className="mb-12 lg:mb-14">
+          <h2 className="font-display text-h2 font-bold tracking-tight text-text-primary dark:text-white mb-8">
+            Projects
           </h2>
-          <div className="w-16 h-1 bg-gojo-500 rounded-full mb-8" />
 
-          {/* Filters */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {filters.map((f) => (
-              <button
-                key={f.value}
-                onClick={() => setActive(f.value)}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-                  active === f.value
-                    ? "bg-gojo-600 text-white shadow-md shadow-gojo-600/20"
-                    : "bg-white dark:bg-dark-900 text-dark-700/70 dark:text-white/60 border border-ice-200 dark:border-dark-600 hover:border-gojo-300 dark:hover:border-gojo-500 hover:text-gojo-600 dark:hover:text-gojo-400"
-                }`}
-              >
-                {f.label}
-              </button>
-            ))}
+          <div className="flex flex-wrap gap-2 border-b border-border-light dark:border-border-dark pb-4">
+            {filters.map((f) => {
+              const on = active === f.value;
+              return (
+                <button
+                  key={f.value}
+                  type="button"
+                  onClick={() => setActive(f.value)}
+                  className={`px-4 py-2 text-sm font-medium rounded transition-smooth focus-ring outline-none ${
+                    on
+                      ? "bg-accent-500 text-white"
+                      : "bg-transparent text-text-secondary dark:text-white/65 hover:text-accent-600 dark:hover:text-accent-400 border border-transparent hover:border-border-light dark:hover:border-border-dark"
+                  }`}
+                >
+                  {f.label}
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* Grid */}
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal-stagger ${isInView ? "in-view" : ""}`}>
-          {filtered.map((project, i) => {
-            const isFeatured = "featured" in project && project.featured;
+        <motion.div
+          key={active}
+          className="grid grid-flow-dense grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8 xl:auto-rows-fr"
+          variants={listVariants}
+          initial={reduceMotion ? false : "hidden"}
+          whileInView={reduceMotion ? undefined : "visible"}
+          viewport={{ once: true, margin: "-60px", amount: 0.15 }}
+        >
+          {sorted.map((project) => {
+            const featured = isFeatured(project);
             return (
-              <a
-                key={i}
+              <motion.a
+                key={project.url}
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group bg-white dark:bg-dark-900 rounded-2xl p-6 shadow-sm border flex flex-col card-hover ${
-                  isFeatured
-                    ? "border-gojo-300 dark:border-gojo-600 ring-1 ring-gojo-200 dark:ring-gojo-700"
-                    : "border-ice-100 dark:border-dark-600"
+                variants={{
+                  hidden: { opacity: 0, y: 16 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: reduceMotion
+                      ? { duration: 0 }
+                      : { type: "spring", stiffness: 100, damping: 20 },
+                  },
+                }}
+                whileHover={springHover}
+                className={`group flex flex-col h-full min-h-[11rem] rounded-lg border border-border-light dark:border-border-dark transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] focus-ring outline-none ${
+                  featured
+                    ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-l-[3px] border-l-accent-500"
+                    : "md:col-span-2 xl:col-span-2 xl:row-span-1"
                 }`}
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`px-2.5 py-1 text-xs font-semibold rounded-full ${
-                        project.category === "cybersecurity"
-                          ? "bg-gojo-50 dark:bg-gojo-700/20 text-gojo-700 dark:text-gojo-300"
-                          : "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400"
-                      }`}
-                    >
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-label uppercase tracking-wide text-text-tertiary dark:text-white/45 font-medium">
                       {project.category === "cybersecurity"
                         ? "Security"
                         : "Software"}
                     </span>
-                    {isFeatured && (
-                      <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full bg-gojo-600 text-white">
+                    {featured ? (
+                      <span className="text-xs font-semibold uppercase tracking-wide text-accent-600 dark:text-accent-400">
                         Featured
                       </span>
-                    )}
+                    ) : null}
                   </div>
-                  <svg
-                    className="w-4 h-4 text-dark-700/30 dark:text-white/30 group-hover:text-gojo-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
+                  <GithubLogo
+                    size={22}
+                    weight="bold"
+                    className="text-text-tertiary dark:text-white/45 shrink-0 transition-colors group-hover:text-accent-500"
+                    aria-hidden
+                  />
                 </div>
 
-                <h3 className="font-bold text-dark-800 dark:text-white group-hover:text-gojo-600 dark:group-hover:text-gojo-400 transition-colors mb-2">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-text-primary dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors mb-3">
                   {project.name}
                 </h3>
-                <p className="text-sm text-dark-700/60 dark:text-white/50 leading-relaxed flex-1">
+                <p className="text-sm text-text-secondary dark:text-white/70 leading-relaxed flex-1">
                   {project.description}
                 </p>
 
-                <div className="mt-4 flex items-center gap-2 text-xs text-dark-700/40 dark:text-white/30 group-hover:text-gojo-500 transition-colors">
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                  </svg>
-                  <span>View on GitHub</span>
-                </div>
-              </a>
+                <p className="mt-5 text-xs font-mono text-text-tertiary dark:text-white/45 flex items-center gap-2">
+                  <span className="underline underline-offset-2 decoration-border-light dark:decoration-border-dark group-hover:decoration-accent-500">
+                    View on GitHub
+                  </span>
+                </p>
+              </motion.a>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
+}
+
+function isFeatured(project: Project): boolean {
+  return "featured" in project && Boolean(project.featured);
 }

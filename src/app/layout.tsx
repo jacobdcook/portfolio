@@ -11,9 +11,11 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jacobdcook.com"),
   title: "Jacob Cook – Detection Engineer | Security Automation",
   description:
     "Detection engineering and security automation. Reducing alert noise, building reliable triage, designing threat-aware systems. MS Cybersecurity @ WGU. CompTIA SecurityX, CSIE.",
+  manifest: "/manifest.json",
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",

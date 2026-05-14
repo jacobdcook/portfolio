@@ -104,135 +104,184 @@
   ],
   "projects": [
     {
-      "name": "Stryker / Intune Detection Pack",
-      "description": "Detection-as-code for Intune MDM abuse: Sigma rules, KV enrichment, MITRE-aligned playbooks. Inspired by March 2026 Stryker/Handala-style scenarios.",
+      "name": "Stryker / Intune detection pack",
+      "description": "Detection-as-code for Intune MDM abuse (Stryker/Handala-style scenarios): Sigma rules, KV enrichment, MITRE-mapped response playbooks.",
       "url": "https://github.com/jacobdcook/stryker-intune-detection-pack",
       "category": "cybersecurity",
       "featured": true
     },
     {
-      "name": "Okta Detection Engine",
-      "description": "Python-based detection logic for Okta: MFA fatigue, impossible travel, and related identity threat scenarios.",
-      "url": "https://github.com/jacobdcook/okta-detection-engine",
+      "name": "AWS identity detection lab",
+      "description": "Synthetic CloudTrail-style scenarios, Python detection logic with baseline allowlists, and pytest checks for AWS log and identity abuse interviews.",
+      "url": "https://github.com/jacobdcook/aws-identity-detection-lab",
       "category": "cybersecurity",
       "featured": true
     },
     {
-      "name": "SOAR-lite – Incident Response Orchestrator",
-      "description": "Lightweight SOAR: ingests alerts and runs automated playbooks for triage and response workflows.",
-      "url": "https://github.com/jacobdcook/soar-incident-orchestrator",
-      "category": "cybersecurity",
-      "featured": true
-    },
-    {
-      "name": "Cloud Infrastructure Security Auditor",
-      "description": "Terraform and live Azure auditing: static analysis, dynamic resource checks, AI-assisted remediation for misconfigurations.",
+      "name": "Cloud infrastructure security auditor",
+      "description": "Terraform and live Azure auditing with static checks, runtime signals, and AI-assisted remediation suggestions.",
       "url": "https://github.com/jacobdcook/cloud-security-auditor",
       "category": "cybersecurity",
       "featured": true
     },
     {
-      "name": "Network Traffic Behavioral Analyzer",
-      "description": "Behavioral analysis for C2 beaconing and data exfiltration patterns; Groq-assisted summarization for review.",
+      "name": "Okta detection engine",
+      "description": "Python detections for Okta abuse: MFA fatigue, impossible travel, and related identity threat patterns with tuning notes.",
+      "url": "https://github.com/jacobdcook/okta-detection-engine",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "SOAR-lite incident orchestrator",
+      "description": "Lightweight SOAR that ingests alerts and runs automated playbooks for triage and response workflows.",
+      "url": "https://github.com/jacobdcook/soar-incident-orchestrator",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "Network traffic behavioral analyzer",
+      "description": "Behavioral monitoring focused on beaconing and exfiltration-style anomalies with assisted summarization for review.",
       "url": "https://github.com/jacobdcook/network-behavior-analyzer",
       "category": "cybersecurity",
       "featured": true
     },
     {
-      "name": "Blue Team SOC Monitoring Lab",
-      "description": "Wazuh SIEM stack: log ingestion, Python attack simulation, rule tuning, and triage on auth and security logs.",
+      "name": "Blue team SOC monitoring lab",
+      "description": "Wazuh SIEM (Docker): Linux log ingestion, Python brute-force simulation, alert triage, and documented rule IDs.",
       "url": "https://github.com/jacobdcook/blue-team-soc-monitoring-lab",
       "category": "cybersecurity",
       "featured": true
     },
     {
-      "name": "Phishing Analysis Lab",
-      "description": "Phishing triage: headers, links, VirusTotal, structured reports for handoff.",
+      "name": "Phishing analysis lab",
+      "description": "Hands-on phishing triage: headers, links, VirusTotal workflow, and structured reports aligned to SOC Tier 1 practice.",
       "url": "https://github.com/jacobdcook/Phishing-Analysis-Lab",
       "category": "cybersecurity"
     },
     {
-      "name": "Azure Cloud Hardening Lab",
-      "description": "Hardened Azure infrastructure with Terraform; reduced attack surface via IaC.",
+      "name": "Azure cloud hardening lab",
+      "description": "Terraform-first hardened Azure footprint with repeatable deployment patterns for reduced attack surface.",
       "url": "https://github.com/jacobdcook/Azure-Cloud-Hardening-Lab",
       "category": "cybersecurity"
     },
     {
-      "name": "AI Log Auditor",
-      "description": "Log triage automation: pattern matching and AI-assisted analysis with PDF reporting for review.",
+      "name": "AI log auditor",
+      "description": "Pattern-first log scanning plus AI-assisted analysis with PDF reporting for peer review.",
       "url": "https://github.com/jacobdcook/ai-log-auditor",
       "category": "cybersecurity"
     },
     {
-      "name": "TCM SOC 101 Lab Notes",
-      "description": "Lab notes from TCM Security SOC 101 course.",
+      "name": "TryHackMe streak keeper",
+      "description": "Selenium automation plus cron scheduling to maintain TryHackMe streaks during busy stretches.",
+      "url": "https://github.com/jacobdcook/thm-streak-keeper",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "TCM SOC 101 lab notes",
+      "description": "Structured notes from the TCM Security SOC 101 course.",
       "url": "https://github.com/jacobdcook/tcm-soc-101-lab-notes",
       "category": "cybersecurity"
     },
     {
-      "name": "Security+ Learning Lab",
-      "description": "Hands-on labs and notes for Security+ prep.",
+      "name": "Security+ learning lab",
+      "description": "Professor Messer-aligned summaries, labs, and reflections supporting Security+ preparation.",
       "url": "https://github.com/jacobdcook/security-plus-labs",
       "category": "cybersecurity"
     },
     {
-      "name": "Cybersecurity Learning Journey",
-      "description": "Documentation of concepts, tools, and hands-on practice.",
+      "name": "Cybersecurity learning journey",
+      "description": "Running journal of labs, tooling, and milestones across Security+ study and blue-team skill building.",
       "url": "https://github.com/jacobdcook/cybersecurity-learning-journey",
       "category": "cybersecurity"
     },
     {
-      "name": "G3-GPT",
-      "description": "RAG platform with Azure SSO and role-based access for enterprise document retrieval.",
-      "url": "https://github.com/jacobdcook/G3-GPT",
+      "name": "Claude Code skills",
+      "description": "Reusable Claude Code skill packs for session memory, wrap-ups, and multi-machine workflows.",
+      "url": "https://github.com/jacobdcook/claude-skills",
+      "category": "software"
+    },
+    {
+      "name": "Kokoro TTS GUI",
+      "description": "Tkinter desktop shell around Kokoro TTS with MP3 export and ffmpeg stitching helpers.",
+      "url": "https://github.com/jacobdcook/kokoro-gui",
+      "category": "software"
+    },
+    {
+      "name": "Meal planner",
+      "description": "Single-file Tkinter planner that generates weekly lunch and dinner rotations from your saved meal pool (stdlib only).",
+      "url": "https://github.com/jacobdcook/meal-planner",
       "category": "software"
     },
     {
       "name": "Synapse",
-      "description": "Multi-model AI chat client for local Ollama models with a ChatGPT-style desktop UI.",
+      "description": "Multi-model desktop client for local Ollama with streaming markdown, conversation memory, and VRAM-aware switching.",
       "url": "https://github.com/jacobdcook/synapse",
       "category": "software"
     },
     {
-      "name": "Whisper Transcribe",
-      "description": "Fast local audio-to-text transcription using faster-whisper with CUDA GPU acceleration.",
+      "name": "Whisper transcribe",
+      "description": "Local speech-to-text harness using faster-whisper with CUDA acceleration for batch workflows.",
       "url": "https://github.com/jacobdcook/whisper-transcribe",
       "category": "software"
     },
     {
-      "name": "Career Development Tracker",
-      "description": "Desktop app for structured career plans: templates, progress tracking, and AI-assisted planning.",
+      "name": "G3-GPT",
+      "description": "Capstone RAG stack with Azure SSO, RBAC, and document retrieval workflows.",
+      "url": "https://github.com/jacobdcook/G3-GPT",
+      "category": "software"
+    },
+    {
+      "name": "Career development tracker",
+      "description": "Desktop planner with templates, AI-assisted drafting, and progress tracking across roles.",
       "url": "https://github.com/jacobdcook/career-development-tracker",
       "category": "software"
     },
     {
-      "name": "LinkedIn Feed Parser",
-      "description": "GUI tool to parse raw LinkedIn feed HTML into readable post summaries.",
+      "name": "LinkedIn feed parser",
+      "description": "GUI utility that converts noisy LinkedIn HTML dumps into skim-friendly summaries.",
       "url": "https://github.com/jacobdcook/linkedin-feed-parser",
       "category": "software"
     },
     {
-      "name": "Daily Wellness Scheduler",
-      "description": "Desktop app for supplements/electrolytes with gamification.",
+      "name": "Daily wellness scheduler",
+      "description": "Gamified supplement and electrolyte tracker with reminders for consistent routines.",
       "url": "https://github.com/jacobdcook/daily-wellness-scheduler",
       "category": "software"
     },
     {
+      "name": "Discord guild leave GUI",
+      "description": "Tkinter helper to enumerate Discord servers and leave selected guilds with configurable delays.",
+      "url": "https://github.com/jacobdcook/discord-guild-leave-gui",
+      "category": "software"
+    },
+    {
+      "name": "Click-at-time",
+      "description": "Minimal scheduler GUI that captures cursor coordinates and fires a single click at a chosen clock time.",
+      "url": "https://github.com/jacobdcook/click-at-time",
+      "category": "software"
+    },
+    {
       "name": "HealthLink",
-      "description": "Healthcare platform connecting patients with providers.",
+      "description": "Early Flutter/Dart experimentation scaffold exploring healthcare routing UX.",
       "url": "https://github.com/jacobdcook/HealthLink",
       "category": "software"
     },
     {
-      "name": "Smart Pantry Meal Planning",
-      "description": "AI-powered meal planning from ingredients.",
+      "name": "Smart pantry meal planning",
+      "description": "HackSwift Hackathon 2024 build: ingredient-aware meal planning assistant (fork retained for attribution).",
       "url": "https://github.com/jacobdcook/SmartPantry-MealPlanning",
       "category": "software"
     },
     {
-      "name": "AI Job Hunter",
-      "description": "Scrapes listings, filters roles, and uses AI to score fit (personal tooling).",
+      "name": "AI job hunter",
+      "description": "Personal tooling that scrapes postings, filters titles, and scores fit with lightweight AI assists.",
       "url": "https://github.com/jacobdcook/ai-job-hunter",
+      "category": "software"
+    },
+    {
+      "name": "Raspberry Pi day planner",
+      "description": "Utility planner experiments targeting Raspberry Pi form factors.",
+      "url": "https://github.com/jacobdcook/raspberry-pi-day-planner",
       "category": "software"
     }
   ]

@@ -4,21 +4,21 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import profile from "../../content/profile.json";
 
-const SIGMA_SNIPPET = `title: Suspicious encoded PowerShell
-status: experimental
+const SIGMA_SNIPPET = `title: MFA Fatigue Attack
+status: production
 logsource:
-  category: process_creation
-  product: windows
+  product: okta
+  service: authentication
 detection:
-  selection:
-    CommandLine|contains|all:
-      - "powershell"
-      - " -e"
-      - "JAB"
-  condition: selection
+  push_spam:
+    eventType: system.push.send_factor_verify_push
+    timeframe: 10m
+  approval:
+    eventType: user.authentication.auth_via_mfa
+  condition: push_spam | count() >= 5
 falsepositives:
-  - Rare admin scripts using -enc
-level: medium`;
+  - Legitimate user retrying failed pushes
+level: critical`;
 
 const spring = { type: "spring" as const, stiffness: 100, damping: 20 };
 

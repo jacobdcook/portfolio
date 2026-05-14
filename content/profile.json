@@ -207,6 +207,18 @@
       "category": "software"
     },
     {
+      "name": "Unified TTS (launcher kit)",
+      "description": "Stub launcher + README for combining drill flows with study-corpus TTS; wire EXAMTOPICS_DIR and your own unified_app.py.",
+      "url": "https://github.com/jacobdcook/unified-tts",
+      "category": "software"
+    },
+    {
+      "name": "TTS study reader",
+      "description": "Minimal plaintext playlist reader using Edge TTS and paragraph splits; generic materials folder only.",
+      "url": "https://github.com/jacobdcook/tts-study-reader",
+      "category": "software"
+    },
+    {
       "name": "G3-GPT",
       "description": "Capstone RAG stack with Azure SSO, RBAC, and document retrieval workflows.",
       "url": "https://github.com/jacobdcook/G3-GPT",

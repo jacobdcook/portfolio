@@ -86,9 +86,9 @@ export default function Hero() {
                 animate: { opacity: 1, y: 0 },
                 transition: { ...spring, delay: 0.08 },
               })}
-          className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-center xl:justify-between lg:gap-8 xl:gap-10"
+          className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col items-center gap-8"
         >
-          <div className="relative w-44 h-44 sm:w-52 sm:h-52 shrink-0 lg:w-48 lg:h-48 xl:w-52 xl:h-52">
+          <div className="relative w-44 h-44 sm:w-52 sm:h-52 shrink-0">
             <div
               className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-accent-400/40 via-accent-500/25 to-accent-700/30 blur-2xl scale-110 opacity-90 dark:opacity-55"
               aria-hidden
@@ -99,13 +99,13 @@ export default function Hero() {
                 alt={`Portrait of ${profile.name}`}
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 1024px) 208px, 208px"
+                sizes="(max-width: 640px) 176px, 208px"
                 priority
               />
             </div>
           </div>
 
-          <div className="w-full min-w-0 flex-1 max-w-xl lg:max-w-none">
+          <div className="w-full min-w-0">
             <pre
               className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary dark:text-white/90 overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
             >

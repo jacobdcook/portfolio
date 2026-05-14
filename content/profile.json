@@ -171,12 +171,6 @@
       "category": "cybersecurity"
     },
     {
-      "name": "TryHackMe streak keeper",
-      "description": "Selenium automation plus cron scheduling to maintain TryHackMe streaks during busy stretches.",
-      "url": "https://github.com/jacobdcook/thm-streak-keeper",
-      "category": "cybersecurity"
-    },
-    {
       "name": "TCM SOC 101 lab notes",
       "description": "Structured notes from the TCM Security SOC 101 course.",
       "url": "https://github.com/jacobdcook/tcm-soc-101-lab-notes",
@@ -189,27 +183,9 @@
       "category": "cybersecurity"
     },
     {
-      "name": "Cybersecurity learning journey",
-      "description": "Running journal of labs, tooling, and milestones across Security+ study and blue-team skill building.",
-      "url": "https://github.com/jacobdcook/cybersecurity-learning-journey",
-      "category": "cybersecurity"
-    },
-    {
       "name": "Claude Code skills",
       "description": "Reusable Claude Code skill packs for session memory, wrap-ups, and multi-machine workflows.",
       "url": "https://github.com/jacobdcook/claude-skills",
-      "category": "software"
-    },
-    {
-      "name": "Kokoro TTS GUI",
-      "description": "Tkinter desktop shell around Kokoro TTS with MP3 export and ffmpeg stitching helpers.",
-      "url": "https://github.com/jacobdcook/kokoro-gui",
-      "category": "software"
-    },
-    {
-      "name": "Meal planner",
-      "description": "Single-file Tkinter planner that generates weekly lunch and dinner rotations from your saved meal pool (stdlib only).",
-      "url": "https://github.com/jacobdcook/meal-planner",
       "category": "software"
     },
     {
@@ -234,54 +210,6 @@
       "name": "Career development tracker",
       "description": "Desktop planner with templates, AI-assisted drafting, and progress tracking across roles.",
       "url": "https://github.com/jacobdcook/career-development-tracker",
-      "category": "software"
-    },
-    {
-      "name": "LinkedIn feed parser",
-      "description": "GUI utility that converts noisy LinkedIn HTML dumps into skim-friendly summaries.",
-      "url": "https://github.com/jacobdcook/linkedin-feed-parser",
-      "category": "software"
-    },
-    {
-      "name": "Daily wellness scheduler",
-      "description": "Gamified supplement and electrolyte tracker with reminders for consistent routines.",
-      "url": "https://github.com/jacobdcook/daily-wellness-scheduler",
-      "category": "software"
-    },
-    {
-      "name": "Discord guild leave GUI",
-      "description": "Tkinter helper to enumerate Discord servers and leave selected guilds with configurable delays.",
-      "url": "https://github.com/jacobdcook/discord-guild-leave-gui",
-      "category": "software"
-    },
-    {
-      "name": "Click-at-time",
-      "description": "Minimal scheduler GUI that captures cursor coordinates and fires a single click at a chosen clock time.",
-      "url": "https://github.com/jacobdcook/click-at-time",
-      "category": "software"
-    },
-    {
-      "name": "HealthLink",
-      "description": "Early Flutter/Dart experimentation scaffold exploring healthcare routing UX.",
-      "url": "https://github.com/jacobdcook/HealthLink",
-      "category": "software"
-    },
-    {
-      "name": "Smart pantry meal planning",
-      "description": "HackSwift Hackathon 2024 build: ingredient-aware meal planning assistant (fork retained for attribution).",
-      "url": "https://github.com/jacobdcook/SmartPantry-MealPlanning",
-      "category": "software"
-    },
-    {
-      "name": "AI job hunter",
-      "description": "Personal tooling that scrapes postings, filters titles, and scores fit with lightweight AI assists.",
-      "url": "https://github.com/jacobdcook/ai-job-hunter",
-      "category": "software"
-    },
-    {
-      "name": "Raspberry Pi day planner",
-      "description": "Utility planner experiments targeting Raspberry Pi form factors.",
-      "url": "https://github.com/jacobdcook/raspberry-pi-day-planner",
       "category": "software"
     }
   ]

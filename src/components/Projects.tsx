@@ -107,10 +107,10 @@ export default function Projects() {
                   },
                 }}
                 whileHover={springHover}
-                className={`group flex flex-col h-full min-h-[11rem] rounded-lg border border-border-light dark:border-border-dark transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] focus-ring outline-none ${
+                className={`group flex flex-col h-full min-h-[11rem] rounded-lg border transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] focus-ring outline-none ${
                   featured
-                    ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-l-[3px] border-l-accent-500"
-                    : "md:col-span-2 xl:col-span-2 xl:row-span-1"
+                    ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-2 border-accent-500/40 dark:border-accent-500/30"
+                    : "border border-border-light dark:border-border-dark md:col-span-2 xl:col-span-2 xl:row-span-1"
                 }`}
               >
                 <div className="flex items-start justify-between gap-3 mb-4">

@@ -89,10 +89,6 @@ export default function Hero() {
           className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col items-center gap-8"
         >
           <div className="relative w-44 h-44 sm:w-52 sm:h-52 shrink-0">
-            <div
-              className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-accent-400/40 via-accent-500/25 to-accent-700/30 blur-2xl scale-110 opacity-90 dark:opacity-55"
-              aria-hidden
-            />
             <div className="relative h-full w-full overflow-hidden rounded-full ring-[3px] ring-accent-500/25 ring-offset-[3px] ring-offset-canvas-light dark:ring-offset-canvas-dark shadow-md">
               <Image
                 src={profile.headshotPath}

@@ -40,6 +40,9 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      <a href="#hero" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-6 focus:px-4 focus:py-2 focus:bg-accent-500 focus:text-white focus:rounded focus:z-50">
+        Skip to main content
+      </a>
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a

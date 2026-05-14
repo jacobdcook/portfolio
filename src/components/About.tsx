@@ -27,7 +27,7 @@ export default function About() {
         </h2>
 
         <div className="max-w-prose space-y-10">
-          <blockquote className="font-display text-xl sm:text-2xl font-semibold tracking-tight leading-snug text-text-primary dark:text-white border-l-[3px] border-accent-500 pl-6 py-1 not-italic">
+          <blockquote className="font-display text-2xl sm:text-3xl font-bold tracking-tight leading-snug text-text-primary dark:text-white border-l-4 border-accent-500 pl-6 py-1 not-italic">
             {pullQuote}
           </blockquote>
 

@@ -201,6 +201,12 @@
       "category": "software"
     },
     {
+      "name": "Kokoro TTS GUI",
+      "description": "Tkinter desktop shell for Kokoro TTS: synthesis, MP3 export, and ffmpeg stitching.",
+      "url": "https://github.com/jacobdcook/kokoro-gui",
+      "category": "software"
+    },
+    {
       "name": "G3-GPT",
       "description": "Capstone RAG stack with Azure SSO, RBAC, and document retrieval workflows.",
       "url": "https://github.com/jacobdcook/G3-GPT",

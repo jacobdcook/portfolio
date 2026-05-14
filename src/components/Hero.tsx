@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import profile from "../../content/profile.json";
 
@@ -85,16 +86,34 @@ export default function Hero() {
                 animate: { opacity: 1, y: 0 },
                 transition: { ...spring, delay: 0.08 },
               })}
-          className="lg:col-span-6 xl:col-span-5 min-w-0"
+          className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col gap-8"
         >
-          <pre
-            className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary dark:text-white/90 overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
-          >
-            {SIGMA_SNIPPET}
-          </pre>
-          <p className="mt-3 text-xs font-medium uppercase tracking-wide text-text-tertiary dark:text-white/45">
-            Sigma rule excerpt
-          </p>
+          <figure className="max-w-sm lg:max-w-md xl:max-w-none mx-auto lg:mx-0 w-full">
+            <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden border border-border-light dark:border-border-dark bg-border-light/40 dark:bg-white/[0.06] shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none">
+              <Image
+                src={profile.headshotPath}
+                alt={`${profile.name}`}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 28rem"
+                priority
+              />
+            </div>
+            <figcaption className="mt-2 text-xs text-text-tertiary dark:text-white/45">
+              {profile.name}
+            </figcaption>
+          </figure>
+
+          <div>
+            <pre
+              className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary dark:text-white/90 overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
+            >
+              {SIGMA_SNIPPET}
+            </pre>
+            <p className="mt-3 text-xs font-medium uppercase tracking-wide text-text-tertiary dark:text-white/45">
+              Sigma rule excerpt
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

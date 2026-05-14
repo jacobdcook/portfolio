@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Sun, Moon } from "@phosphor-icons/react/dist/ssr";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useTheme } from "@/context/ThemeContext";
+import profile from "../../content/profile.json";
 
 const navLinks = [
   { label: "About", href: "#about", section: "about" },
@@ -18,6 +19,12 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const activeSection = useActiveSection();
   const { theme, toggleTheme } = useTheme();
+
+  const initials = profile.name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,9 +44,11 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className="text-lg font-semibold text-text-primary dark:text-white hover:text-accent-500 transition-colors"
+          aria-label={`${profile.name}, back to top`}
+          title={profile.name}
+          className="font-mono text-sm font-bold tracking-tight tabular-nums px-2 py-1 rounded border border-border-light dark:border-border-dark text-text-primary dark:text-white hover:border-accent-500 hover:text-accent-500 transition-colors focus-ring"
         >
-          Jacob Cook
+          {initials}
         </a>
 
         {/* Desktop nav */}

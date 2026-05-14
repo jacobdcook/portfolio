@@ -86,25 +86,26 @@ export default function Hero() {
                 animate: { opacity: 1, y: 0 },
                 transition: { ...spring, delay: 0.08 },
               })}
-          className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col gap-8"
+          className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col items-center lg:items-start gap-8"
         >
-          <figure className="max-w-sm lg:max-w-md xl:max-w-none mx-auto lg:mx-0 w-full">
-            <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden border border-border-light dark:border-border-dark bg-border-light/40 dark:bg-white/[0.06] shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none">
+          <div className="relative w-44 h-44 sm:w-52 sm:h-52 shrink-0">
+            <div
+              className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-br from-accent-400/40 via-accent-500/25 to-accent-700/30 blur-2xl scale-110 opacity-90 dark:opacity-55"
+              aria-hidden
+            />
+            <div className="relative h-full w-full overflow-hidden rounded-full ring-[3px] ring-accent-500/25 ring-offset-[3px] ring-offset-canvas-light dark:ring-offset-canvas-dark shadow-md">
               <Image
                 src={profile.headshotPath}
-                alt={`${profile.name}`}
+                alt={`Portrait of ${profile.name}`}
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 28rem"
+                sizes="(max-width: 640px) 176px, 208px"
                 priority
               />
             </div>
-            <figcaption className="mt-2 text-xs text-text-tertiary dark:text-white/45">
-              {profile.name}
-            </figcaption>
-          </figure>
+          </div>
 
-          <div>
+          <div className="w-full max-w-xl lg:max-w-none">
             <pre
               className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary dark:text-white/90 overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
             >

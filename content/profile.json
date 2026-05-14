@@ -2,7 +2,7 @@
   "name": "Jacob Cook",
   "pronouns": "he/him",
   "tagline": "I engineer Sigma coverage, SIEM tuning, and automation so noisy telemetry turns into triage paths analysts can repeat.",
-  "heroGreeting": "Jacob Cook. Detection engineer building reliable triage from noisy data.",
+  "heroGreeting": "Detection engineer building reliable triage from noisy data.",
   "heroSubtitle": "Sigma rules, SIEM hardening, identity detections, and SOAR-style orchestration.",
   "bio": "Detection and security automation engineer focused on reducing alert noise, closing coverage gaps, and building repeatable triage paths. My public detection work includes behavioral Sigma rules with KV store enrichment and false-positive tuning, Okta identity threat detections, SOAR-style orchestration that cuts manual response steps, and network behavior analysis that catches C2 beaconing and exfiltration patterns. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
   "targetRoles": "Open to: Detection Engineer, Threat Hunter, Security Automation Engineer, Vulnerability Management, Tier 2+ SOC. Sacramento or remote.",

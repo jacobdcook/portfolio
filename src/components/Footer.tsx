@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
           {/* Left: identity */}
           <div>
-            <p className="text-sm font-semibold text-text-primary dark:text-white">
-              {profile.name}
+            <p className="text-sm font-medium text-text-primary dark:text-white">
+              Portfolio
             </p>
             <p className="text-xs text-text-tertiary dark:text-white/50 mt-2">
-              Detection engineer building reliable triage paths.
+              Detection engineering · {profile.location}
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Bottom: copyright + legal */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs">
           <p>
-            &copy; {new Date().getFullYear()} Jacob Cook. All rights reserved.
+            &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-accent-500 transition-colors">

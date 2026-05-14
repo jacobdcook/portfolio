@@ -78,7 +78,7 @@ const config: Config = {
         sm: ["14px", { lineHeight: "1.5" }],
         xs: ["13px", { lineHeight: "1.5" }],
         // Label
-        label: ["13px", { fontWeight: "500", letterSpacing: "0.05em", textTransform: "uppercase" }],
+        label: ["13px", { fontWeight: "500", letterSpacing: "0.05em" }],
       },
       spacing: {
         section: "6rem",  // py-24 equivalent

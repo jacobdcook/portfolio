@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
 
-const geist = Geist({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist-sans",
-});
-
-const geistMono = Geist_Mono({
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist-mono",
@@ -55,10 +50,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${geistMono.variable}`}
+      className={spaceMono.variable}
       suppressHydrationWarning
     >
       <head>
+        <style>{`
+          :root {
+            --font-geist-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            --font-cabinet: 'Freight Sans Pro', 'Akzidenz Grotesk', 'Benton Sans', system-ui, sans-serif;
+          }
+        `}</style>
         <script
           dangerouslySetInnerHTML={{
             __html: `

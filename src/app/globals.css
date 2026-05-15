@@ -80,7 +80,7 @@ section {
 }
 
 /* Button base styles */
-button, a[role="button"] {
+button:focus-visible, a[role="button"]:focus-visible {
   @apply focus-ring;
 }
 

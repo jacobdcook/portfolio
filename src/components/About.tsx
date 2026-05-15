@@ -1,6 +1,7 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
+import { navySectionStart, navyHeading, navySubheading } from "@/lib/navySection";
 import profile from "../../content/profile.json";
 
 type Edu = (typeof profile.education)[number];
@@ -17,17 +18,12 @@ export default function About() {
     dot > 0 ? profile.bio.slice(dot + 2).trim() : "";
 
   return (
-    <section
-      id="about"
-      className="py-24 lg:py-32 px-6 lg:px-0 bg-navy-50 dark:bg-navy-950/50 border-y border-navy-100/90 dark:border-navy-800/60"
-    >
+    <section id="about" className={navySectionStart}>
       <div
         ref={ref}
         className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
       >
-        <h2 className="font-display text-h2 font-bold tracking-tight text-navy-800 dark:text-navy-100 mb-12">
-          About me
-        </h2>
+        <h2 className={`${navyHeading} mb-12`}>About me</h2>
 
         <div className="max-w-prose space-y-10">
           <blockquote className="font-display text-2xl sm:text-3xl font-bold tracking-tight leading-snug text-navy-900 dark:text-white border-l-4 border-navy-500 dark:border-navy-400 pl-6 py-1 not-italic">
@@ -45,9 +41,7 @@ export default function About() {
           </p>
 
           <div className="space-y-8 pt-4">
-            <h3 className="text-label uppercase tracking-wide text-navy-600 dark:text-navy-300 font-medium">
-              Education
-            </h3>
+            <h3 className={navySubheading}>Education</h3>
             <ul className="space-y-6">
               {degrees.map((edu) => (
                 <li key={`${edu.degree}-${edu.school}`}>
@@ -73,9 +67,7 @@ export default function About() {
           </div>
 
           <div className="space-y-4 pt-2">
-            <h3 className="text-label uppercase tracking-wide text-navy-600 dark:text-navy-300 font-medium">
-              Certifications
-            </h3>
+            <h3 className={navySubheading}>Certifications</h3>
             <div className="flex flex-wrap gap-2">
               {certs.map((c) => (
                 <kbd

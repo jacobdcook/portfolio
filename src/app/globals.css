@@ -40,7 +40,7 @@ code, pre {
   }
 
   .focus-ring {
-    @apply outline-none ring-2 ring-brand-500 ring-offset-2 dark:ring-offset-canvas-dark;
+    @apply outline-none ring-2 ring-accent-500 ring-offset-2 dark:ring-offset-canvas-dark;
   }
 
   .prose {
@@ -58,12 +58,12 @@ code, pre {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #202aba;
+  background: #B8553E;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a2295;
+  background: #A24430;
 }
 
 html.dark ::-webkit-scrollbar-thumb {
@@ -104,7 +104,7 @@ button:active {
 /* Form utilities */
 input, textarea, select {
   @apply border border-border-light dark:border-border-dark rounded px-3 py-2 text-base transition-colors;
-  @apply focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50;
+  @apply focus:border-accent-500 focus:ring-1 focus:ring-accent-500/50;
 }
 
 label {
@@ -113,26 +113,11 @@ label {
 
 /* Link utilities */
 a {
-  @apply text-brand-500 hover:text-brand-600 transition-colors;
+  @apply text-accent-500 hover:text-accent-600 transition-colors;
 }
 
 a:focus {
-  @apply outline-none ring-2 ring-brand-500 rounded;
-}
-
-/* Red zone: contact overrides default link color */
-#contact a:not([class*="bg-"]) {
-  @apply text-accent-500 hover:text-accent-600;
-}
-
-#contact a:focus {
-  @apply ring-accent-500;
-}
-
-#contact input,
-#contact textarea,
-#contact select {
-  @apply focus:border-accent-500 focus:ring-accent-500/50;
+  @apply outline-none ring-2 ring-accent-500 rounded;
 }
 
 /* Animations */

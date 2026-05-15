@@ -17,10 +17,7 @@ export default function About() {
     dot > 0 ? profile.bio.slice(dot + 2).trim() : "";
 
   return (
-    <section
-      id="about"
-      className="py-24 lg:py-32 px-6 lg:px-0 bg-accent-50/70 dark:bg-accent-950/20 border-y border-accent-100/80 dark:border-accent-900/40"
-    >
+    <section id="about" className="py-24 lg:py-32 px-6 lg:px-0 bg-canvas-light dark:bg-canvas-dark">
       <div
         ref={ref}
         className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
@@ -30,7 +27,7 @@ export default function About() {
         </h2>
 
         <div className="max-w-prose space-y-10">
-          <blockquote className="font-display text-2xl sm:text-3xl font-bold tracking-tight leading-snug text-text-primary dark:text-white border-l-4 border-accent-300 dark:border-accent-400/70 pl-6 py-1 not-italic">
+          <blockquote className="font-display text-2xl sm:text-3xl font-bold tracking-tight leading-snug text-text-primary dark:text-white border-l-4 border-accent-500 pl-6 py-1 not-italic">
             {pullQuote}
           </blockquote>
 

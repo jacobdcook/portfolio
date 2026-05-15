@@ -65,13 +65,13 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-brand-500 text-white font-semibold text-base transition-smooth hover:bg-brand-600 hover:scale-[1.02] active:scale-[0.98] active:translate-y-px focus-ring"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-accent-500 text-white font-semibold text-base transition-smooth hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98] active:translate-y-px focus-ring"
             >
               Get in touch
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-text-primary dark:text-white font-semibold text-base transition-smooth hover:border-brand-500 hover:text-brand-500 dark:hover:text-brand-400 hover:scale-[1.02] active:scale-[0.98] focus-ring"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-text-primary dark:text-white font-semibold text-base transition-smooth hover:border-accent-500 hover:text-accent-500 dark:hover:text-accent-400 hover:scale-[1.02] active:scale-[0.98] focus-ring"
             >
               View projects
             </a>
@@ -89,7 +89,7 @@ export default function Hero() {
           className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col items-center gap-8"
         >
           <div className="relative w-44 h-44 sm:w-52 sm:h-52 shrink-0">
-            <div className="relative h-full w-full overflow-hidden rounded-full ring-[3px] ring-brand-500/25 ring-offset-[3px] ring-offset-canvas-light dark:ring-offset-canvas-dark shadow-md">
+            <div className="relative h-full w-full overflow-hidden rounded-full ring-[3px] ring-accent-500/25 ring-offset-[3px] ring-offset-canvas-light dark:ring-offset-canvas-dark shadow-md">
               <Image
                 src={profile.headshotPath}
                 alt={`Portrait of ${profile.name}`}

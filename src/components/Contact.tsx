@@ -49,7 +49,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 lg:py-32 px-6 lg:px-0 bg-accent-50 dark:bg-accent-950/35 border-t border-accent-200/80 dark:border-accent-800/50"
+      className="py-24 lg:py-32 px-6 lg:px-0 bg-canvas-light dark:bg-canvas-dark border-t border-border-light dark:border-border-dark"
     >
       <div
         ref={ref}

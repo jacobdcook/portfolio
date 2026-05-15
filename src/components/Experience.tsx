@@ -38,7 +38,7 @@ export default function Experience() {
                     {exp.type}
                   </span>
                 </div>
-                <p className="text-sm font-medium text-brand-600 dark:text-brand-400">
+                <p className="text-sm font-medium text-accent-600 dark:text-accent-400">
                   {exp.company}
                 </p>
                 <p className="text-base text-text-secondary dark:text-white/70 leading-relaxed">

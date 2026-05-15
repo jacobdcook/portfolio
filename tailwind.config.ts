@@ -1,5 +1,20 @@
 import type { Config } from "tailwindcss";
 
+/** #202ABA — About → Projects band (also exposed as `brand`). */
+const navyBlue = {
+  50: "#EEF0FB",
+  100: "#D4D8F5",
+  200: "#A9B2EB",
+  300: "#7E8CE0",
+  400: "#5365D6",
+  500: "#202ABA",
+  600: "#1A2295",
+  700: "#141A70",
+  800: "#0E124B",
+  900: "#080A26",
+  950: "#050618",
+};
+
 const config: Config = {
   darkMode: "class",
   content: [
@@ -19,31 +34,20 @@ const config: Config = {
           secondary: "#6B6B68",
           tertiary: "#9B9B98",
         },
-        // Accent (Terracotta)
+        brand: navyBlue,
+        navy: navyBlue,
+        // Accent red (#ba2020) — about (soft) and contact/footer (full)
         accent: {
-          50: "#FBF3F0",
-          100: "#F5E1DC",
-          200: "#E8C9B9",
-          300: "#DAA896",
-          400: "#CC8B73",
-          500: "#B8553E",
-          600: "#A24430",
-          700: "#8F3729",
-          800: "#7A2B22",
-          900: "#5D1F16",
-        },
-        // Navy (#202aba) — About section only
-        navy: {
-          50: "#EEF0FB",
-          100: "#D4D8F5",
-          200: "#A9B2EB",
-          300: "#7E8CE0",
-          400: "#5365D6",
-          500: "#202ABA",
-          600: "#1A2295",
-          700: "#141A70",
-          800: "#0E124B",
-          900: "#080A26",
+          50: "#FBF0F0",
+          100: "#F5D8D8",
+          200: "#E8B5B5",
+          300: "#D99292",
+          400: "#CC6F6F",
+          500: "#BA2020",
+          600: "#9A1A1A",
+          700: "#7A1414",
+          800: "#5A0F0F",
+          900: "#3A0A0A",
         },
         // Semantic
         success: "#4B7C5A",

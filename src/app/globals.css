@@ -58,12 +58,12 @@ code, pre {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B8553E;
+  background: #202aba;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A24430;
+  background: #1a2295;
 }
 
 html.dark ::-webkit-scrollbar-thumb {
@@ -104,20 +104,61 @@ button:active {
 /* Form utilities */
 input, textarea, select {
   @apply border border-border-light dark:border-border-dark rounded px-3 py-2 text-base transition-colors;
-  @apply focus:border-accent-500 focus:ring-1 focus:ring-accent-500/50;
+  @apply focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50;
 }
 
 label {
   @apply block text-sm font-medium mb-2;
 }
 
-/* Link utilities */
+/* Link utilities (accent default; navy band overrides below) */
 a {
   @apply text-accent-500 hover:text-accent-600 transition-colors;
 }
 
-a:focus {
+a:focus-visible {
   @apply outline-none ring-2 ring-accent-500 rounded;
+}
+
+/* Navy band: About → Projects */
+#about a,
+#skills a,
+#experience a,
+#projects a {
+  @apply text-inherit hover:text-inherit transition-colors;
+}
+
+#about a:focus-visible,
+#skills a:focus-visible,
+#experience a:focus-visible,
+#projects a:focus-visible,
+#about button:focus-visible,
+#skills button:focus-visible,
+#experience button:focus-visible,
+#projects button:focus-visible {
+  @apply outline-none ring-2 ring-navy-500 ring-offset-2 ring-offset-navy-50 dark:ring-offset-navy-950/80 rounded;
+}
+
+#about .focus-ring:focus-visible,
+#skills .focus-ring:focus-visible,
+#experience .focus-ring:focus-visible,
+#projects .focus-ring:focus-visible {
+  @apply ring-navy-500;
+}
+
+/* Red zone: contact overrides default link color */
+#contact a:not([class*="bg-"]) {
+  @apply text-accent-500 hover:text-accent-600;
+}
+
+#contact a:focus-visible {
+  @apply ring-accent-500;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+  @apply focus:border-accent-500 focus:ring-accent-500/50;
 }
 
 /* Animations */

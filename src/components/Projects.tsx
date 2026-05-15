@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
-import { navySectionEnd, navyHeading } from "@/lib/navySection";
+import { navySectionEnd, navyHeading, navyFocusRing } from "@/lib/navySection";
 import profile from "../../content/profile.json";
 
 type Category = "all" | "cybersecurity" | "software";
@@ -63,7 +63,7 @@ export default function Projects() {
                   key={f.value}
                   type="button"
                   onClick={() => setActive(f.value)}
-                  className={`px-4 py-2 text-sm font-medium rounded transition-smooth focus-ring outline-none ${
+                  className={`px-4 py-2 text-sm font-medium rounded transition-smooth ${navyFocusRing} ${
                     on
                       ? "bg-navy-500 text-white"
                       : "bg-transparent text-navy-900/75 dark:text-white/65 hover:text-navy-600 dark:hover:text-navy-300 border border-transparent hover:border-navy-200 dark:hover:border-navy-700"
@@ -103,7 +103,7 @@ export default function Projects() {
                   },
                 }}
                 whileHover={springHover}
-                className={`group flex flex-col h-full min-h-[11rem] rounded-lg border transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] focus-ring outline-none ${
+                className={`group flex flex-col h-full min-h-[11rem] rounded-lg border transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] text-inherit ${navyFocusRing} ${
                   featured
                     ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-2 border-navy-500/40 dark:border-navy-400/30"
                     : "border border-navy-200 dark:border-navy-700 md:col-span-2 xl:col-span-2 xl:row-span-1"

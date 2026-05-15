@@ -13,3 +13,7 @@ export const navyHeading =
 
 export const navySubheading =
   "text-label uppercase tracking-wide text-navy-600 dark:text-navy-300 font-medium";
+
+/** Focus ring inside About → Projects (not global accent focus-ring). */
+export const navyFocusRing =
+  "outline-none focus-visible:ring-2 focus-visible:ring-navy-500 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-50 dark:focus-visible:ring-offset-navy-950/80 rounded";

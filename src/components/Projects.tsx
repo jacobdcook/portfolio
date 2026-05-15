@@ -69,8 +69,8 @@ export default function Projects() {
                   onClick={() => setActive(f.value)}
                   className={`px-4 py-2 text-sm font-medium rounded transition-smooth focus-ring outline-none ${
                     on
-                      ? "bg-accent-500 text-white"
-                      : "bg-transparent text-text-secondary dark:text-white/65 hover:text-accent-600 dark:hover:text-accent-400 border border-transparent hover:border-border-light dark:hover:border-border-dark"
+                      ? "bg-brand-500 text-white"
+                      : "bg-transparent text-text-secondary dark:text-white/65 hover:text-brand-600 dark:hover:text-brand-400 border border-transparent hover:border-border-light dark:hover:border-border-dark"
                   }`}
                 >
                   {f.label}
@@ -109,7 +109,7 @@ export default function Projects() {
                 whileHover={springHover}
                 className={`group flex flex-col h-full min-h-[11rem] rounded-lg border transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] focus-ring outline-none ${
                   featured
-                    ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-2 border-accent-500/40 dark:border-accent-500/30"
+                    ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-2 border-brand-500/40 dark:border-brand-500/30"
                     : "border border-border-light dark:border-border-dark md:col-span-2 xl:col-span-2 xl:row-span-1"
                 }`}
               >
@@ -121,7 +121,7 @@ export default function Projects() {
                         : "Software"}
                     </span>
                     {featured ? (
-                      <span className="text-xs font-semibold uppercase tracking-wide text-accent-600 dark:text-accent-400">
+                      <span className="text-xs font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">
                         Featured
                       </span>
                     ) : null}
@@ -129,12 +129,12 @@ export default function Projects() {
                   <GithubLogo
                     size={22}
                     weight="bold"
-                    className="text-text-tertiary dark:text-white/45 shrink-0 transition-colors group-hover:text-accent-500"
+                    className="text-text-tertiary dark:text-white/45 shrink-0 transition-colors group-hover:text-brand-500"
                     aria-hidden
                   />
                 </div>
 
-                <h3 className="font-display text-lg font-semibold tracking-tight text-text-primary dark:text-white group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors mb-3">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-text-primary dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors mb-3">
                   {project.name}
                 </h3>
                 <p className="text-sm text-text-secondary dark:text-white/70 leading-relaxed flex-1">
@@ -142,7 +142,7 @@ export default function Projects() {
                 </p>
 
                 <p className="mt-5 text-xs font-mono text-text-tertiary dark:text-white/45 flex items-center gap-2">
-                  <span className="underline underline-offset-2 decoration-border-light dark:decoration-border-dark group-hover:decoration-accent-500">
+                  <span className="underline underline-offset-2 decoration-border-light dark:decoration-border-dark group-hover:decoration-brand-500">
                     View on GitHub
                   </span>
                 </p>

@@ -32,6 +32,19 @@ const config: Config = {
           800: "#7A2B22",
           900: "#5D1F16",
         },
+        // Navy (#202aba) — About section only
+        navy: {
+          50: "#EEF0FB",
+          100: "#D4D8F5",
+          200: "#A9B2EB",
+          300: "#7E8CE0",
+          400: "#5365D6",
+          500: "#202ABA",
+          600: "#1A2295",
+          700: "#141A70",
+          800: "#0E124B",
+          900: "#080A26",
+        },
         // Semantic
         success: "#4B7C5A",
         error: "#9F2F2D",

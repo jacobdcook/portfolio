@@ -40,7 +40,7 @@ code, pre {
   }
 
   .focus-ring {
-    @apply outline-none ring-2 ring-accent-500 ring-offset-2 dark:ring-offset-canvas-dark dark:ring-neon-500;
+    @apply outline-none ring-2 ring-accent-500 ring-offset-2 dark:ring-offset-canvas-dark;
   }
 
   .prose {
@@ -137,15 +137,6 @@ a:focus-visible {
   @apply outline-none ring-2 ring-accent-500 rounded;
 }
 
-/* Dark mode: neon green accent */
-html.dark a {
-  @apply text-neon-500 hover:text-neon-400 transition-colors;
-}
-
-html.dark a:focus-visible {
-  @apply ring-neon-500;
-}
-
 /* Navy band: About → Projects */
 #about a,
 #skills a,
@@ -185,21 +176,6 @@ html.dark a:focus-visible {
 #contact textarea,
 #contact select {
   @apply focus:border-accent-500 focus:ring-accent-500/50;
-}
-
-/* Dark mode contact: neon green */
-html.dark #contact a:not([class*="bg-"]) {
-  @apply text-neon-500 hover:text-neon-400;
-}
-
-html.dark #contact a:focus-visible {
-  @apply ring-neon-500;
-}
-
-html.dark #contact input,
-html.dark #contact textarea,
-html.dark #contact select {
-  @apply focus:border-neon-500 focus:ring-neon-500/50;
 }
 
 /* Animations */

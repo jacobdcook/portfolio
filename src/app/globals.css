@@ -28,6 +28,12 @@ code, pre {
   font-family: var(--font-geist-mono), ui-monospace, monospace;
 }
 
+/* Dark mode: terminal green for code/pre blocks */
+html.dark code,
+html.dark pre {
+  color: #00FF41;
+}
+
 /* Text utilities */
 @layer utilities {
   .text-balance {

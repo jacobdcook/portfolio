@@ -49,6 +49,19 @@ const config: Config = {
           800: "#5A0F0F",
           900: "#3A0A0A",
         },
+        // Neon green (terminal aesthetic for dark mode)
+        neon: {
+          50: "#F0FFF0",
+          100: "#CCFFCC",
+          200: "#99FF99",
+          300: "#66FF66",
+          400: "#33FF33",
+          500: "#00FF41",
+          600: "#00E635",
+          700: "#00CC2B",
+          800: "#00A621",
+          900: "#007D17",
+        },
         // Semantic
         success: "#4B7C5A",
         error: "#9F2F2D",

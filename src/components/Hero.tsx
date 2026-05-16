@@ -103,7 +103,7 @@ export default function Hero() {
 
           <div className="w-full min-w-0">
             <pre
-              className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary dark:text-white/90 overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
+              className="font-mono text-xs sm:text-sm leading-relaxed p-5 sm:p-6 rounded-lg border border-border-light dark:border-border-dark bg-white/70 dark:bg-white/[0.04] text-text-primary overflow-x-auto whitespace-pre shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none text-left"
             >
               {SIGMA_SNIPPET}
             </pre>

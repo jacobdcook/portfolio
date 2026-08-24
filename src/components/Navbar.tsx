@@ -20,12 +20,6 @@ export default function Navbar() {
   const activeSection = useActiveSection();
   const { theme, toggleTheme } = useTheme();
 
-  const initials = profile.name
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((part) => part[0]?.toUpperCase() ?? "")
-    .join("");
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -49,9 +43,16 @@ export default function Navbar() {
           href="#"
           aria-label={`${profile.name}, back to top`}
           title={profile.name}
-          className="font-mono text-sm font-bold tracking-tight tabular-nums px-2 py-1 rounded border border-border-light dark:border-border-dark text-text-primary dark:text-white hover:border-navy-500 hover:text-navy-600 dark:hover:border-neon-500/60 dark:hover:text-neon-400 transition-colors focus-ring"
+          className="font-mono text-base font-bold tracking-tight px-1.5 py-1 rounded text-text-primary dark:text-white hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring"
         >
-          {initials}
+          <span className="text-navy-500 dark:text-neon-500" aria-hidden>
+            ❯{" "}
+          </span>
+          jc
+          <span
+            aria-hidden
+            className="terminal-cursor inline-block w-[0.5em] h-[1.05em] ml-1 align-text-bottom bg-navy-500 dark:bg-neon-500"
+          />
         </a>
 
         {/* Desktop nav */}

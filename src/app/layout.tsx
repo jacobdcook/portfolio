@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Mono } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
@@ -9,6 +9,13 @@ const spaceMono = Space_Mono({
   display: "swap",
   variable: "--font-geist-mono",
 });
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F7F6F3" },
+    { media: "(prefers-color-scheme: dark)", color: "#16161A" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jacobdcook.com"),

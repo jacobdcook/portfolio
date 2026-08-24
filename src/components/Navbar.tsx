@@ -66,7 +66,7 @@ export default function Navbar() {
                 rel={link.isExternal ? "noopener noreferrer" : undefined}
                 className={`text-sm font-medium transition-colors ${
                   link.isExternal
-                    ? "px-4 py-2 border border-border-light dark:border-border-dark text-text-primary dark:text-white hover:border-accent-500 hover:text-accent-500"
+                    ? "px-4 py-2 rounded bg-accent-500 text-white hover:bg-accent-600 shadow-[0_4px_16px_-4px_rgba(186,32,32,0.45)]"
                     : isActive
                     ? "text-accent-500 border-b-2 border-accent-500"
                     : "text-text-secondary dark:text-white/70 hover:text-accent-500"
@@ -140,7 +140,7 @@ export default function Navbar() {
               rel={link.isExternal ? "noopener noreferrer" : undefined}
               className={`block py-3 transition-colors font-medium ${
                 link.isExternal
-                  ? "mt-2 px-4 py-2 border border-border-light dark:border-border-dark text-text-primary dark:text-white hover:border-accent-500 hover:text-accent-500 text-center"
+                  ? "mt-2 px-4 py-2 rounded bg-accent-500 text-white hover:bg-accent-600 text-center"
                   : "text-text-primary dark:text-white/70 hover:text-accent-500"
               }`}
               onClick={() => setMobileOpen(false)}

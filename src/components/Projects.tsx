@@ -2,8 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
-import { navySectionEnd, navyHeading, navyFocusRing } from "@/lib/navySection";
+import { GithubLogo, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { navySectionEnd, navyFocusRing } from "@/lib/navySection";
+import SectionHeading from "@/components/SectionHeading";
 import profile from "../../content/profile.json";
 
 type Category = "all" | "cybersecurity" | "software";
@@ -53,7 +54,7 @@ export default function Projects() {
     <section id="projects" className={navySectionEnd}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 lg:mb-14">
-          <h2 className={`${navyHeading} mb-8`}>Projects</h2>
+          <SectionHeading index="04" title="Projects" className="mb-8" />
 
           <div className="flex flex-wrap gap-2 border-b border-navy-200 dark:border-navy-700 pb-4">
             {filters.map((f) => {
@@ -103,12 +104,18 @@ export default function Projects() {
                   },
                 }}
                 whileHover={springHover}
-                className={`group flex flex-col h-full min-h-[11rem] rounded-lg border transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-md dark:hover:shadow-none p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] text-inherit ${navyFocusRing} ${
+                className={`group relative overflow-hidden flex flex-col h-full min-h-[11rem] rounded-lg border transition-smooth shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-[0_12px_32px_-12px_rgba(20,26,112,0.25)] dark:hover:shadow-[0_0_28px_-6px_rgba(0,255,65,0.12)] p-6 lg:p-7 bg-white/80 dark:bg-white/[0.04] text-inherit hover:border-navy-500/60 dark:hover:border-neon-500/30 ${navyFocusRing} ${
                   featured
                     ? "md:col-span-2 md:row-span-2 xl:col-span-2 xl:row-span-2 min-h-[17rem] border-2 border-navy-500/40 dark:border-navy-400/30"
                     : "border border-navy-200 dark:border-navy-700 md:col-span-2 xl:col-span-2 xl:row-span-1"
                 }`}
               >
+                {featured ? (
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-navy-500 via-navy-400 to-accent-500 dark:from-neon-600 dark:via-neon-500 dark:to-navy-400"
+                  />
+                ) : null}
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-label uppercase tracking-wide text-navy-600/90 dark:text-navy-300/90 font-medium">
@@ -137,10 +144,16 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <p className="mt-5 text-xs font-mono text-navy-700/70 dark:text-white/45 flex items-center gap-2">
-                  <span className="underline underline-offset-2 decoration-navy-200 dark:decoration-navy-700 group-hover:decoration-navy-500">
+                <p className="mt-5 text-xs font-mono text-navy-700/70 dark:text-white/45 flex items-center gap-1.5 group-hover:text-navy-600 dark:group-hover:text-neon-400 transition-colors">
+                  <span className="underline underline-offset-2 decoration-navy-200 dark:decoration-navy-700 group-hover:decoration-navy-500 dark:group-hover:decoration-neon-500/60">
                     View on GitHub
                   </span>
+                  <ArrowUpRight
+                    size={14}
+                    weight="bold"
+                    aria-hidden
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
                 </p>
               </motion.a>
             );

@@ -9,6 +9,7 @@ import {
   Phone,
 } from "@phosphor-icons/react/dist/ssr";
 import { useInView } from "@/hooks/useInView";
+import SectionHeading from "@/components/SectionHeading";
 import profile from "../../content/profile.json";
 
 export default function Contact() {
@@ -55,9 +56,12 @@ export default function Contact() {
         ref={ref}
         className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
       >
-        <h2 className="font-display text-h2 font-bold tracking-tight text-text-primary dark:text-white mb-14 lg:mb-16">
-          Contact
-        </h2>
+        <SectionHeading
+          index="05"
+          title="Contact"
+          variant="accent"
+          className="mb-14 lg:mb-16"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20">
           <div className="space-y-8 max-w-prose">

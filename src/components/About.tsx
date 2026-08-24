@@ -1,7 +1,8 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
-import { navySectionStart, navyHeading, navySubheading } from "@/lib/navySection";
+import { navySectionStart, navySubheading } from "@/lib/navySection";
+import SectionHeading from "@/components/SectionHeading";
 import profile from "../../content/profile.json";
 
 type Edu = (typeof profile.education)[number];
@@ -23,7 +24,7 @@ export default function About() {
         ref={ref}
         className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
       >
-        <h2 className={`${navyHeading} mb-12`}>About me</h2>
+        <SectionHeading index="01" title="About me" className="mb-12" />
 
         <div className="max-w-prose space-y-10">
           <blockquote className="font-display text-2xl sm:text-3xl font-bold tracking-tight leading-snug text-navy-900 dark:text-white border-l-4 border-navy-500 dark:border-navy-400 pl-6 py-1 not-italic">

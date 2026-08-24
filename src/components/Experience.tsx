@@ -2,7 +2,8 @@
 
 import { MapPin } from "@phosphor-icons/react/dist/ssr";
 import { useInView } from "@/hooks/useInView";
-import { navySectionShell, navyHeading } from "@/lib/navySection";
+import { navySectionShell } from "@/lib/navySection";
+import SectionHeading from "@/components/SectionHeading";
 import profile from "../../content/profile.json";
 
 export default function Experience() {
@@ -14,7 +15,11 @@ export default function Experience() {
         ref={ref}
         className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
       >
-        <h2 className={`${navyHeading} mb-14 lg:mb-16`}>Experience</h2>
+        <SectionHeading
+          index="03"
+          title="Experience"
+          className="mb-14 lg:mb-16"
+        />
 
         <div className="space-y-0">
           {profile.experience.map((exp) => (

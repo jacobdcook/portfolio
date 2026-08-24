@@ -1,11 +1,8 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
-import {
-  navySectionShell,
-  navyHeading,
-  navySubheading,
-} from "@/lib/navySection";
+import { navySectionShell, navySubheading } from "@/lib/navySection";
+import SectionHeading from "@/components/SectionHeading";
 import profile from "../../content/profile.json";
 
 const groups: { title: string; key: keyof typeof profile.skills }[] = [
@@ -23,7 +20,7 @@ export default function Skills() {
         ref={ref}
         className={`max-w-6xl mx-auto reveal ${isInView ? "in-view" : ""}`}
       >
-        <h2 className={`${navyHeading} mb-14 lg:mb-16`}>Skills</h2>
+        <SectionHeading index="02" title="Skills" className="mb-14 lg:mb-16" />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-16">
           {groups.map((g) => (
@@ -33,11 +30,11 @@ export default function Skills() {
               >
                 {g.title}
               </h3>
-              <ul className="space-y-3">
+              <ul className="flex flex-wrap gap-2.5">
                 {profile.skills[g.key].map((skill) => (
                   <li
                     key={skill}
-                    className="text-sm text-navy-900/80 dark:text-white/75 leading-relaxed pl-3 border-l border-navy-200 dark:border-navy-700"
+                    className="px-3.5 py-1.5 text-sm rounded-full border border-navy-200 dark:border-navy-700 bg-white/70 dark:bg-navy-900/40 text-navy-900/85 dark:text-white/80 leading-relaxed transition-colors hover:border-navy-500 hover:text-navy-700 dark:hover:border-neon-500/50 dark:hover:text-neon-400"
                   >
                     {skill}
                   </li>

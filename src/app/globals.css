@@ -46,7 +46,7 @@ html.dark pre {
   }
 
   .focus-ring {
-    @apply outline-none ring-2 ring-accent-500 ring-offset-2 dark:ring-offset-canvas-dark;
+    @apply outline-none ring-2 ring-navy-500 dark:ring-neon-500 ring-offset-2 dark:ring-offset-canvas-dark;
   }
 
   .prose {
@@ -134,13 +134,13 @@ label {
   @apply block text-sm font-medium mb-2;
 }
 
-/* Link utilities (accent default; navy band overrides below) */
+/* Link utilities (navy default, neon in dark; navy band overrides below) */
 a {
-  @apply text-accent-500 hover:text-accent-600 transition-colors;
+  @apply text-navy-600 hover:text-navy-500 dark:text-neon-500 dark:hover:text-neon-400 transition-colors;
 }
 
 a:focus-visible {
-  @apply outline-none ring-2 ring-accent-500 rounded;
+  @apply outline-none ring-2 ring-navy-500 dark:ring-neon-500 rounded;
 }
 
 /* Navy band: About → Projects */
@@ -169,19 +169,19 @@ a:focus-visible {
   @apply ring-navy-500;
 }
 
-/* Red zone: contact overrides default link color */
+/* Contact: matches the navy/neon link scheme */
 #contact a:not([class*="bg-"]) {
-  @apply text-accent-500 hover:text-accent-600;
+  @apply text-navy-600 hover:text-navy-500 dark:text-neon-500 dark:hover:text-neon-400;
 }
 
 #contact a:focus-visible {
-  @apply ring-accent-500;
+  @apply ring-navy-500 dark:ring-neon-500;
 }
 
 #contact input,
 #contact textarea,
 #contact select {
-  @apply focus:border-accent-500 focus:ring-accent-500/50;
+  @apply focus:border-navy-500 focus:ring-navy-500/50;
 }
 
 /* Hero backdrop: blueprint grid */

@@ -40,7 +40,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <a href="#hero" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-6 focus:px-4 focus:py-2 focus:bg-accent-500 focus:text-white focus:rounded focus:z-50">
+      <a href="#hero" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-6 focus:px-4 focus:py-2 focus:bg-navy-500 focus:text-white focus:rounded focus:z-50">
         Skip to main content
       </a>
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -49,7 +49,7 @@ export default function Navbar() {
           href="#"
           aria-label={`${profile.name}, back to top`}
           title={profile.name}
-          className="font-mono text-sm font-bold tracking-tight tabular-nums px-2 py-1 rounded border border-border-light dark:border-border-dark text-text-primary dark:text-white hover:border-accent-500 hover:text-accent-500 transition-colors focus-ring"
+          className="font-mono text-sm font-bold tracking-tight tabular-nums px-2 py-1 rounded border border-border-light dark:border-border-dark text-text-primary dark:text-white hover:border-navy-500 hover:text-navy-600 dark:hover:border-neon-500/60 dark:hover:text-neon-400 transition-colors focus-ring"
         >
           {initials}
         </a>
@@ -66,10 +66,10 @@ export default function Navbar() {
                 rel={link.isExternal ? "noopener noreferrer" : undefined}
                 className={`text-sm font-medium transition-colors ${
                   link.isExternal
-                    ? "px-4 py-2 rounded bg-accent-500 text-white hover:bg-accent-600 shadow-[0_4px_16px_-4px_rgba(186,32,32,0.45)]"
+                    ? "px-4 py-2 rounded bg-navy-500 text-white hover:bg-navy-600 dark:bg-neon-500 dark:text-canvas-dark dark:hover:bg-neon-400 shadow-[0_4px_16px_-4px_rgba(32,42,186,0.45)] dark:shadow-[0_4px_16px_-4px_rgba(0,255,65,0.3)]"
                     : isActive
-                    ? "text-accent-500 border-b-2 border-accent-500"
-                    : "text-text-secondary dark:text-white/70 hover:text-accent-500"
+                    ? "text-navy-600 dark:text-neon-400 border-b-2 border-navy-500 dark:border-neon-500"
+                    : "text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400"
                 }`}
               >
                 {link.label}
@@ -81,7 +81,7 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="flex items-center justify-center text-text-secondary dark:text-white/70 hover:text-accent-500 focus-ring"
+            className="flex items-center justify-center text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400 focus-ring"
           >
             {theme === "dark" ? (
               <Sun size={20} weight="bold" />
@@ -96,7 +96,7 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="flex items-center justify-center text-text-secondary dark:text-white/70 hover:text-accent-500 focus-ring"
+            className="flex items-center justify-center text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400 focus-ring"
           >
             {theme === "dark" ? (
               <Sun size={20} weight="bold" />
@@ -140,8 +140,8 @@ export default function Navbar() {
               rel={link.isExternal ? "noopener noreferrer" : undefined}
               className={`block py-3 transition-colors font-medium ${
                 link.isExternal
-                  ? "mt-2 px-4 py-2 rounded bg-accent-500 text-white hover:bg-accent-600 text-center"
-                  : "text-text-primary dark:text-white/70 hover:text-accent-500"
+                  ? "mt-2 px-4 py-2 rounded bg-navy-500 text-white hover:bg-navy-600 dark:bg-neon-500 dark:text-canvas-dark dark:hover:bg-neon-400 text-center"
+                  : "text-text-primary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400"
               }`}
               onClick={() => setMobileOpen(false)}
             >

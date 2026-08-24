@@ -110,7 +110,7 @@ export default function Hero() {
       <div aria-hidden className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-grid-hero [mask-image:radial-gradient(ellipse_75%_65%_at_50%_40%,black,transparent)]" />
         <div className="absolute -top-40 right-[8%] w-[34rem] h-[34rem] rounded-full bg-navy-500/10 dark:bg-neon-500/[0.05] blur-3xl" />
-        <div className="absolute -bottom-24 left-[4%] w-[28rem] h-[28rem] rounded-full bg-accent-500/[0.06] dark:bg-navy-500/15 blur-3xl" />
+        <div className="absolute -bottom-24 left-[4%] w-[28rem] h-[28rem] rounded-full bg-navy-400/10 dark:bg-navy-500/15 blur-3xl" />
       </div>
 
       <div className="relative max-w-6xl mx-auto w-full grid gap-12 lg:gap-16 lg:grid-cols-12 lg:items-center">
@@ -131,7 +131,7 @@ export default function Hero() {
             className="font-display text-display sm:text-display-lg xl:text-display-xl font-bold tracking-tighter text-text-primary dark:text-white text-balance leading-[1.05]"
           >
             {profile.heroGreetingPrefix}{" "}
-            <span className="bg-gradient-to-r from-navy-500 to-accent-500 dark:from-neon-300 dark:to-neon-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-navy-700 to-navy-400 dark:from-neon-300 dark:to-neon-600 bg-clip-text text-transparent">
               {profile.heroGreetingHighlight}
             </span>{" "}
             {profile.heroGreetingSuffix}
@@ -152,13 +152,13 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-accent-500 text-white font-semibold text-base transition-smooth hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98] active:translate-y-px focus-ring shadow-[0_8px_24px_-8px_rgba(186,32,32,0.5)]"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded bg-navy-500 text-white dark:bg-neon-500 dark:text-canvas-dark font-semibold text-base transition-smooth hover:bg-navy-600 dark:hover:bg-neon-400 hover:scale-[1.02] active:scale-[0.98] active:translate-y-px focus-ring shadow-[0_8px_24px_-8px_rgba(32,42,186,0.5)] dark:shadow-[0_8px_24px_-8px_rgba(0,255,65,0.35)]"
             >
               Get in touch
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-text-primary dark:text-white font-semibold text-base transition-smooth hover:border-accent-500 hover:text-accent-500 dark:hover:border-neon-500/60 dark:hover:text-neon-500 hover:scale-[1.02] active:scale-[0.98] focus-ring"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded border-2 border-border-light dark:border-border-dark bg-transparent text-text-primary dark:text-white font-semibold text-base transition-smooth hover:border-navy-500 hover:text-navy-600 dark:hover:border-neon-500/60 dark:hover:text-neon-500 hover:scale-[1.02] active:scale-[0.98] focus-ring"
             >
               View projects
             </a>
@@ -210,7 +210,7 @@ export default function Hero() {
           className="lg:col-span-6 xl:col-span-5 min-w-0 flex flex-col items-center gap-8"
         >
           <div className="relative w-44 h-44 sm:w-52 sm:h-52 shrink-0">
-            <div className="relative h-full w-full overflow-hidden rounded-full ring-[3px] ring-accent-500/25 dark:ring-neon-500/25 ring-offset-[3px] ring-offset-canvas-light dark:ring-offset-canvas-dark shadow-md">
+            <div className="relative h-full w-full overflow-hidden rounded-full ring-[3px] ring-navy-500/25 dark:ring-neon-500/25 ring-offset-[3px] ring-offset-canvas-light dark:ring-offset-canvas-dark shadow-md">
               <Image
                 src={profile.headshotPath}
                 alt={`Portrait of ${profile.name}`}

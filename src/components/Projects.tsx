@@ -113,7 +113,7 @@ export default function Projects() {
                 {featured ? (
                   <span
                     aria-hidden
-                    className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-navy-500 via-navy-400 to-accent-500 dark:from-neon-600 dark:via-neon-500 dark:to-navy-400"
+                    className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-navy-600 via-navy-400 to-navy-300 dark:from-neon-600 dark:via-neon-500 dark:to-navy-400"
                   />
                 ) : null}
                 <div className="flex items-start justify-between gap-3 mb-4">

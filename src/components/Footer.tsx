@@ -25,7 +25,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="hover:text-accent-500 transition-colors focus-ring p-2"
+              className="hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring p-2"
             >
               <GithubLogo size={20} weight="bold" />
             </a>
@@ -34,14 +34,14 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-accent-500 transition-colors focus-ring p-2"
+              className="hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring p-2"
             >
               <LinkedinLogo size={20} weight="bold" />
             </a>
             <a
               href={`mailto:${profile.email}`}
               aria-label="Email"
-              className="hover:text-accent-500 transition-colors focus-ring p-2"
+              className="hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring p-2"
             >
               <Envelope size={20} weight="bold" />
             </a>
@@ -57,10 +57,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-accent-500 transition-colors">
+            <a href="#" className="hover:text-navy-600 dark:hover:text-neon-400 transition-colors">
               Privacy
             </a>
-            <a href="#" className="hover:text-accent-500 transition-colors">
+            <a href="#" className="hover:text-navy-600 dark:hover:text-neon-400 transition-colors">
               Terms
             </a>
           </div>

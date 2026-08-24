@@ -59,7 +59,6 @@ export default function Contact() {
         <SectionHeading
           index="05"
           title="Contact"
-          variant="accent"
           className="mb-14 lg:mb-16"
         />
 
@@ -75,18 +74,18 @@ export default function Contact() {
               <li>
                 <a
                   href={`mailto:${profile.email}`}
-                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors focus-ring rounded"
+                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring rounded"
                 >
-                  <EnvelopeSimple size={22} weight="bold" className="shrink-0 text-accent-500" />
+                  <EnvelopeSimple size={22} weight="bold" className="shrink-0 text-navy-500 dark:text-neon-500" />
                   <span>{profile.email}</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${profile.phone.replace(/[^\d+]/g, "")}`}
-                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors focus-ring rounded"
+                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring rounded"
                 >
-                  <Phone size={22} weight="bold" className="shrink-0 text-accent-500" />
+                  <Phone size={22} weight="bold" className="shrink-0 text-navy-500 dark:text-neon-500" />
                   <span>{profile.phone}</span>
                 </a>
               </li>
@@ -95,9 +94,9 @@ export default function Contact() {
                   href={profile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors focus-ring rounded"
+                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring rounded"
                 >
-                  <LinkedinLogo size={22} weight="bold" className="shrink-0 text-accent-500" />
+                  <LinkedinLogo size={22} weight="bold" className="shrink-0 text-navy-500 dark:text-neon-500" />
                   <span>LinkedIn</span>
                 </a>
               </li>
@@ -106,14 +105,14 @@ export default function Contact() {
                   href={profile.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors focus-ring rounded"
+                  className="inline-flex items-center gap-3 text-sm text-text-primary dark:text-white hover:text-navy-600 dark:hover:text-neon-400 transition-colors focus-ring rounded"
                 >
-                  <GithubLogo size={22} weight="bold" className="shrink-0 text-accent-500" />
+                  <GithubLogo size={22} weight="bold" className="shrink-0 text-navy-500 dark:text-neon-500" />
                   <span>GitHub</span>
                 </a>
               </li>
               <li className="inline-flex items-center gap-3 text-sm text-text-secondary dark:text-white/65">
-                <MapPin size={22} weight="bold" className="shrink-0 text-accent-500" />
+                <MapPin size={22} weight="bold" className="shrink-0 text-navy-500 dark:text-neon-500" />
                 <span>{profile.location}</span>
               </li>
             </ul>
@@ -138,7 +137,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, name: e.target.value })
                   }
-                  className="w-full rounded border border-border-light dark:border-border-dark bg-canvas-light dark:bg-canvas-dark px-3 py-2 text-base text-text-primary dark:text-white placeholder:text-text-tertiary focus:border-accent-500 focus:ring-1 focus:ring-accent-500/50 outline-none transition-colors"
+                  className="w-full rounded border border-border-light dark:border-border-dark bg-canvas-light dark:bg-canvas-dark px-3 py-2 text-base text-text-primary dark:text-white placeholder:text-text-tertiary focus:border-navy-500 focus:ring-1 focus:ring-navy-500/50 outline-none transition-colors"
                   placeholder="Your name"
                   autoComplete="name"
                 />
@@ -158,7 +157,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, email: e.target.value })
                   }
-                  className="w-full rounded border border-border-light dark:border-border-dark bg-canvas-light dark:bg-canvas-dark px-3 py-2 text-base text-text-primary dark:text-white placeholder:text-text-tertiary focus:border-accent-500 focus:ring-1 focus:ring-accent-500/50 outline-none transition-colors"
+                  className="w-full rounded border border-border-light dark:border-border-dark bg-canvas-light dark:bg-canvas-dark px-3 py-2 text-base text-text-primary dark:text-white placeholder:text-text-tertiary focus:border-navy-500 focus:ring-1 focus:ring-navy-500/50 outline-none transition-colors"
                   placeholder="you@example.com"
                   autoComplete="email"
                 />
@@ -177,7 +176,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, message: e.target.value })
                   }
-                  className="w-full rounded border border-border-light dark:border-border-dark bg-canvas-light dark:bg-canvas-dark px-3 py-2 text-base text-text-primary dark:text-white placeholder:text-text-tertiary focus:border-accent-500 focus:ring-1 focus:ring-accent-500/50 outline-none transition-colors resize-y min-h-[120px]"
+                  className="w-full rounded border border-border-light dark:border-border-dark bg-canvas-light dark:bg-canvas-dark px-3 py-2 text-base text-text-primary dark:text-white placeholder:text-text-tertiary focus:border-navy-500 focus:ring-1 focus:ring-navy-500/50 outline-none transition-colors resize-y min-h-[120px]"
                   placeholder="Brief context and how I can help"
                 />
               </div>
@@ -185,7 +184,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full py-3.5 px-6 rounded bg-accent-500 text-white font-semibold text-base transition-smooth hover:bg-accent-600 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 disabled:hover:scale-100 focus-ring"
+                className="w-full py-3.5 px-6 rounded bg-navy-500 text-white dark:bg-neon-500 dark:text-canvas-dark font-semibold text-base transition-smooth hover:bg-navy-600 dark:hover:bg-neon-400 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 disabled:hover:scale-100 focus-ring"
               >
                 {status === "sending"
                   ? "Sending…"
@@ -207,7 +206,7 @@ export default function Contact() {
               </p>
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex justify-center lg:justify-start items-center px-8 py-3.5 rounded bg-accent-500 text-white font-semibold transition-smooth hover:bg-accent-600 focus-ring self-center lg:self-start"
+                className="inline-flex justify-center lg:justify-start items-center px-8 py-3.5 rounded bg-navy-500 text-white dark:bg-neon-500 dark:text-canvas-dark font-semibold transition-smooth hover:bg-navy-600 dark:hover:bg-neon-400 focus-ring self-center lg:self-start"
               >
                 Send an email
               </a>

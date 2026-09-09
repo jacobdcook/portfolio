@@ -8,7 +8,7 @@
   "heroGreetingSuffix": "from noisy data.",
   "availability": "Open to Detection Engineering roles",
   "heroSubtitle": "Sigma rules, SIEM hardening, identity detections, and SOAR-style orchestration.",
-  "bio": "Detection and security automation engineer focused on reducing alert noise, closing coverage gaps, and building repeatable triage paths. My public detection work includes behavioral Sigma rules with KV store enrichment and false-positive tuning, Okta identity threat detections, SOAR-style orchestration that cuts manual response steps, and network behavior analysis that catches C2 beaconing and exfiltration patterns. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
+  "bio": "Detection and security automation engineer focused on reducing alert noise, closing coverage gaps, and building repeatable triage paths. My public detection work includes behavioral Sigma rules with KV store enrichment and false-positive tuning, Okta identity threat detections, SOAR-style orchestration that cuts manual response steps, and network behavior analysis that catches C2 beaconing and exfiltration patterns. I also ship local-first productivity tooling (Voxflow push-to-talk dictation, Murmur streaming TTS for Claude Code) and desktop apps in public beta. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
   "targetRoles": "Open to: Detection Engineer, Threat Hunter, Security Automation Engineer, Vulnerability Management, Tier 2+ SOC. Sacramento or remote.",
   "location": "Sacramento, CA",
   "email": "jacobcookofficial@gmail.com",
@@ -51,7 +51,7 @@
       "period": "Oct 2025 – Present",
       "location": "Sacramento, CA",
       "type": "Part-time",
-      "description": "Public detection and automation portfolio across SIEM, identity, cloud, and network security. Built behavioral Sigma detection pack for Stryker/Intune MDM attack with KV store enrichment and baseline-aware thresholds. Okta detection engine with false-positive tuning (3 benign use cases per detection). SOAR-style orchestration automating alert intake and response. Network behavior analyzer detecting C2 beaconing via behavioral baselines. Wazuh SIEM stack with rule tuning that tightened noisy coverage. Each project includes detection logic, false-positive analysis, and repeatable triage paths. Code at github.com/jacobdcook."
+      "description": "Public detection and automation portfolio across SIEM, identity, cloud, and network security. Built behavioral Sigma detection pack for Stryker/Intune MDM attack with KV store enrichment and baseline-aware thresholds. Okta detection engine with false-positive tuning (3 benign use cases per detection). SOAR-style orchestration automating alert intake and response. Network behavior analyzer detecting C2 beaconing via behavioral baselines. Wazuh SIEM stack with rule tuning that tightened noisy coverage. Also shipping local voice tooling (Voxflow, Murmur) and CareerHound desktop beta builds. Each project includes detection logic, false-positive analysis, and repeatable triage paths. Code at github.com/jacobdcook."
     },
     {
       "title": "Warehouse Operations – Engineering & Facilities Support",
@@ -103,6 +103,12 @@
       "degree": "CompTIA CSIE (Secure Infrastructure Expert)",
       "school": "CompTIA",
       "period": "Stackable credential",
+      "icon": "cert"
+    },
+    {
+      "degree": "CompTIA CSAP (Security Analytics Professional)",
+      "school": "CompTIA",
+      "period": "Stackable credential (Security+ · CySA+ · PenTest+)",
       "icon": "cert"
     }
   ],
@@ -185,6 +191,24 @@
       "description": "Professor Messer-aligned summaries, labs, and reflections supporting Security+ preparation.",
       "url": "https://github.com/jacobdcook/security-plus-labs",
       "category": "cybersecurity"
+    },
+    {
+      "name": "Voxflow",
+      "description": "Hold a key, speak, release. Local, cross-platform push-to-talk dictation (open-source Wispr Flow alternative).",
+      "url": "https://github.com/jacobdcook/voxflow",
+      "category": "software"
+    },
+    {
+      "name": "Murmur",
+      "description": "Streaming Kokoro TTS daemon for Claude Code: music ducking, tray controls, hold-to-pause hotkeys, and sentence-level playback.",
+      "url": "https://github.com/jacobdcook/murmur",
+      "category": "software"
+    },
+    {
+      "name": "CareerHound (beta)",
+      "description": "Desktop career workflow app: LinkedIn export import, draft review, and manual-send queue. Public beta builds; source private during beta.",
+      "url": "https://github.com/jacobdcook/careerhound-releases",
+      "category": "software"
     },
     {
       "name": "Claude Code skills",

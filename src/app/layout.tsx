@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jacobdcook.com"),
   title: "Jacob Cook – Detection Engineer | Security Automation",
   description:
-    "Detection engineering and security automation. Reducing alert noise, building reliable triage, designing threat-aware systems. MS Cybersecurity @ WGU. CompTIA SecurityX, CSIE.",
+    "Detection engineering and security automation. Reducing alert noise, building reliable triage, designing threat-aware systems. M.S. Cybersecurity, WGU. CompTIA SecurityX, CSIE.",
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.svg",

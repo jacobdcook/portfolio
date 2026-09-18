@@ -34,17 +34,14 @@
       "System hardening",
       "Networking fundamentals"
     ],
-    "supporting": ["Python", "Scripting", "Documentation", "Git"]
+    "supporting": [
+      "Python",
+      "Scripting",
+      "Documentation",
+      "Git"
+    ]
   },
   "experience": [
-    {
-      "title": "MS Cybersecurity Graduate Student",
-      "company": "Western Governors University",
-      "period": "Jan 2026 – Present",
-      "location": "Remote",
-      "type": "Full-time",
-      "description": "MS Cybersecurity (competency-based): network defense, incident response, security architecture, and hands-on labs across SIEM, logging, and system hardening. Coursework and labs connected to public detection and automation work, with emphasis on detection coverage, alert quality, and triage paths."
-    },
     {
       "title": "Security & Detection Projects (Open Source)",
       "company": "Personal Projects",
@@ -64,9 +61,9 @@
   ],
   "education": [
     {
-      "degree": "Master's in Cybersecurity",
+      "degree": "M.S. Cybersecurity and Information Assurance",
       "school": "Western Governors University",
-      "period": "Expected Oct 2026",
+      "period": "Sep 2026",
       "icon": "shield"
     },
     {

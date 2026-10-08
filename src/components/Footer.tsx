@@ -14,7 +14,7 @@ export default function Footer() {
               Portfolio
             </p>
             <p className="text-xs text-text-tertiary dark:text-white/50 mt-2">
-              Detection engineering · {profile.location}
+              Software & security · {profile.location}
             </p>
           </div>
 

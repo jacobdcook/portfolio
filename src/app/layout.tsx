@@ -19,18 +19,18 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jacobdcook.com"),
-  title: "Jacob Cook – Detection Engineer | Security Automation",
+  title: "Jacob Cook | Software Engineering & Security Automation",
   description:
-    "Detection engineering and security automation. Reducing alert noise, building reliable triage, designing threat-aware systems. M.S. Cybersecurity, WGU. CompTIA SecurityX, CSIE.",
+    "Software projects for security automation, identity, and internal workflows. Enterprise service desk experience, BS Computer Science, and MS Cybersecurity.",
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Jacob Cook – Detection Engineer | Security Automation",
+    title: "Jacob Cook | Software Engineering & Security Automation",
     description:
-      "Detection engineering and security automation. Building reliable triage paths and threat-aware systems.",
+      "Python APIs, security automation, and identity workflows. Explore personal projects and enterprise IT experience.",
     type: "website",
     url: "https://jacobdcook.com",
     images: [
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Jacob Cook – Detection Engineer",
+        alt: "Jacob Cook | Software & Security",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jacob Cook – Detection Engineer | Security Automation",
+    title: "Jacob Cook | Software Engineering & Security Automation",
     description:
-      "Detection engineering and security automation. Building reliable triage paths and threat-aware systems.",
+      "Python APIs, security automation, and identity workflows. Explore personal projects and enterprise IT experience.",
     images: ["/og-image.png"],
   },
 };

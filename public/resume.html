@@ -8,8 +8,8 @@
         * { box-sizing: border-box; }
         body {
             font-family: Calibri, "Segoe UI", Aptos, Arial, sans-serif;
-            font-size: 9.75pt;
-            line-height: 1.18;
+            font-size: 10pt;
+            line-height: 1.25;
             color: #1a1a1a;
             margin: 0;
             padding: 0;
@@ -81,7 +81,7 @@
         .section-title {
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 9.75pt;
+            font-size: 10pt;
             letter-spacing: 0.6px;
             border-bottom: 2px solid #1a1a1a;
             margin-top: 3px;
@@ -98,7 +98,7 @@
             align-items: baseline;
         }
 
-        .item-header .title { font-weight: 700; font-size: 9.75pt; }
+        .item-header .title { font-weight: 700; font-size: 10pt; }
         .item-header .date { font-size: 9.25pt; color: #444; white-space: nowrap; }
 
         .job-title {
@@ -143,150 +143,37 @@
     </style>
 </head>
 <body>
-
-    <button class="print-btn no-print" onclick="window.print()">Download PDF / Print</button>
-
-    <div class="page">
-        <div class="header">
-            <div class="name">Jacob Cook</div>
-            <div class="headline">Detection Engineer | Threat Hunter | Security Automation | Wazuh · Azure AD · Okta · Python · SOAR</div>
-            <div class="contact">
-                Sacramento, CA <span class="separator">·</span> 916 709 1794 <span class="separator">·</span> jacobcookofficial@gmail.com<br>
-                <a href="https://www.linkedin.com/in/jcook-dev/">linkedin.com/in/jcook-dev</a> <span class="separator">·</span> <a href="https://github.com/jacobdcook">github.com/jacobdcook</a> <span class="separator">·</span> <a href="https://jacobdcook.com">jacobdcook.com</a>
-            </div>
-        </div>
-
-        <div class="summary">
-            Hands-on experience building detection rules and automating incident response with Wazuh, Azure AD, Okta, and Python. MS in Cybersecurity and Information Assurance (WGU, 2026). Targeting SOC analyst and detection engineering roles.
-        </div>
-
-        <div class="section-title">Technical Skills</div>
-        <div class="item">
-            <div class="skills-grid">
-                <div class="skills-col">
-                    <ul>
-                        <li>Wazuh SIEM</li>
-                        <li>Threat Detection &amp; Hunting</li>
-                        <li>MITRE ATT&amp;CK</li>
-                        <li>Alert Triage &amp; Incident Response</li>
-                    </ul>
-                </div>
-                <div class="skills-col">
-                    <ul>
-                        <li>Azure AD &amp; Okta</li>
-                        <li>SSO / RBAC</li>
-                        <li>SOAR &amp; Playbook Automation</li>
-                        <li>Phishing Analysis &amp; IOC Analysis</li>
-                    </ul>
-                </div>
-                <div class="skills-col">
-                    <ul>
-                        <li>Python &amp; Bash &amp; SQL</li>
-                        <li>Git &amp; FastAPI &amp; React</li>
-                        <li>Linux (Ubuntu / CentOS) &amp; Windows</li>
-                        <li>Wireshark &amp; Networking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-title">Technical Projects</div>
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Stryker / Intune Detection Pack: Detection-as-Code</span>
-                <span class="date">2026</span>
-            </div>
-            <ul>
-                <li>Authored 6 Sigma-format detection rules for Intune MDM abuse mapped to MITRE ATT&amp;CK (threat-hunting style use cases), with enrichment logic that eliminated 100% of false positives in a 100-event simulation (80 benign suppressed, 20 malicious caught) using KV store-style admin baseline lookups.</li>
-                <li>Documented 3 benign false-positive scenarios per rule (18 total), covering VPN logins, scheduled maintenance, and PIM activations so analysts can triage confidently without escalating known-good activity.</li>
-                <li>Verification: 43 passing pytest cases in repo (tests/test_rules.py), reproducible against synthetic data, not a live tenant.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Blue Team SOC Monitoring Lab: Wazuh SIEM</span>
-                <span class="date">2026</span>
-            </div>
-            <ul>
-                <li>Built a full Wazuh SIEM stack from scratch and validated 12 detection rule patterns against 242 simulated auth-style events, separating true-positive threats from benign noise with 100% precision after tuning.</li>
-                <li>Reduced false-positive alert volume by 100% by tuning out all 79 benign-only matches (cron jobs, service accounts, scheduled deployments) without dropping a single true positive.</li>
-                <li>Verification: 19 passing pytest cases in repo (tests/test_detection_accuracy.py). All metrics reproducible.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">SOAR-lite: Incident Response Orchestrator</span>
-                <span class="date">2026</span>
-            </div>
-            <ul>
-                <li>Eliminated four manual triage steps (classification, IOC enrichment, notification, ticket creation) by building automated SIEM-triggered playbooks, reducing triage time by over 60% in lab testing.</li>
-                <li>Built end-to-end alert automation: webhook ingestion from Wazuh, automatic playbook routing by event type, IP blocking, Slack notification, and incident documentation with zero analyst intervention required.</li>
-                <li>Delivered a working handoff path from initial alert handling to documented, Tier 2-ready response that closes the gap between raw detection and actionable cases.</li>
-                <li>Verification: 10 passing pytest cases in repo (tests/test_orchestrator.py). Tests run against the real FastAPI app, not mocked endpoints.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Phishing Analysis Lab</span>
-                <span class="date">2026</span>
-            </div>
-            <ul>
-                <li>Triaged 5 real-world phishing samples end-to-end: header inspection, SPF/DKIM/DMARC validation, URL defanging, VirusTotal enrichment, IOC extraction, and attacker infrastructure mapping, achieving 100% accurate threat classification against known IOC ground truth.</li>
-                <li>Delivered production-style triage reports with documented IOCs, confidence assessments, and escalation decisions that mirror real security operations output.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title">G3-GPT: Industry-Sponsored Enterprise AI Platform (Team of 6)</span>
-                <span class="date">2024</span>
-            </div>
-            <ul>
-                <li>Secured a production AI platform for corporate stakeholders by engineering RBAC and Azure AD SSO, enforcing data privacy requirements that enabled executive-level adoption.</li>
-                <li>Shipped an enterprise-grade platform on deadline as part of a six-person team under direct industry sponsor oversight with zero critical security findings at delivery.</li>
-            </ul>
-        </div>
-
-        <div class="section-title">Professional Experience</div>
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Williams-Sonoma (WSI) <span style="font-weight:600;">|</span> Service Desk Analyst</span>
-                <span class="date">2026 - Present</span>
-            </div>
-            <ul>
-                <li>Triage and resolve ServiceNow tickets for retail store and corporate users across a large enterprise footprint, structured troubleshooting, escalation, and clear communication under time pressure.</li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <span class="title">Target Distribution Center <span style="font-weight:600;">|</span> Operations Engineer: Systems Monitoring &amp; Incident Response</span>
-                <span class="date">2019 - 2025</span>
-            </div>
-            <ul>
-                <li>Maintained 99.5% system uptime across automated sortation and conveyor infrastructure by monitoring sensors, alerts, and operational dashboards across rotating shifts, the same continuous monitoring discipline expected in round-the-clock operations environments.</li>
-                <li>Resolved 200+ system anomalies over six years through structured root cause analysis, producing compliance-tracked documentation that reduced repeat incidents by an estimated 30% and supported audit readiness.</li>
-                <li>Reduced mean time to recovery by an estimated 20% by coordinating cross-team incident response during outages, including escalation, triage prioritization, and post-incident reporting that mirrors incident response program workflows.</li>
-            </ul>
-        </div>
-
-        <div class="section-title">Education &amp; Certifications</div>
-        <div class="item">
-            <div class="item-header">
-                <span class="edu-line">WGU | MS, Cybersecurity and Information Assurance</span>
-                <span class="date">Sep 2026 · GPA 3.50</span>
-            </div>
-            <div class="item-header" style="margin-top: 1px;">
-                <span class="edu-line">CSUS | BS, Computer Science</span>
-                <span class="date">Jan 2025 · GPA 3.50</span>
-            </div>
-            <div class="cert-line" style="margin-top: 2px;">
-                <span class="skill-label">CompTIA:</span> Security+ · CySA+ · PenTest+ · SecurityX · CSIE (stackable)
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+<button class="print-btn no-print" onclick="window.print()">Download PDF / Print</button>
+<main class="page">
+<div class="header">
+<div class="name">Jacob Cook</div>
+<div class="headline">Software Engineering · Security Automation · Identity &amp; Internal Tools</div>
+<div class="contact">Sacramento, CA · 916 709 1794 · jacobcookofficial@gmail.com<br>
+<a href="https://www.linkedin.com/in/jcook-dev/">linkedin.com/in/jcook-dev</a> · <a href="https://github.com/jacobdcook">github.com/jacobdcook</a> · <a href="https://jacobdcook.com">jacobdcook.com</a></div>
+</div>
+<div class="summary">Enterprise service desk analyst with a BS in Computer Science and an MS in Cybersecurity. Building personal software projects in Python APIs, security automation, and identity workflows, with current PostgreSQL lab work. Seeking backend, internal tools, and security automation opportunities.</div>
+<div class="section-title">Technical Skills</div>
+<div class="skills-grid">
+<div class="skills-col"><ul><li>Python · Bash · SQL</li><li>FastAPI · REST APIs · Git</li><li>TypeScript · React · Next.js</li><li>PostgreSQL (current lab work)</li></ul></div>
+<div class="skills-col"><ul><li>Security automation · Playbooks</li><li>Wazuh · Sigma · MITRE ATT&amp;CK</li><li>Identity detection · Okta labs</li><li>SSO / RBAC (project work)</li></ul></div>
+<div class="skills-col"><ul><li>ServiceNow · Incident triage</li><li>Windows · Linux · Networking</li><li>Docker · Automated testing</li><li>Documentation · Troubleshooting</li></ul></div>
+</div>
+<div class="section-title">Professional Experience</div>
+<div class="item"><div class="item-header"><span class="title">Williams-Sonoma, Inc. | Service Desk Analyst</span><span class="date">Jun 2026 – Present</span></div>
+<ul><li>Support hardware, software, POS systems, and network issues across 600+ retail stores in a high-volume enterprise service desk environment.</li><li>Triage incidents in ServiceNow, troubleshoot Windows and store devices, document resolutions, and escalate complex issues to cross-functional IT teams.</li></ul></div>
+<div class="item"><div class="item-header"><span class="title">Target | Warehouse Operations, Engineering &amp; Facilities Support</span><span class="date">Oct 2019 – Aug 2025</span></div>
+<ul><li>Supported engineering and facilities teams with industrial-system monitoring, hardware diagnostics, and troubleshooting in a high-throughput distribution center.</li><li>Helped investigate recurring equipment and integration failures, validate sensor-to-server reporting, and coordinate issue escalation and operational changes.</li></ul></div>
+<div class="section-title">Selected Software &amp; Security Projects</div>
+<div class="item"><div class="item-header"><span class="title">SOC Triage &amp; Identity Workflow Lab | Personal project</span><span class="date">2026</span></div>
+<ul><li>Assembled a Python/FastAPI and PostgreSQL lab for alert normalization, evidence enrichment, triage decisions, and approval-gated response workflows.</li><li>Added synthetic retail identity scenarios covering onboarding and rehire, with an optional Keycloak/OIDC lab and a Svelte interface.</li><li>Automated checks exercise 42 alert cases, 10 identity scenarios, and PostgreSQL backup/restore. Uses mock AI by default; live integrations and broader API authorization remain in progress.</li></ul></div>
+<div class="item"><div class="item-header"><span class="title">G3-GPT | Industry-sponsored CS capstone, team of six</span><span class="date">2024</span></div>
+<ul><li>Contributed to a document-retrieval application with Azure AD single sign-on and role-based access controls as part of a six-person student team.</li><li>Worked with an industry sponsor on application requirements and access to corporate documents.</li></ul></div>
+<div class="item"><div class="item-header"><span class="title">SOAR-lite | Python Incident Response Orchestrator</span><span class="date">2026</span></div>
+<ul><li>Built a FastAPI workflow for alert intake, event-based playbook routing, IOC enrichment, notifications, and incident documentation.</li><li>Used automated tests to exercise application behavior and documented the lab's triage and response workflow.</li></ul></div>
+<div class="item"><div class="item-header"><span class="title">Detection-as-Code &amp; Wazuh Labs | Personal projects</span><span class="date">2026</span></div>
+<ul><li>Developed Sigma-format rules for MDM abuse, with MITRE ATT&amp;CK mappings, admin-baseline enrichment, and documented benign scenarios.</li><li>Configured a Wazuh SIEM lab, simulated authentication events, and tested detection patterns and false-positive tuning against synthetic data.</li></ul></div>
+<div class="section-title">Education &amp; Certifications</div>
+<div class="item"><div class="item-header"><span class="edu-line">Western Governors University | MS, Cybersecurity and Information Assurance</span><span class="date">2026</span></div>
+<div class="item-header"><span class="edu-line">Sacramento State | BS, Computer Science</span><span class="date">Jan 2025 · GPA 3.50</span></div>
+<div class="cert-line">CompTIA: Security+ · CySA+ · PenTest+ · SecurityX · CSAP · CSIE</div></div>
+</main></body></html>

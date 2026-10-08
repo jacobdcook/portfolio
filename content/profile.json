@@ -1,15 +1,15 @@
 {
   "name": "Jacob Cook",
   "pronouns": "he/him",
-  "tagline": "I engineer Sigma coverage, SIEM tuning, and automation so noisy telemetry turns into triage paths analysts can repeat.",
-  "heroGreeting": "Detection engineer building reliable triage from noisy data.",
-  "heroGreetingPrefix": "Detection engineer building",
-  "heroGreetingHighlight": "reliable triage",
-  "heroGreetingSuffix": "from noisy data.",
-  "availability": "Open to Detection Engineering roles",
-  "heroSubtitle": "Sigma rules, SIEM hardening, identity detections, and SOAR-style orchestration.",
-  "bio": "Detection and security automation engineer focused on reducing alert noise, closing coverage gaps, and building repeatable triage paths. My public detection work includes behavioral Sigma rules with KV store enrichment and false-positive tuning, Okta identity threat detections, SOAR-style orchestration that cuts manual response steps, and network behavior analysis that catches C2 beaconing and exfiltration patterns. I also ship local-first productivity tooling (Voxflow push-to-talk dictation, Murmur streaming TTS for Claude Code) and desktop apps in public beta. Based in California. Outside of work I enjoy camping, mountain biking, and time with my dogs.",
-  "targetRoles": "Open to: Detection Engineer, Threat Hunter, Security Automation Engineer, Vulnerability Management, Tier 2+ SOC. Sacramento or remote.",
+  "tagline": "I build software for security and internal workflows, with a focus on clear APIs, identity, and reliable data.",
+  "heroGreeting": "Building software for security and internal workflows.",
+  "heroGreetingPrefix": "Building software for",
+  "heroGreetingHighlight": "security",
+  "heroGreetingSuffix": "and internal workflows.",
+  "availability": "Open to software and security automation roles",
+  "heroSubtitle": "Python, APIs, identity workflows, and PostgreSQL-backed labs.",
+  "bio": "I build software for security and internal business workflows. At Williams-Sonoma, I work on the enterprise service desk supporting 600+ retail stores, troubleshooting Windows, POS, and network issues through ServiceNow. My personal projects connect that operational experience with Python APIs, security automation, and identity detection. Current lab work brings together PostgreSQL, alert triage, and synthetic employee onboarding and rehire scenarios. Public projects include Sigma detection rules, Okta identity detections, a SOAR-style orchestrator, and desktop tools. I hold a BS in Computer Science and an MS in Cybersecurity and Information Assurance. Based in Sacramento; outside work, I'm usually camping, mountain biking, or spending time with my dogs.",
+  "targetRoles": "Interested in software engineering for internal tools, backend development, security automation, and identity-focused roles. Sacramento or remote.",
   "location": "Sacramento, CA",
   "email": "jacobcookofficial@gmail.com",
   "phone": "916 709 1794",
@@ -18,42 +18,50 @@
   "resumePath": "/resume.pdf",
   "headshotPath": "/headshot.jpg",
   "skills": {
+    "supporting": [
+      "Python and Bash",
+      "TypeScript / React / Next.js",
+      "REST APIs / FastAPI",
+      "Git and automated testing",
+      "SQL / PostgreSQL (current lab work)"
+    ],
     "soc_blue_team": [
-      "Detection engineering (Sigma, MITRE-aligned labs)",
-      "SIEM (Wazuh)",
-      "Identity detection (Okta, lab)",
-      "Log analysis and alert triage",
-      "SOAR-style automation / playbooks",
-      "Phishing analysis",
-      "Network behavior and cloud auditing (lab)"
+      "Security automation and playbooks",
+      "Sigma / MITRE ATT&CK (labs)",
+      "Wazuh SIEM and alert triage (labs)",
+      "Identity detections (Okta / AWS labs)",
+      "SSO / RBAC (project work)"
     ],
     "it_systems": [
+      "ServiceNow incident triage",
       "Windows and Linux",
-      "Azure (labs)",
-      "Terraform / IaC",
-      "System hardening",
-      "Networking fundamentals"
-    ],
-    "supporting": [
-      "Python",
-      "Scripting",
-      "Documentation",
-      "Git"
+      "Retail POS and device troubleshooting",
+      "Networking fundamentals",
+      "Docker / Terraform (projects)",
+      "Technical documentation"
     ]
   },
   "experience": [
     {
-      "title": "Security & Detection Projects (Open Source)",
+      "title": "Service Desk Analyst",
+      "company": "Williams-Sonoma, Inc.",
+      "period": "Jun 2026 – Present",
+      "location": "Rocklin, CA · Hybrid",
+      "type": "Full-time",
+      "description": "Support hardware, software, POS systems, and network issues across 600+ retail stores. Triage incidents in ServiceNow, troubleshoot Windows and store devices, document resolutions, and escalate complex issues to the appropriate IT teams."
+    },
+    {
+      "title": "Software & Security Projects",
       "company": "Personal Projects",
       "period": "Oct 2025 – Present",
       "location": "Sacramento, CA",
       "type": "Part-time",
-      "description": "Public detection and automation portfolio across SIEM, identity, cloud, and network security. Built behavioral Sigma detection pack for Stryker/Intune MDM attack with KV store enrichment and baseline-aware thresholds. Okta detection engine with false-positive tuning (3 benign use cases per detection). SOAR-style orchestration automating alert intake and response. Network behavior analyzer detecting C2 beaconing via behavioral baselines. Wazuh SIEM stack with rule tuning that tightened noisy coverage. Also shipping local voice tooling (Voxflow, Murmur) and CareerHound desktop beta builds. Each project includes detection logic, false-positive analysis, and repeatable triage paths. Code at github.com/jacobdcook."
+      "description": "Personal projects across Python APIs, security automation, identity detection, and desktop software. Public work includes Sigma detection rules with false-positive notes, Okta identity detections, and SOAR-style alert workflows. Current SOC and identity lab work uses PostgreSQL, synthetic retail identity scenarios, and repeatable integration checks. These are personal projects and lab exercises, separate from employer systems."
     },
     {
       "title": "Warehouse Operations – Engineering & Facilities Support",
       "company": "Target Warehouse",
-      "period": "Oct 2019 – 2025",
+      "period": "Oct 2019 – Aug 2025",
       "location": "Woodland, CA",
       "type": "Full-time",
       "description": "Supported Engineering and Facilities in a high-throughput warehouse: kept industrial and material-handling systems available, diagnosed hardware and integration failures quickly, and used root cause analysis and change control to reduce repeat outages and downtime. Monitoring, diagnostics, sensor-to-server validation, and change management aligned to operational and enterprise standards."
@@ -110,6 +118,13 @@
     }
   ],
   "projects": [
+    {
+      "name": "SOC triage & identity workflow lab",
+      "description": "Personal lab combining Python APIs, PostgreSQL, alert triage, and synthetic onboarding/rehire scenarios. Includes integration checks and database restore exercises. Live integrations and broader API authorization remain in progress.",
+      "url": "/soc-identity-lab.html",
+      "category": "software",
+      "featured": true
+    },
     {
       "name": "Stryker / Intune detection pack",
       "description": "Detection-as-code for Intune MDM abuse (Stryker/Handala-style scenarios): Sigma rules, KV enrichment, MITRE-mapped response playbooks.",
@@ -205,7 +220,8 @@
       "name": "CareerHound (beta)",
       "description": "Desktop career workflow app: LinkedIn export import, draft review, and manual-send queue. Public beta builds; source private during beta.",
       "url": "https://github.com/jacobdcook/careerhound-releases",
-      "category": "software"
+      "category": "software",
+      "featured": true
     },
     {
       "name": "Claude Code skills",
@@ -247,7 +263,8 @@
       "name": "G3-GPT",
       "description": "Capstone RAG stack with Azure SSO, RBAC, and document retrieval workflows.",
       "url": "https://github.com/jacobdcook/G3-GPT",
-      "category": "software"
+      "category": "software",
+      "featured": true
     },
     {
       "name": "Career development tracker",

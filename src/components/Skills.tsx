@@ -6,9 +6,9 @@ import SectionHeading from "@/components/SectionHeading";
 import profile from "../../content/profile.json";
 
 const groups: { title: string; key: keyof typeof profile.skills }[] = [
-  { title: "Detection & blue team", key: "soc_blue_team" },
-  { title: "IT & systems", key: "it_systems" },
-  { title: "Supporting", key: "supporting" },
+  { title: "Software & data", key: "supporting" },
+  { title: "Security & identity", key: "soc_blue_team" },
+  { title: "Enterprise support & systems", key: "it_systems" },
 ];
 
 export default function Skills() {

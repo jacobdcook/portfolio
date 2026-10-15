@@ -64,7 +64,7 @@ export default function Projects() {
                   key={f.value}
                   type="button"
                   onClick={() => setActive(f.value)}
-                  className={`px-4 py-2 text-sm font-medium rounded transition-smooth ${navyFocusRing} ${
+                  className={`px-4 py-2.5 text-sm font-medium rounded transition-smooth ${navyFocusRing} ${
                     on
                       ? "bg-navy-500 text-white"
                       : "bg-transparent text-navy-900/75 dark:text-white/65 hover:text-navy-600 dark:hover:text-navy-300 border border-transparent hover:border-navy-200 dark:hover:border-navy-700"
@@ -83,7 +83,7 @@ export default function Projects() {
           variants={listVariants}
           initial={reduceMotion ? false : "hidden"}
           whileInView={reduceMotion ? undefined : "visible"}
-          viewport={{ once: true, margin: "-60px", amount: 0.15 }}
+          viewport={{ once: true, margin: "-60px", amount: "some" }}
         >
           {sorted.map((project) => {
             const featured = isFeatured(project);

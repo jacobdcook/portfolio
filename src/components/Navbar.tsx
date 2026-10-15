@@ -82,7 +82,7 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="flex items-center justify-center text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400 focus-ring"
+            className="flex items-center justify-center p-2 -m-1 text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400 focus-ring rounded"
           >
             {theme === "dark" ? (
               <Sun size={20} weight="bold" />
@@ -97,7 +97,7 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="flex items-center justify-center text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400 focus-ring"
+            className="flex items-center justify-center p-2 -m-1 text-text-secondary dark:text-white/70 hover:text-navy-600 dark:hover:text-neon-400 focus-ring rounded"
           >
             {theme === "dark" ? (
               <Sun size={20} weight="bold" />

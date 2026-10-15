@@ -271,6 +271,62 @@
       "description": "Desktop planner with templates, AI-assisted drafting, and progress tracking across roles.",
       "url": "https://github.com/jacobdcook/career-development-tracker",
       "category": "software"
+    },
+    {
+      "name": "Active Directory attack lab",
+      "description": "Deliberately vulnerable Active Directory lab on KVM/libvirt with BloodHound, the full attack chain, and a mapped detection for each step.",
+      "url": "https://github.com/jacobdcook/ad-attack-lab",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "Wazuh ransomware early-warning pack",
+      "description": "Wazuh + Sysmon ransomware early-warning pack: ATT&CK-mapped precursor rules, firewall host-isolation active response, a simulator, and a pytest harness.",
+      "url": "https://github.com/jacobdcook/wazuh-ransomware-early-warning",
+      "category": "cybersecurity",
+      "featured": true
+    },
+    {
+      "name": "GPU hash-cracking lab",
+      "description": "Password-cracking lab on an RTX 4090: hash generation, dictionary/rule/mask attacks, and matching blue-team detections on synthetic data.",
+      "url": "https://github.com/jacobdcook/gpu-hash-cracking",
+      "category": "cybersecurity"
+    },
+    {
+      "name": "AI job hunter",
+      "description": "Job-search automation that scrapes listings, filters them, and uses an LLM to score matches.",
+      "url": "https://github.com/jacobdcook/ai-job-hunter",
+      "category": "software"
+    },
+    {
+      "name": "LinkedIn feed parser",
+      "description": "GUI that parses raw LinkedIn feed HTML into clean, readable post summaries without clicking \"Read more\".",
+      "url": "https://github.com/jacobdcook/linkedin-feed-parser",
+      "category": "software"
+    },
+    {
+      "name": "Meal planner",
+      "description": "Single-file Tkinter desktop meal planner that generates weekly lunch and dinner plans from your own meal pool; stdlib only.",
+      "url": "https://github.com/jacobdcook/meal-planner",
+      "category": "software"
+    },
+    {
+      "name": "TryHackMe streak keeper",
+      "description": "Selenium automation that keeps a TryHackMe streak alive on a daily cron.",
+      "url": "https://github.com/jacobdcook/thm-streak-keeper",
+      "category": "software"
+    },
+    {
+      "name": "Discord guild-leave GUI",
+      "description": "GUI to list your Discord servers and bulk-leave selected ones with a configurable delay.",
+      "url": "https://github.com/jacobdcook/discord-guild-leave-gui",
+      "category": "software"
+    },
+    {
+      "name": "Daily wellness scheduler",
+      "description": "Desktop app for tracking daily supplement and electrolyte schedules with gamified progress.",
+      "url": "https://github.com/jacobdcook/daily-wellness-scheduler",
+      "category": "software"
     }
   ]
 }
